@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lanzarote · Timanfaya — Modelo visual interactivo de fuentes públicas</title>
+<link rel="stylesheet" href="vendor/maplibre-gl.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="top">
+  <div class="brand"><b>Proyecto Timanfaya</b><span>Lanzarote · erupciones 1730–1736 y 1824 · fuentes públicas</span></div>
+  <div class="searchbox"><input id="q" type="search" placeholder="Buscar: Tingafa, GPR, tubo de lava, Carracedo, InSAR…" autocomplete="off"><div id="results" hidden></div></div>
+  <nav>
+    <button id="btn3d" title="Activar relieve 3D (MDT Terrarium/AWS)">3D</button>
+    <button id="btnTl" class="on">Línea temporal</button>
+    <button id="btnLim">Limitaciones y lagunas</button>
+    <button id="btnSrc">Fuentes</button>
+    <button id="btnAbout">Acerca de</button>
+  </nav>
+</header>
+<main>
+  <aside id="left">
+    <section><h3>Mapa base</h3><div id="basemaps"></div></section>
+    <section><h3>Capas</h3><div id="layers"></div></section>
+    <section><h3>Filtros</h3>
+      <div class="flt"><b>Confianza de la ubicación/dato</b>
+        <label><input type="checkbox" class="fc" value="alto" checked> <i class="dot c-alto"></i>alto</label>
+        <label><input type="checkbox" class="fc" value="medio" checked> <i class="dot c-medio"></i>medio</label>
+        <label><input type="checkbox" class="fc" value="bajo" checked> <i class="dot c-bajo"></i>bajo</label></div>
+      <div class="flt"><b>Erupción</b>
+        <label><input type="checkbox" id="fe1730" checked> 1730–1736</label>
+        <label><input type="checkbox" id="fe1824" checked> 1824</label></div>
+      <div class="flt"><label><input type="checkbox" id="fapprox" checked> Mostrar ubicaciones aproximadas</label>
+        <label><input type="checkbox" id="func" checked> Dibujar radio de incertidumbre</label></div>
+    </section>
+    <section><h3>Leyenda</h3><div id="legend"></div></section>
+    <section><h3>Sin ubicación (<span id="nogeo-n"></span>)</h3><p class="mini">Elementos documentados cuyas coordenadas no se han podido establecer con fuentes abiertas.</p><div id="nogeo"></div></section>
+  </aside>
+  <div id="mapwrap"><div id="map"></div>
+    <div id="tl">
+      <div class="tl-row"><button id="play" title="Reproducir">▶</button>
+        <input id="slider" type="range" min="0" max="1000" value="1000">
+        <div id="tdate">todo</div><button id="tlreset">Mostrar todo</button></div>
+      <div id="tlevents"></div><div class="mini" id="tlnote">La línea temporal filtra centros eruptivos y núcleos por fase. Los polígonos de coladas del IGME no pueden fecharse por fase: aparecen completos desde sep-1730 (1824: jul-1824).</div>
+    </div>
+    <div id="credits">Datos: IGME GEODE · IGN NGBE/PNOA · GRAFCAN · Purcell et al. 2022 (CC BY 4.0) · MDT: AWS Terrain Tiles · Vea «Fuentes» · <a href="#" id="lnkAbout">Acerca de / Aviso legal</a> · contenidos propios CC BY 4.0 · proyecto no oficial</div>
+  </div>
+  <aside id="right" hidden><button id="closeR" aria-label="Cerrar">×</button><div id="ficha"></div></aside>
+</main>
+<div id="modal" hidden><div class="box"><button id="closeM" aria-label="Cerrar">×</button><div id="modalc"></div></div></div>
+<script src="vendor/maplibre-gl.js"></script>
+<script src="data/bundle.js"></script>
+<script src="data/dem_bundle.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
