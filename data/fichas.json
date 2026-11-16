@@ -1,0 +1,2758 @@
+{
+ "fichas": [
+  {
+   "id": "geo-1730-colada-1",
+   "titulo": "Coladas 1730–36 · 1.er episodio (IGME unidad 73)",
+   "capa": "coladas_1730_1736",
+   "categoria": "Geología / geometría de erupción",
+   "confianza": "alto",
+   "resumen": "43 polígonos del Mapa Geológico Continuo GEODE (IGME, 1:25.000, zona Z2910 Lanzarote) con la unidad 73; superficie total 36.46 km². Es la única geometría abierta de coladas y conos de 1730–36 y 1824 localizada.",
+   "detalle": [
+    {
+     "k": "Unidad IGME",
+     "v": "73"
+    },
+    {
+     "k": "Polígonos",
+     "v": 43
+    },
+    {
+     "k": "Superficie (km², cálculo en UTM 28N)",
+     "v": 36.46
+    },
+    {
+     "k": "Datación",
+     "v": "1730–1736 (el IGME no separa fases con fechas absolutas)"
+    }
+   ],
+   "metodo_localizacion": "Polígonos descargados del servicio REST del IGME (capa «Recintos geología») y reproyectados sin modificación geométrica (redondeo a 5 decimales ≈ 1 m). La asignación por unidad de código procede de la leyenda oficial.",
+   "limitaciones": "Los «tres episodios» del IGME no equivalen a las cinco fases de Carracedo et al. (1992). Escala 1:25.000: contornos generalizados; el recubrimiento de lapilli y arenas se cartografía aparte (unidades 79 y 77a).",
+   "source_ids": [
+    "R14",
+    "R15"
+   ],
+   "enlaces": [
+    {
+     "t": "Servicio REST IGME",
+     "u": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer"
+    },
+    {
+     "t": "Leyenda LEYE_Z2910",
+     "u": "https://info.igme.es/cartografiadigital/geologica/Geode.aspx"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "geo-1730-colada-1"
+   ]
+  },
+  {
+   "id": "geo-1730-colada-2",
+   "titulo": "Coladas 1730–36 · 2.º episodio (IGME unidad 75)",
+   "capa": "coladas_1730_1736",
+   "categoria": "Geología / geometría de erupción",
+   "confianza": "alto",
+   "resumen": "3 polígonos del Mapa Geológico Continuo GEODE (IGME, 1:25.000, zona Z2910 Lanzarote) con la unidad 75; superficie total 77.18 km². Es la única geometría abierta de coladas y conos de 1730–36 y 1824 localizada.",
+   "detalle": [
+    {
+     "k": "Unidad IGME",
+     "v": "75"
+    },
+    {
+     "k": "Polígonos",
+     "v": 3
+    },
+    {
+     "k": "Superficie (km², cálculo en UTM 28N)",
+     "v": 77.18
+    },
+    {
+     "k": "Datación",
+     "v": "1730–1736 (el IGME no separa fases con fechas absolutas)"
+    }
+   ],
+   "metodo_localizacion": "Polígonos descargados del servicio REST del IGME (capa «Recintos geología») y reproyectados sin modificación geométrica (redondeo a 5 decimales ≈ 1 m). La asignación por unidad de código procede de la leyenda oficial.",
+   "limitaciones": "Los «tres episodios» del IGME no equivalen a las cinco fases de Carracedo et al. (1992). Escala 1:25.000: contornos generalizados; el recubrimiento de lapilli y arenas se cartografía aparte (unidades 79 y 77a).",
+   "source_ids": [
+    "R14",
+    "R15"
+   ],
+   "enlaces": [
+    {
+     "t": "Servicio REST IGME",
+     "u": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer"
+    },
+    {
+     "t": "Leyenda LEYE_Z2910",
+     "u": "https://info.igme.es/cartografiadigital/geologica/Geode.aspx"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "geo-1730-colada-2"
+   ]
+  },
+  {
+   "id": "geo-1730-colada-3",
+   "titulo": "Coladas 1730–36 · 3.er episodio (IGME unidad 77)",
+   "capa": "coladas_1730_1736",
+   "categoria": "Geología / geometría de erupción",
+   "confianza": "alto",
+   "resumen": "9 polígonos del Mapa Geológico Continuo GEODE (IGME, 1:25.000, zona Z2910 Lanzarote) con la unidad 77; superficie total 31.72 km². Es la única geometría abierta de coladas y conos de 1730–36 y 1824 localizada.",
+   "detalle": [
+    {
+     "k": "Unidad IGME",
+     "v": "77"
+    },
+    {
+     "k": "Polígonos",
+     "v": 9
+    },
+    {
+     "k": "Superficie (km², cálculo en UTM 28N)",
+     "v": 31.72
+    },
+    {
+     "k": "Datación",
+     "v": "1730–1736 (el IGME no separa fases con fechas absolutas)"
+    }
+   ],
+   "metodo_localizacion": "Polígonos descargados del servicio REST del IGME (capa «Recintos geología») y reproyectados sin modificación geométrica (redondeo a 5 decimales ≈ 1 m). La asignación por unidad de código procede de la leyenda oficial.",
+   "limitaciones": "Los «tres episodios» del IGME no equivalen a las cinco fases de Carracedo et al. (1992). Escala 1:25.000: contornos generalizados; el recubrimiento de lapilli y arenas se cartografía aparte (unidades 79 y 77a).",
+   "source_ids": [
+    "R14",
+    "R15"
+   ],
+   "enlaces": [
+    {
+     "t": "Servicio REST IGME",
+     "u": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer"
+    },
+    {
+     "t": "Leyenda LEYE_Z2910",
+     "u": "https://info.igme.es/cartografiadigital/geologica/Geode.aspx"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "geo-1730-colada-3"
+   ]
+  },
+  {
+   "id": "geo-1730-arenas-3",
+   "titulo": "Recubrimiento de arenas sobre coladas, 3.er episodio (IGME unidad 77a)",
+   "capa": "coladas_1730_1736",
+   "categoria": "Geología / geometría de erupción",
+   "confianza": "alto",
+   "resumen": "1 polígonos del Mapa Geológico Continuo GEODE (IGME, 1:25.000, zona Z2910 Lanzarote) con la unidad 77a; superficie total 0.42 km². Es la única geometría abierta de coladas y conos de 1730–36 y 1824 localizada.",
+   "detalle": [
+    {
+     "k": "Unidad IGME",
+     "v": "77a"
+    },
+    {
+     "k": "Polígonos",
+     "v": 1
+    },
+    {
+     "k": "Superficie (km², cálculo en UTM 28N)",
+     "v": 0.42
+    },
+    {
+     "k": "Datación",
+     "v": "1730–1736 (el IGME no separa fases con fechas absolutas)"
+    }
+   ],
+   "metodo_localizacion": "Polígonos descargados del servicio REST del IGME (capa «Recintos geología») y reproyectados sin modificación geométrica (redondeo a 5 decimales ≈ 1 m). La asignación por unidad de código procede de la leyenda oficial.",
+   "limitaciones": "Los «tres episodios» del IGME no equivalen a las cinco fases de Carracedo et al. (1992). La escala 1:25.000 implica generalización del contorno. Montaña Tingafa figura como 1824 en el IGME y como 1730–36 en el ULPGC (véase ficha de Tingafa).",
+   "source_ids": [
+    "R14",
+    "R15"
+   ],
+   "enlaces": [
+    {
+     "t": "Servicio REST IGME",
+     "u": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer"
+    },
+    {
+     "t": "Leyenda LEYE_Z2910",
+     "u": "https://info.igme.es/cartografiadigital/geologica/Geode.aspx"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "geo-1730-arenas-3"
+   ]
+  },
+  {
+   "id": "geo-1730-piroclastos-x",
+   "titulo": "Piroclastos de dispersión 1730–36 (IGME unidad 79)",
+   "capa": "coladas_1730_1736",
+   "categoria": "Geología / geometría de erupción",
+   "confianza": "alto",
+   "resumen": "74 polígonos del Mapa Geológico Continuo GEODE (IGME, 1:25.000, zona Z2910 Lanzarote) con la unidad 79; superficie total 25.53 km². Es la única geometría abierta de coladas y conos de 1730–36 y 1824 localizada.",
+   "detalle": [
+    {
+     "k": "Unidad IGME",
+     "v": "79"
+    },
+    {
+     "k": "Polígonos",
+     "v": 74
+    },
+    {
+     "k": "Superficie (km², cálculo en UTM 28N)",
+     "v": 25.53
+    },
+    {
+     "k": "Datación",
+     "v": "1730–1736 (el IGME no separa fases con fechas absolutas)"
+    }
+   ],
+   "metodo_localizacion": "Polígonos descargados del servicio REST del IGME (capa «Recintos geología») y reproyectados sin modificación geométrica (redondeo a 5 decimales ≈ 1 m). La asignación por unidad de código procede de la leyenda oficial.",
+   "limitaciones": "Los «tres episodios» del IGME no equivalen a las cinco fases de Carracedo et al. (1992). La escala 1:25.000 implica generalización del contorno. Montaña Tingafa figura como 1824 en el IGME y como 1730–36 en el ULPGC (véase ficha de Tingafa).",
+   "source_ids": [
+    "R14",
+    "R15"
+   ],
+   "enlaces": [
+    {
+     "t": "Servicio REST IGME",
+     "u": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer"
+    },
+    {
+     "t": "Leyenda LEYE_Z2910",
+     "u": "https://info.igme.es/cartografiadigital/geologica/Geode.aspx"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "geo-1730-piroclastos-x"
+   ]
+  },
+  {
+   "id": "geo-1730-cono-1",
+   "titulo": "Conos de tefra 1730–36 · 1.er episodio (IGME unidad 74)",
+   "capa": "conos_centros_eruptivos",
+   "categoria": "Geología / geometría de erupción",
+   "confianza": "alto",
+   "resumen": "13 polígonos del Mapa Geológico Continuo GEODE (IGME, 1:25.000, zona Z2910 Lanzarote) con la unidad 74; superficie total 0.91 km². Es la única geometría abierta de coladas y conos de 1730–36 y 1824 localizada.",
+   "detalle": [
+    {
+     "k": "Unidad IGME",
+     "v": "74"
+    },
+    {
+     "k": "Polígonos",
+     "v": 13
+    },
+    {
+     "k": "Superficie (km², cálculo en UTM 28N)",
+     "v": 0.91
+    },
+    {
+     "k": "Datación",
+     "v": "1730–1736 (el IGME no separa fases con fechas absolutas)"
+    }
+   ],
+   "metodo_localizacion": "Polígonos descargados del servicio REST del IGME (capa «Recintos geología») y reproyectados sin modificación geométrica (redondeo a 5 decimales ≈ 1 m). La asignación por unidad de código procede de la leyenda oficial.",
+   "limitaciones": "Los «tres episodios» del IGME no equivalen a las cinco fases de Carracedo et al. (1992). La escala 1:25.000 implica generalización del contorno. Montaña Tingafa figura como 1824 en el IGME y como 1730–36 en el ULPGC (véase ficha de Tingafa).",
+   "source_ids": [
+    "R14",
+    "R15"
+   ],
+   "enlaces": [
+    {
+     "t": "Servicio REST IGME",
+     "u": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer"
+    },
+    {
+     "t": "Leyenda LEYE_Z2910",
+     "u": "https://info.igme.es/cartografiadigital/geologica/Geode.aspx"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "geo-1730-cono-1"
+   ]
+  },
+  {
+   "id": "geo-1730-cono-2",
+   "titulo": "Conos de tefra 1730–36 · 2.º episodio (IGME unidad 76)",
+   "capa": "conos_centros_eruptivos",
+   "categoria": "Geología / geometría de erupción",
+   "confianza": "alto",
+   "resumen": "12 polígonos del Mapa Geológico Continuo GEODE (IGME, 1:25.000, zona Z2910 Lanzarote) con la unidad 76; superficie total 2.24 km². Es la única geometría abierta de coladas y conos de 1730–36 y 1824 localizada.",
+   "detalle": [
+    {
+     "k": "Unidad IGME",
+     "v": "76"
+    },
+    {
+     "k": "Polígonos",
+     "v": 12
+    },
+    {
+     "k": "Superficie (km², cálculo en UTM 28N)",
+     "v": 2.24
+    },
+    {
+     "k": "Datación",
+     "v": "1730–1736 (el IGME no separa fases con fechas absolutas)"
+    }
+   ],
+   "metodo_localizacion": "Polígonos descargados del servicio REST del IGME (capa «Recintos geología») y reproyectados sin modificación geométrica (redondeo a 5 decimales ≈ 1 m). La asignación por unidad de código procede de la leyenda oficial.",
+   "limitaciones": "Los «tres episodios» del IGME no equivalen a las cinco fases de Carracedo et al. (1992). La escala 1:25.000 implica generalización del contorno. Montaña Tingafa figura como 1824 en el IGME y como 1730–36 en el ULPGC (véase ficha de Tingafa).",
+   "source_ids": [
+    "R14",
+    "R15"
+   ],
+   "enlaces": [
+    {
+     "t": "Servicio REST IGME",
+     "u": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer"
+    },
+    {
+     "t": "Leyenda LEYE_Z2910",
+     "u": "https://info.igme.es/cartografiadigital/geologica/Geode.aspx"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "geo-1730-cono-2"
+   ]
+  },
+  {
+   "id": "geo-1730-cono-3",
+   "titulo": "Conos de tefra 1730–36 · 3.er episodio (IGME unidad 78)",
+   "capa": "conos_centros_eruptivos",
+   "categoria": "Geología / geometría de erupción",
+   "confianza": "alto",
+   "resumen": "2 polígonos del Mapa Geológico Continuo GEODE (IGME, 1:25.000, zona Z2910 Lanzarote) con la unidad 78; superficie total 1.05 km². Es la única geometría abierta de coladas y conos de 1730–36 y 1824 localizada.",
+   "detalle": [
+    {
+     "k": "Unidad IGME",
+     "v": "78"
+    },
+    {
+     "k": "Polígonos",
+     "v": 2
+    },
+    {
+     "k": "Superficie (km², cálculo en UTM 28N)",
+     "v": 1.05
+    },
+    {
+     "k": "Datación",
+     "v": "1730–1736 (el IGME no separa fases con fechas absolutas)"
+    }
+   ],
+   "metodo_localizacion": "Polígonos descargados del servicio REST del IGME (capa «Recintos geología») y reproyectados sin modificación geométrica (redondeo a 5 decimales ≈ 1 m). La asignación por unidad de código procede de la leyenda oficial.",
+   "limitaciones": "Los «tres episodios» del IGME no equivalen a las cinco fases de Carracedo et al. (1992). La escala 1:25.000 implica generalización del contorno. Montaña Tingafa figura como 1824 en el IGME y como 1730–36 en el ULPGC (véase ficha de Tingafa).",
+   "source_ids": [
+    "R14",
+    "R15"
+   ],
+   "enlaces": [
+    {
+     "t": "Servicio REST IGME",
+     "u": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer"
+    },
+    {
+     "t": "Leyenda LEYE_Z2910",
+     "u": "https://info.igme.es/cartografiadigital/geologica/Geode.aspx"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "geo-1730-cono-3"
+   ]
+  },
+  {
+   "id": "geo-1824-colada-x",
+   "titulo": "Coladas de 1824 (IGME unidad 80)",
+   "capa": "coladas_1824",
+   "categoria": "Geología / geometría de erupción",
+   "confianza": "alto",
+   "resumen": "4 polígonos del Mapa Geológico Continuo GEODE (IGME, 1:25.000, zona Z2910 Lanzarote) con la unidad 80; superficie total 2.43 km². Es la única geometría abierta de coladas y conos de 1730–36 y 1824 localizada.",
+   "detalle": [
+    {
+     "k": "Unidad IGME",
+     "v": "80"
+    },
+    {
+     "k": "Polígonos",
+     "v": 4
+    },
+    {
+     "k": "Superficie (km², cálculo en UTM 28N)",
+     "v": 2.43
+    },
+    {
+     "k": "Datación",
+     "v": "1824"
+    }
+   ],
+   "metodo_localizacion": "Polígonos descargados del servicio REST del IGME (capa «Recintos geología») y reproyectados sin modificación geométrica (redondeo a 5 decimales ≈ 1 m). La asignación por unidad de código procede de la leyenda oficial.",
+   "limitaciones": "Los «tres episodios» del IGME no equivalen a las cinco fases de Carracedo et al. (1992). Escala 1:25.000: contornos generalizados; el recubrimiento de lapilli y arenas se cartografía aparte (unidades 79 y 77a).",
+   "source_ids": [
+    "R14",
+    "R15"
+   ],
+   "enlaces": [
+    {
+     "t": "Servicio REST IGME",
+     "u": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer"
+    },
+    {
+     "t": "Leyenda LEYE_Z2910",
+     "u": "https://info.igme.es/cartografiadigital/geologica/Geode.aspx"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "geo-1824-colada-x"
+   ]
+  },
+  {
+   "id": "geo-1824-cono-x",
+   "titulo": "Conos de tefra de 1824 (IGME unidad 81)",
+   "capa": "coladas_1824",
+   "categoria": "Geología / geometría de erupción",
+   "confianza": "alto",
+   "resumen": "4 polígonos del Mapa Geológico Continuo GEODE (IGME, 1:25.000, zona Z2910 Lanzarote) con la unidad 81; superficie total 0.43 km². Es la única geometría abierta de coladas y conos de 1730–36 y 1824 localizada.",
+   "detalle": [
+    {
+     "k": "Unidad IGME",
+     "v": "81"
+    },
+    {
+     "k": "Polígonos",
+     "v": 4
+    },
+    {
+     "k": "Superficie (km², cálculo en UTM 28N)",
+     "v": 0.43
+    },
+    {
+     "k": "Datación",
+     "v": "1824"
+    }
+   ],
+   "metodo_localizacion": "Polígonos descargados del servicio REST del IGME (capa «Recintos geología») y reproyectados sin modificación geométrica (redondeo a 5 decimales ≈ 1 m). La asignación por unidad de código procede de la leyenda oficial.",
+   "limitaciones": "Los «tres episodios» del IGME no equivalen a las cinco fases de Carracedo et al. (1992). La escala 1:25.000 implica generalización del contorno. Montaña Tingafa figura como 1824 en el IGME y como 1730–36 en el ULPGC (véase ficha de Tingafa).",
+   "source_ids": [
+    "R14",
+    "R15"
+   ],
+   "enlaces": [
+    {
+     "t": "Servicio REST IGME",
+     "u": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer"
+    },
+    {
+     "t": "Leyenda LEYE_Z2910",
+     "u": "https://info.igme.es/cartografiadigital/geologica/Geode.aspx"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "geo-1824-cono-x"
+   ]
+  },
+  {
+   "id": "geo-1824-piroclastos-x",
+   "titulo": "Piroclastos de dispersión de 1824 (IGME unidad 82)",
+   "capa": "coladas_1824",
+   "categoria": "Geología / geometría de erupción",
+   "confianza": "alto",
+   "resumen": "1 polígonos del Mapa Geológico Continuo GEODE (IGME, 1:25.000, zona Z2910 Lanzarote) con la unidad 82; superficie total 0.25 km². Es la única geometría abierta de coladas y conos de 1730–36 y 1824 localizada.",
+   "detalle": [
+    {
+     "k": "Unidad IGME",
+     "v": "82"
+    },
+    {
+     "k": "Polígonos",
+     "v": 1
+    },
+    {
+     "k": "Superficie (km², cálculo en UTM 28N)",
+     "v": 0.25
+    },
+    {
+     "k": "Datación",
+     "v": "1824"
+    }
+   ],
+   "metodo_localizacion": "Polígonos descargados del servicio REST del IGME (capa «Recintos geología») y reproyectados sin modificación geométrica (redondeo a 5 decimales ≈ 1 m). La asignación por unidad de código procede de la leyenda oficial.",
+   "limitaciones": "Los «tres episodios» del IGME no equivalen a las cinco fases de Carracedo et al. (1992). La escala 1:25.000 implica generalización del contorno. Montaña Tingafa figura como 1824 en el IGME y como 1730–36 en el ULPGC (véase ficha de Tingafa).",
+   "source_ids": [
+    "R14",
+    "R15"
+   ],
+   "enlaces": [
+    {
+     "t": "Servicio REST IGME",
+     "u": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer"
+    },
+    {
+     "t": "Leyenda LEYE_Z2910",
+     "u": "https://info.igme.es/cartografiadigital/geologica/Geode.aspx"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "geo-1824-piroclastos-x"
+   ]
+  },
+  {
+   "id": "cono-cuervo",
+   "titulo": "Volcán del Cuervo (Caldera de los Cuervos / Montaña de las Lapas)",
+   "capa": "conos_centros_eruptivos",
+   "categoria": "Cono / centro eruptivo",
+   "confianza": "alto",
+   "resumen": "Según R16, el 1 de septiembre de 1730 «estalla lo que ahora conocemos como el Volcán del Cuervo»; su lava afectó a Chimanfaya, Rodeo, parte de Mancha Blanca, Santa Catalina y Maso. El NGBE da dos nombres para el mismo punto («Montaña de las Lapas | Montaña del Cuervo»).",
+   "detalle": [
+    {
+     "k": "Erupción",
+     "v": "1730-1736"
+    },
+    {
+     "k": "Fase (R16)",
+     "v": "Fase 1 — primer centro eruptivo, 1-sep-1730"
+    },
+    {
+     "k": "Coordenadas",
+     "v": "28.99109, -13.69391 (ETRS89/WGS84)"
+    },
+    {
+     "k": "Identificador NGBE",
+     "v": "2629834"
+    }
+   ],
+   "metodo_localizacion": "Punto del Nomenclátor Geográfico Básico de España (IGN) para el topónimo; Punto NGBE (28.99109, -13.69391). Polígono de cono IGME más próximo: unidad 74 a 0 m. La atribución a una fase procede del texto de R16 (divulgación basada en Carracedo & Rodríguez Badiola 1991), no de una datación del cono.",
+   "limitaciones": "Incertidumbre posicional ≈300 m (el punto NGBE no siempre coincide con la cima). La correspondencia nombre histórico ↔ cono actual es interpretativa.",
+   "source_ids": [
+    "R16",
+    "R22",
+    "R27",
+    "R14"
+   ],
+   "enlaces": [
+    {
+     "t": "NGBE (WFS IGN)",
+     "u": "https://www.ign.es/wfs-inspire/ngbe"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "cono-cuervo"
+   ]
+  },
+  {
+   "id": "cono-rilla",
+   "titulo": "Caldera de la Rilla (candidata a «volcán de Santa Catalina»)",
+   "capa": "conos_centros_eruptivos",
+   "categoria": "Cono / centro eruptivo",
+   "confianza": "alto",
+   "resumen": "R16 menciona tres bocas eruptivas abiertas en octubre de 1730 «encima de Santa Catalina» y un «volcán de Santa Catalina». R10 anota «Rilla o Santa Catalina». La correspondencia con esta caldera (y no con la Caldera Santa Catalina, a 1,4 km) es una inferencia.",
+   "detalle": [
+    {
+     "k": "Erupción",
+     "v": "1730-1736"
+    },
+    {
+     "k": "Fase (R16)",
+     "v": "Fase 1 — octubre de 1730: «tres bocas sobre Santa Catalina»"
+    },
+    {
+     "k": "Coordenadas",
+     "v": "29.00427, -13.70709 (ETRS89/WGS84)"
+    },
+    {
+     "k": "Identificador NGBE",
+     "v": "2628871"
+    }
+   ],
+   "metodo_localizacion": "Punto del Nomenclátor Geográfico Básico de España (IGN) para el topónimo; Punto NGBE (29.00427, -13.70709). Polígono de cono IGME más próximo: unidad 74 a 0 m. La atribución a una fase procede del texto de R16 (divulgación basada en Carracedo & Rodríguez Badiola 1991), no de una datación del cono.",
+   "limitaciones": "Incertidumbre posicional ≈300 m (el punto NGBE no siempre coincide con la cima). La correspondencia nombre histórico ↔ cono actual es interpretativa.",
+   "source_ids": [
+    "R16",
+    "R10",
+    "R27",
+    "R14"
+   ],
+   "enlaces": [
+    {
+     "t": "NGBE (WFS IGN)",
+     "u": "https://www.ign.es/wfs-inspire/ngbe"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "cono-rilla"
+   ]
+  },
+  {
+   "id": "cono-santa-catalina",
+   "titulo": "Caldera Santa Catalina (NGBE)",
+   "capa": "conos_centros_eruptivos",
+   "categoria": "Cono / centro eruptivo",
+   "confianza": "alto",
+   "resumen": "Topónimo NGBE «Caldera Santa Catalina»; el polígono IGME más próximo pertenece al 3.er episodio (unidad 78), mientras que R16 sitúa las bocas de «Santa Catalina» en octubre de 1730. Conflicto de atribución sin resolver.",
+   "detalle": [
+    {
+     "k": "Erupción",
+     "v": "1730-1736"
+    },
+    {
+     "k": "Fase (R16)",
+     "v": "Fase no determinada"
+    },
+    {
+     "k": "Coordenadas",
+     "v": "29.00690, -13.68848 (ETRS89/WGS84)"
+    },
+    {
+     "k": "Identificador NGBE",
+     "v": "2628885"
+    }
+   ],
+   "metodo_localizacion": "Punto del Nomenclátor Geográfico Básico de España (IGN) para el topónimo; Punto NGBE (29.00690, -13.68848). Polígono de cono IGME más próximo: unidad 78 a 0 m. La atribución a una fase procede del texto de R16 (divulgación basada en Carracedo & Rodríguez Badiola 1991), no de una datación del cono.",
+   "limitaciones": "Incertidumbre posicional ≈300 m (el punto NGBE no siempre coincide con la cima). La correspondencia nombre histórico ↔ cono actual es interpretativa.",
+   "source_ids": [
+    "R10",
+    "R16",
+    "R27",
+    "R14"
+   ],
+   "enlaces": [
+    {
+     "t": "NGBE (WFS IGN)",
+     "u": "https://www.ign.es/wfs-inspire/ngbe"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "cono-santa-catalina"
+   ]
+  },
+  {
+   "id": "cono-pico-partido",
+   "titulo": "Pico Partido (candidato a «boca junto a Maso»)",
+   "capa": "conos_centros_eruptivos",
+   "categoria": "Cono / centro eruptivo",
+   "confianza": "alto",
+   "resumen": "R16: «La boca eruptiva al lado de la aldea de Maso podría ser la que hoy conocemos como Pico Partido». Hipótesis de los autores, no dato.",
+   "detalle": [
+    {
+     "k": "Erupción",
+     "v": "1730-1736"
+    },
+    {
+     "k": "Fase (R16)",
+     "v": "Fase 1 — octubre de 1730 (hipótesis de R16)"
+    },
+    {
+     "k": "Coordenadas",
+     "v": "29.00848, -13.71930 (ETRS89/WGS84)"
+    },
+    {
+     "k": "Identificador NGBE",
+     "v": "2630040"
+    }
+   ],
+   "metodo_localizacion": "Punto del Nomenclátor Geográfico Básico de España (IGN) para el topónimo; Punto NGBE (29.00848, -13.71930). Polígono de cono IGME más próximo: unidad 74 a 0 m. La atribución a una fase procede del texto de R16 (divulgación basada en Carracedo & Rodríguez Badiola 1991), no de una datación del cono.",
+   "limitaciones": "Incertidumbre posicional ≈300 m (el punto NGBE no siempre coincide con la cima). La correspondencia nombre histórico ↔ cono actual es interpretativa.",
+   "source_ids": [
+    "R16",
+    "R27",
+    "R14"
+   ],
+   "enlaces": [
+    {
+     "t": "NGBE (WFS IGN)",
+     "u": "https://www.ign.es/wfs-inspire/ngbe"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "cono-pico-partido"
+   ]
+  },
+  {
+   "id": "cono-senalo",
+   "titulo": "Montaña del Señalo (Montañas del Señalo)",
+   "capa": "conos_centros_eruptivos",
+   "categoria": "Cono / centro eruptivo",
+   "confianza": "alto",
+   "resumen": "R16: «en marzo de 1731 entrarían en erupción las Montañas del Señalo», inicio de la fase 2 (cesa hacia finales de junio de 1731, 4 episodios). R23 atribuye a Montaña Señalo la lava que alcanzó Tingafa (principios de marzo de 1731). R40 estudia las alteraciones silíceas de sus lavas.",
+   "detalle": [
+    {
+     "k": "Erupción",
+     "v": "1730-1736"
+    },
+    {
+     "k": "Fase (R16)",
+     "v": "Fase 2 — marzo de 1731"
+    },
+    {
+     "k": "Coordenadas",
+     "v": "29.00311, -13.71619 (ETRS89/WGS84)"
+    },
+    {
+     "k": "Identificador NGBE",
+     "v": "2629855"
+    }
+   ],
+   "metodo_localizacion": "Punto del Nomenclátor Geográfico Básico de España (IGN) para el topónimo; Punto NGBE (29.00311, -13.71619). Polígono de cono IGME más próximo: unidad 76 a 0 m. La atribución a una fase procede del texto de R16 (divulgación basada en Carracedo & Rodríguez Badiola 1991), no de una datación del cono.",
+   "limitaciones": "Incertidumbre posicional ≈300 m (el punto NGBE no siempre coincide con la cima). La correspondencia nombre histórico ↔ cono actual es interpretativa.",
+   "source_ids": [
+    "R16",
+    "R23",
+    "R40",
+    "R27",
+    "R14"
+   ],
+   "enlaces": [
+    {
+     "t": "NGBE (WFS IGN)",
+     "u": "https://www.ign.es/wfs-inspire/ngbe"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "cono-senalo"
+   ]
+  },
+  {
+   "id": "cono-rajada",
+   "titulo": "Montaña Rajada",
+   "capa": "conos_centros_eruptivos",
+   "categoria": "Cono / centro eruptivo",
+   "confianza": "alto",
+   "resumen": "R16: la fase 3 «comienza aproximadamente a 13 km de donde sucedieron las primeras», con una erupción submarina inicial y volcanes como El Quemado y Montaña Rajada. R10 sitúa las Calderas Quemadas entre Montaña Rajada y el macizo de Timanfaya.",
+   "detalle": [
+    {
+     "k": "Erupción",
+     "v": "1730-1736"
+    },
+    {
+     "k": "Fase (R16)",
+     "v": "Fase 3 — junio de 1731 a mediados de enero de 1732"
+    },
+    {
+     "k": "Coordenadas",
+     "v": "28.99487, -13.77368 (ETRS89/WGS84)"
+    },
+    {
+     "k": "Identificador NGBE",
+     "v": "2629877"
+    }
+   ],
+   "metodo_localizacion": "Punto del Nomenclátor Geográfico Básico de España (IGN) para el topónimo; Punto NGBE (28.99487, -13.77368). Polígono de cono IGME más próximo: unidad 76 a 0 m. La atribución a una fase procede del texto de R16 (divulgación basada en Carracedo & Rodríguez Badiola 1991), no de una datación del cono.",
+   "limitaciones": "Incertidumbre posicional ≈300 m (el punto NGBE no siempre coincide con la cima). La correspondencia nombre histórico ↔ cono actual es interpretativa.",
+   "source_ids": [
+    "R16",
+    "R10",
+    "R27",
+    "R14"
+   ],
+   "enlaces": [
+    {
+     "t": "NGBE (WFS IGN)",
+     "u": "https://www.ign.es/wfs-inspire/ngbe"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "cono-rajada"
+   ]
+  },
+  {
+   "id": "cono-quemada",
+   "titulo": "Montaña Quemada",
+   "capa": "conos_centros_eruptivos",
+   "categoria": "Cono / centro eruptivo",
+   "confianza": "alto",
+   "resumen": "R16: «en enero de 1732, las lavas de Montaña Quemada sepultan [la capilla de San Juan]». La identidad entre «El Quemado» (fase 3) y esta Montaña Quemada del NGBE es probable pero no está confirmada en las fuentes leídas.",
+   "detalle": [
+    {
+     "k": "Erupción",
+     "v": "1730-1736"
+    },
+    {
+     "k": "Fase (R16)",
+     "v": "Fase 3 — enero de 1732 (lavas)"
+    },
+    {
+     "k": "Coordenadas",
+     "v": "28.98828, -13.81592 (ETRS89/WGS84)"
+    },
+    {
+     "k": "Identificador NGBE",
+     "v": "2629876"
+    }
+   ],
+   "metodo_localizacion": "Punto del Nomenclátor Geográfico Básico de España (IGN) para el topónimo; Punto NGBE (28.98828, -13.81592). Polígono de cono IGME más próximo: unidad 76 a 283 m. La atribución a una fase procede del texto de R16 (divulgación basada en Carracedo & Rodríguez Badiola 1991), no de una datación del cono.",
+   "limitaciones": "Incertidumbre posicional ≈300 m (el punto NGBE no siempre coincide con la cima). La correspondencia nombre histórico ↔ cono actual es interpretativa.",
+   "source_ids": [
+    "R16",
+    "R27"
+   ],
+   "enlaces": [
+    {
+     "t": "NGBE (WFS IGN)",
+     "u": "https://www.ign.es/wfs-inspire/ngbe"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "cono-quemada"
+   ]
+  },
+  {
+   "id": "cono-timanfaya",
+   "titulo": "Macizo de Timanfaya / Montañas del Fuego (Cráter de Timanfaya)",
+   "capa": "conos_centros_eruptivos",
+   "categoria": "Cono / centro eruptivo",
+   "confianza": "alto",
+   "resumen": "R16: la fase 4 «da lugar a lo que hoy conocemos como las Montañas del Fuego»; cada cono se mantuvo activo meses; no hay testimonios de primera mano. El punto es el «Cráter de Timanfaya» del NGBE; las Montañas del Fuego son un conjunto de conos alineados (más de 30 conos en el Parque según R06).",
+   "detalle": [
+    {
+     "k": "Erupción",
+     "v": "1730-1736"
+    },
+    {
+     "k": "Fase (R16)",
+     "v": "Fase 4 — enero de 1732 a ≈1736 (ca. 4 años)"
+    },
+    {
+     "k": "Coordenadas",
+     "v": "29.00049, -13.74573 (ETRS89/WGS84)"
+    },
+    {
+     "k": "Identificador NGBE",
+     "v": "2629031"
+    }
+   ],
+   "metodo_localizacion": "Punto del Nomenclátor Geográfico Básico de España (IGN) para el topónimo; Punto NGBE (29.00049, -13.74573). Polígono de cono IGME más próximo: unidad 76 a 0 m. La atribución a una fase procede del texto de R16 (divulgación basada en Carracedo & Rodríguez Badiola 1991), no de una datación del cono.",
+   "limitaciones": "Incertidumbre posicional ≈300 m (el punto NGBE no siempre coincide con la cima). La correspondencia nombre histórico ↔ cono actual es interpretativa.",
+   "source_ids": [
+    "R16",
+    "R06",
+    "R27",
+    "R14"
+   ],
+   "enlaces": [
+    {
+     "t": "NGBE (WFS IGN)",
+     "u": "https://www.ign.es/wfs-inspire/ngbe"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "cono-timanfaya"
+   ]
+  },
+  {
+   "id": "cono-colorada",
+   "titulo": "Caldera Colorada (candidata a «Montaña Colorada»)",
+   "capa": "conos_centros_eruptivos",
+   "categoria": "Cono / centro eruptivo",
+   "confianza": "alto",
+   "resumen": "R16: «la Montaña de las Nueces y Montaña Colorada entran en erupción entre marzo y abril de 1736». R41 estudia las lavas de Montaña de las Nueces. El NGBE consultado no contiene «Montaña de las Nueces»; «Caldera Colorada» es la candidata más próxima para «Montaña Colorada» (inferencia por toponimia).",
+   "detalle": [
+    {
+     "k": "Erupción",
+     "v": "1730-1736"
+    },
+    {
+     "k": "Fase (R16)",
+     "v": "Fase 5 — marzo–abril de 1736"
+    },
+    {
+     "k": "Coordenadas",
+     "v": "29.00592, -13.67779 (ETRS89/WGS84)"
+    },
+    {
+     "k": "Identificador NGBE",
+     "v": "2628868"
+    }
+   ],
+   "metodo_localizacion": "Punto del Nomenclátor Geográfico Básico de España (IGN) para el topónimo; Punto NGBE (29.00592, -13.67779). Polígono de cono IGME más próximo: unidad 78 a 0 m. La atribución a una fase procede del texto de R16 (divulgación basada en Carracedo & Rodríguez Badiola 1991), no de una datación del cono.",
+   "limitaciones": "Incertidumbre posicional ≈300 m (el punto NGBE no siempre coincide con la cima). La correspondencia nombre histórico ↔ cono actual es interpretativa.",
+   "source_ids": [
+    "R16",
+    "R41",
+    "R27",
+    "R14"
+   ],
+   "enlaces": [
+    {
+     "t": "NGBE (WFS IGN)",
+     "u": "https://www.ign.es/wfs-inspire/ngbe"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "cono-colorada"
+   ]
+  },
+  {
+   "id": "cono-tingafa",
+   "titulo": "Montaña Tingafa (Tinga)",
+   "capa": "conos_centros_eruptivos",
+   "categoria": "Cono / centro eruptivo",
+   "confianza": "alto",
+   "resumen": "El polígono IGME de la montaña pertenece a la unidad 81 (conos de 1824), pero la base de topónimos del ULPGC (R24) y R23 la describen como volcán de 1730–36 bajo el cual quedó la aldea de Tingafa. Se muestra el conflicto, no se resuelve.",
+   "detalle": [
+    {
+     "k": "Erupción",
+     "v": "1730-1736 / 1824 (conflicto)"
+    },
+    {
+     "k": "Fase (R16)",
+     "v": "Conflicto entre fuentes"
+    },
+    {
+     "k": "Coordenadas",
+     "v": "29.02008, -13.72089 (ETRS89/WGS84)"
+    },
+    {
+     "k": "Identificador NGBE",
+     "v": "2629891"
+    }
+   ],
+   "metodo_localizacion": "Punto del Nomenclátor Geográfico Básico de España (IGN) para el topónimo; Punto NGBE (29.02008, -13.72089). Polígono de cono IGME más próximo: unidad 81 a 0 m. La atribución a una fase procede del texto de R16 (divulgación basada en Carracedo & Rodríguez Badiola 1991), no de una datación del cono.",
+   "limitaciones": "Incertidumbre posicional ≈300 m (el punto NGBE no siempre coincide con la cima). La correspondencia nombre histórico ↔ cono actual es interpretativa.",
+   "source_ids": [
+    "R14",
+    "R24",
+    "R23",
+    "R27"
+   ],
+   "enlaces": [
+    {
+     "t": "NGBE (WFS IGN)",
+     "u": "https://www.ign.es/wfs-inspire/ngbe"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "cono-tingafa"
+   ]
+  },
+  {
+   "id": "cono-chinero",
+   "titulo": "Montaña del Chinero",
+   "capa": "conos_centros_eruptivos",
+   "categoria": "Cono / centro eruptivo",
+   "confianza": "alto",
+   "resumen": "IGME unidad 81 (a 37 m). R05 y R10 sitúan la zona de Chinero en 1824; R16 describe el volcán Nuevo del Fuego (29-sep a 4-oct-1824) «entre las Montañas del Fuego y la Montaña Quemada»: la identificación con el Chinero es probable pero no se ha confirmado en fuente directa. Inferencia propia reforzada en la simulación (docs/SIMULACION_COLADAS.md): la colada IGME que sale del Chinero hacia el norte tiene 1,76 km² y ≈6,1 km de longitud, igual que Nuevo del Fuego en R13 (Tabla 2: 1,76 km², 6,34 km, llega a la costa); el cono dista ≈14 km del cono de Tao. R13 sitúa Tao en el extremo «occidental» y Nuevo del Fuego en el «oriental», lo contrario de lo que resulta aquí: discrepancia no resuelta.",
+   "detalle": [
+    {
+     "k": "Erupción",
+     "v": "1824"
+    },
+    {
+     "k": "Fase (R16)",
+     "v": "Alineación de 1824 (¿«Nuevo del Fuego»?)"
+    },
+    {
+     "k": "Coordenadas",
+     "v": "29.01031, -13.75061 (ETRS89/WGS84)"
+    },
+    {
+     "k": "Identificador NGBE",
+     "v": "2629847"
+    }
+   ],
+   "metodo_localizacion": "Punto del Nomenclátor Geográfico Básico de España (IGN) para el topónimo; Punto NGBE (29.01031, -13.75061). Polígono de cono IGME más próximo: unidad 81 a 0 m. La atribución a una fase procede del texto de R16 (divulgación basada en Carracedo & Rodríguez Badiola 1991), no de una datación del cono.",
+   "limitaciones": "Incertidumbre posicional ≈300 m (el punto NGBE no siempre coincide con la cima). La correspondencia nombre histórico ↔ cono actual es interpretativa.",
+   "source_ids": [
+    "R14",
+    "R05",
+    "R10",
+    "R16",
+    "R27",
+    "R13"
+   ],
+   "enlaces": [
+    {
+     "t": "NGBE (WFS IGN)",
+     "u": "https://www.ign.es/wfs-inspire/ngbe"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "cono-chinero"
+   ]
+  },
+  {
+   "id": "cono-volcan-nuevo",
+   "titulo": "Volcán Nuevo (NGBE)",
+   "capa": "conos_centros_eruptivos",
+   "categoria": "Cono / centro eruptivo",
+   "confianza": "alto",
+   "resumen": "Cono de la unidad 81 del IGME (a 38 m). El topónimo «Volcán Nuevo» no se ha podido vincular con certeza a «Nuevo del Fuego» o «Tinguatón» de 1824 (R16). Inferencia propia (simulación): la colada IGME junto a este cono (0,51 km², ≈1,5 km) coincide con Tinguatón en R13 (Tabla 2: 0,51 km², 1,35 km) y el cono está ≈4 km al ENE del Chinero, como indica R13 para Tinguatón; no es una atribución publicada.",
+   "detalle": [
+    {
+     "k": "Erupción",
+     "v": "1824"
+    },
+    {
+     "k": "Fase (R16)",
+     "v": "Alineación de 1824 (nombre histórico no establecido)"
+    },
+    {
+     "k": "Coordenadas",
+     "v": "29.02148, -13.71149 (ETRS89/WGS84)"
+    },
+    {
+     "k": "Identificador NGBE",
+     "v": "2630362"
+    }
+   ],
+   "metodo_localizacion": "Punto del Nomenclátor Geográfico Básico de España (IGN) para el topónimo; Punto NGBE (29.02148, -13.71149). Polígono de cono IGME más próximo: unidad 81 a 0 m. La atribución a una fase procede del texto de R16 (divulgación basada en Carracedo & Rodríguez Badiola 1991), no de una datación del cono.",
+   "limitaciones": "Incertidumbre posicional ≈300 m (el punto NGBE no siempre coincide con la cima). La correspondencia nombre histórico ↔ cono actual es interpretativa.",
+   "source_ids": [
+    "R14",
+    "R27",
+    "R16",
+    "R13"
+   ],
+   "enlaces": [
+    {
+     "t": "NGBE (WFS IGN)",
+     "u": "https://www.ign.es/wfs-inspire/ngbe"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "cono-volcan-nuevo"
+   ]
+  },
+  {
+   "id": "cono-tao-1824",
+   "titulo": "Cono de 1824 en el sector de Tao (candidato a «volcán de Tao»)",
+   "capa": "conos_centros_eruptivos",
+   "categoria": "Cono / centro eruptivo",
+   "confianza": "medio",
+   "resumen": "Cono de la unidad 81 del IGME (centroide 29.04894, -13.61940); es el único cono de 1824 cartografiado junto al pueblo de Tao (el NGBE lo nombra «Pico Perneo», a 87 m). R16 sitúa la erupción de Tao (31-jul a 22-ago-1824) con riesgo para Tiagua. La colada de este cono (0,16 km², ≈0,4 km) coincide con el volcán de Tao de R13 (Tabla 2: 0,16 km², 0,4 km), a ≈14 km del Chinero (inferencia propia).",
+   "detalle": [
+    {
+     "k": "Erupción",
+     "v": "1824"
+    },
+    {
+     "k": "Coordenadas (centroide IGME)",
+     "v": "29.04894, -13.61940"
+    }
+   ],
+   "metodo_localizacion": "Centroide del polígono IGME de unidad 81 más alejado al NE; la identificación con el «volcán de Tao» es inferencia por proximidad al pueblo de Tao.",
+   "limitaciones": "La atribución a Tao es inferencia propia (coincidencia de área y longitud de la colada con R13). El cuarto cono IGME de 1824 (Montaña Tingafa, 0,05 km²) no se ha asignado.",
+   "source_ids": [
+    "R14",
+    "R16",
+    "R27",
+    "R13"
+   ],
+   "enlaces": [],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "cono-tao-1824"
+   ]
+  },
+  {
+   "id": "pue-tingafa",
+   "titulo": "Tingafa (Tíngafa)",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "medio",
+   "resumen": "Una de las aldeas mejor documentadas: 64 vecinos en 1733 (R24, R20). La ubicación de la aldea se infiere por el topónimo y la descripción del ULPGC; coincide con el cono homónimo, que el IGME cartografía como de 1824 (conflicto documentado).",
+   "detalle": [
+    {
+     "k": "Coordenadas del ancla",
+     "v": "29.02008, -13.72089 · incertidumbre ≈700 m"
+    },
+    {
+     "k": "Población",
+     "v": "64 vecinos según la visita de Riviere (1733) citada en R24 y R20; R19 recoge una estimación de ≈500 habitantes de De León."
+    },
+    {
+     "k": "Evento",
+     "v": "Lava de Montaña Señalo; von Buch (1825) la sitúa el 7 de marzo de 1731 (R24); R23: primeros días de marzo."
+    }
+   ],
+   "metodo_localizacion": "Punto NGBE de Montaña Tingafa; la fuente R24 indica que «la aldea ocupaba el lugar de la montaña» y R23 la sitúa al norte de la montaña. Radio de incertidumbre 700 m.",
+   "limitaciones": "Cifras de población discrepantes entre fuentes (64 vecinos vs. ≈500 habitantes). Conflicto de edad del cono entre IGME y ULPGC.",
+   "source_ids": [
+    "R24",
+    "R23",
+    "R20",
+    "R19",
+    "R27"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [
+    "Tíngafa",
+    "Tinjafo",
+    "Tinga"
+   ],
+   "estado": "Sepultada por lavas (principios de marzo de 1731)",
+   "feature_ids": [
+    "pue-tingafa"
+   ]
+  },
+  {
+   "id": "pue-chimanfaya",
+   "titulo": "Chimanfaya",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "Citada por R16, R19, R20 y R22 como la primera aldea que desapareció. El nombre «Timanfaya» derivaría de Chimanfaya según De León (R53, fragmento de entrevista).",
+   "detalle": [
+    {
+     "k": "Coordenadas del ancla",
+     "v": "28.99109, -13.69391 · incertidumbre ≈2000 m"
+    },
+    {
+     "k": "Evento",
+     "v": "Primeras lavas del Cuervo (R16, R22, R19)"
+    },
+    {
+     "k": "Estudio específico",
+     "v": "Quintana Andrés y De León (R46), no consultado"
+    }
+   ],
+   "metodo_localizacion": "Anclada de forma muy aproximada al Volcán del Cuervo, cuya lava la afectó según R16; R19 indica que desde Montaña Ortiz se veía «frente al volcán de Los Cuervos». Radio 2000 m.",
+   "limitaciones": "No hay coordenadas publicadas del núcleo en las fuentes abiertas; el punto es solo una referencia de área.",
+   "source_ids": [
+    "R16",
+    "R19",
+    "R22",
+    "R46",
+    "R53"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [
+    "Chimanfaya",
+    "Timanfaya (posible etimología según De León, R53)"
+   ],
+   "estado": "Primera aldea sepultada (septiembre de 1730)",
+   "feature_ids": [
+    "pue-chimanfaya"
+   ]
+  },
+  {
+   "id": "pue-santa-catalina",
+   "titulo": "Santa Catalina (aldea y ermita)",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "Aldea y ermita sepultadas; el Cabildo (17-oct-1730, R26) menciona «el buen lugar de Santa Catalina con su iglesia». Hay dos candidatos de ubicación (Caldera de la Rilla / Caldera Santa Catalina).",
+   "detalle": [
+    {
+     "k": "Coordenadas del ancla",
+     "v": "29.00427, -13.70709 · incertidumbre ≈2000 m"
+    },
+    {
+     "k": "Ermita",
+     "v": "Una de las tres ermitas sepultadas (R19): Santa Catalina, Candelaria y Buen Lugar"
+    },
+    {
+     "k": "Fecha",
+     "v": "Relato de Curbelo citado por R21"
+    }
+   ],
+   "metodo_localizacion": "Anclada a Caldera de la Rilla (NGBE); R10 anota «Rilla o Santa Catalina» y R16 sitúa las bocas de octubre de 1730 «encima de Santa Catalina». Alternativa: Caldera Santa Catalina (a 1,4 km). Radio 2000 m.",
+   "limitaciones": "Dos anclajes toponímicos posibles; la fecha 7-sep-1730 procede de R21 (divulgación) y no se ha contrastado con la transcripción de Curbelo.",
+   "source_ids": [
+    "R16",
+    "R19",
+    "R21",
+    "R10",
+    "R26",
+    "R27"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [
+    "Santa Catalina",
+    "Buen Lugar de Santa Catalina (R26)"
+   ],
+   "estado": "Sepultada en 1730 (R16); destrucción atribuida al 7-sep-1730 en R21",
+   "feature_ids": [
+    "pue-santa-catalina"
+   ]
+  },
+  {
+   "id": "pue-testeina",
+   "titulo": "Testeina",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "Núcleo con restos visibles descritos por De León (R19, R22, R20). El punto del NGBE es de un paraje con nombre similar, no de los restos.",
+   "detalle": [
+    {
+     "k": "Coordenadas del ancla",
+     "v": "28.99249, -13.67151 · incertidumbre ≈1500 m"
+    },
+    {
+     "k": "Restos visibles",
+     "v": "Un taro y las paredes de la casa de Domingo Hernández Fajardo (R19, R22, R20)"
+    }
+   ],
+   "metodo_localizacion": "Anclada al paraje «El Volcán de Testeyna» (NGBE). R19, R22 y R20 describen restos (un taro y muros de la casa de Domingo Hernández Fajardo) visibles entre la lava; R26 incluye «Texteina» entre los lugares cubiertos de arena. Radio 1500 m.",
+   "limitaciones": "No hay coordenadas publicadas de los restos.",
+   "source_ids": [
+    "R19",
+    "R20",
+    "R22",
+    "R26",
+    "R27"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [
+    "Testeyna",
+    "Texteina"
+   ],
+   "estado": "Cubierta por arenas y lavas (1730)",
+   "feature_ids": [
+    "pue-testeina"
+   ]
+  },
+  {
+   "id": "pue-pena-palomas",
+   "titulo": "Peña Palomas",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "medio",
+   "resumen": "Lugar citado en el documento del Cabildo; la montaña homónima ofrece un ancla razonable pero no establece la posición de las casas.",
+   "detalle": [
+    {
+     "k": "Coordenadas del ancla",
+     "v": "28.98169, -13.69690 · incertidumbre ≈1500 m"
+    },
+    {
+     "k": "Fuente",
+     "v": "Carta del Cabildo, 17-oct-1730, transcrita en R26"
+    }
+   ],
+   "metodo_localizacion": "Anclada a «Montaña Peña Palomas» (NGBE): el topónimo conserva el nombre del lugar. El Cabildo (17-oct-1730) cita «el lugar de Peña Palomas» cubierto de arenas (R26). Radio 1500 m.",
+   "limitaciones": "La relación entre el cono y la aldea es solo toponímica.",
+   "source_ids": [
+    "R26",
+    "R27"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [
+    "Peña de las Palomas",
+    "Peña de Plomos (grafía dudosa de R22)"
+   ],
+   "estado": "Cubierta por arenas (1730)",
+   "feature_ids": [
+    "pue-pena-palomas"
+   ]
+  },
+  {
+   "id": "pue-chupadero",
+   "titulo": "El Chupadero (Chupaderos)",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "medio",
+   "resumen": "Citado como afectado por las bocas de octubre de 1730 (R16). Hoy el topónimo se conserva al sur de La Geria, alejado del campo de lavas central: la localización histórica puede ser distinta.",
+   "detalle": [
+    {
+     "k": "Coordenadas del ancla",
+     "v": "28.96930, -13.72400 · incertidumbre ≈1500 m"
+    },
+    {
+     "k": "Fuente",
+     "v": "R16 (fase 1); R26 («cortijos de Maretas y Chupaderos»)"
+    }
+   ],
+   "metodo_localizacion": "Anclada a «Montaña Chupaderos» (NGBE). R16 cita Chupadero entre los lugares afectados en la fase 1 y R26 «la vega del Chupadero». Radio 1500 m.",
+   "limitaciones": "Posible desplazamiento del topónimo; no verificado con De León.",
+   "source_ids": [
+    "R16",
+    "R26",
+    "R20",
+    "R27"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [
+    "Chupaderos",
+    "Vega del Chupadero"
+   ],
+   "estado": "Afectado en la fase 1 (octubre de 1730)",
+   "feature_ids": [
+    "pue-chupadero"
+   ]
+  },
+  {
+   "id": "pue-rodeos",
+   "titulo": "Los Rodeos (Rodeo)",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "Aldea citada entre las primeras afectadas. Se muestra un candidato; el segundo (a 2,6 km) no puede descartarse.",
+   "detalle": [
+    {
+     "k": "Coordenadas del ancla",
+     "v": "29.01331, -13.69531 · incertidumbre ≈1500 m"
+    },
+    {
+     "k": "Fuente",
+     "v": "R16, R21, R26"
+    }
+   ],
+   "metodo_localizacion": "Dos candidatos NGBE: Montaña de los Rodeos (29.01331, −13.69531; el punto usado) y Montaña Rodeos (28.99792, −13.72260). R16 la cita como afectada por las lavas del Cuervo. Radio 1500 m.",
+   "limitaciones": "Dos topónimos candidatos.",
+   "source_ids": [
+    "R16",
+    "R26",
+    "R27"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [
+    "Rodeo",
+    "Los Rodeos"
+   ],
+   "estado": "Afectada por las primeras lavas (1730)",
+   "feature_ids": [
+    "pue-rodeos"
+   ]
+  },
+  {
+   "id": "pue-mazo",
+   "titulo": "Mazo (Maso)",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "Aldea al oeste de Tingafa según la descripción de R24; R16 anota una boca «al lado de Maso» (¿Pico Partido?).",
+   "detalle": [
+    {
+     "k": "Coordenadas del ancla",
+     "v": "29.03070, -13.74011 · incertidumbre ≈2000 m"
+    },
+    {
+     "k": "Fuente",
+     "v": "R16, R21, R24, R10"
+    }
+   ],
+   "metodo_localizacion": "Anclada a «El Mojón de Mazo» (NGBE). R24 sitúa Montaña Tinga «al este de la Montaña de Maso» (consistente con un punto al oeste de Tingafa). R10 y R16 citan Maso/Mazo: lava de Santa Catalina hasta el mar (R21). Radio 2000 m.",
+   "limitaciones": "No se ha localizado la «Montaña de Maso» en el NGBE; el punto es el Mojón de Mazo.",
+   "source_ids": [
+    "R10",
+    "R16",
+    "R21",
+    "R24",
+    "R27"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [
+    "Maso",
+    "Mazo",
+    "Mojón de Mazo"
+   ],
+   "estado": "Sepultada (octubre de 1730 y ss.)",
+   "feature_ids": [
+    "pue-mazo"
+   ]
+  },
+  {
+   "id": "pue-mancha-blanca",
+   "titulo": "Mancha Blanca (emplazamiento antiguo)",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "El núcleo actual de Mancha Blanca no coincide con el original. La posición del antiguo es muy poco precisa.",
+   "detalle": [
+    {
+     "k": "Coordenadas del ancla",
+     "v": "29.03000, -13.68070 · incertidumbre ≈2500 m"
+    },
+    {
+     "k": "Fuente",
+     "v": "R19, R16"
+    }
+   ],
+   "metodo_localizacion": "R19: desde Montaña Ortiz se podía ver «el pueblo de Mancha Blanca en su antigua ubicación», sin precisar distancia ni rumbo. Punto colocado ≈1,7 km al norte de Montaña Ortiz (NGBE 2629874) como referencia; radio de 2500 m. El pueblo actual está en 29.04374, −13.68792.",
+   "limitaciones": "La posición es una estimación de proyecto, no un dato de De León.",
+   "source_ids": [
+    "R19",
+    "R16",
+    "R27"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [
+    "Mancha Blanca (antigua)"
+   ],
+   "estado": "Parcialmente cubierta; refundada en el emplazamiento actual",
+   "feature_ids": [
+    "pue-mancha-blanca"
+   ]
+  },
+  {
+   "id": "pue-buen-lugar",
+   "titulo": "Buen Lugar (ermita de San Juan Evangelista)",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "Aldea con capilla de San Juan, donde ejercía el cura Curbelo. Fuentes en conflicto: R23 la sitúa cerca de Tingafa y la destrucción en marzo de 1731; R16 atribuye su destrucción a las lavas de Montaña Quemada en enero de 1732 (muy alejada, al oeste). Por ello no se asigna geometría.",
+   "detalle": [
+    {
+     "k": "Fuente",
+     "v": "R16; R23; R26"
+    }
+   ],
+   "metodo_localizacion": "Sin geometría: las fuentes abiertas consultadas no permiten asignar coordenadas ni un radio razonable.",
+   "limitaciones": "No se publica ubicación en las fuentes abiertas; solo la tesis (R18) y el libro (R17) de De León contendrían la localización.",
+   "source_ids": [
+    "R16",
+    "R23",
+    "R26"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [],
+   "estado": "Citada como afectada o sepultada",
+   "feature_ids": [
+    "pue-buen-lugar"
+   ]
+  },
+  {
+   "id": "pue-maretas",
+   "titulo": "Maretas",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "Cortijo/aldea de Maretas citado por el Cabildo (R26) y R16 (Mareta Grande afectada). El NGBE contiene varios topónimos «Mareta»; ninguno puede asociarse sin ambigüedad.",
+   "detalle": [
+    {
+     "k": "Fuente",
+     "v": "R26; R16"
+    }
+   ],
+   "metodo_localizacion": "Sin geometría: las fuentes abiertas consultadas no permiten asignar coordenadas ni un radio razonable.",
+   "limitaciones": "No se publica ubicación en las fuentes abiertas; solo la tesis (R18) y el libro (R17) de De León contendrían la localización.",
+   "source_ids": [
+    "R26",
+    "R16"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [],
+   "estado": "Citada como afectada o sepultada",
+   "feature_ids": [
+    "pue-maretas"
+   ]
+  },
+  {
+   "id": "pue-jarretas",
+   "titulo": "Jarretas",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "Citada en la lista de lugares afectados (R26). Sin ancla toponímica en el NGBE consultado.",
+   "detalle": [
+    {
+     "k": "Fuente",
+     "v": "R26"
+    }
+   ],
+   "metodo_localizacion": "Sin geometría: las fuentes abiertas consultadas no permiten asignar coordenadas ni un radio razonable.",
+   "limitaciones": "No se publica ubicación en las fuentes abiertas; solo la tesis (R18) y el libro (R17) de De León contendrían la localización.",
+   "source_ids": [
+    "R26"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [],
+   "estado": "Citada como afectada o sepultada",
+   "feature_ids": [
+    "pue-jarretas"
+   ]
+  },
+  {
+   "id": "pue-candelaria",
+   "titulo": "Candelaria",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "Una de las tres ermitas sepultadas (R19: Santa Catalina, Candelaria y Buen Lugar). Las iglesias actuales de Candelaria del NGBE (La Asomada, Mozaga) son posteriores y no deben tomarse como ubicación.",
+   "detalle": [
+    {
+     "k": "Fuente",
+     "v": "R19"
+    }
+   ],
+   "metodo_localizacion": "Sin geometría: las fuentes abiertas consultadas no permiten asignar coordenadas ni un radio razonable.",
+   "limitaciones": "No se publica ubicación en las fuentes abiertas; solo la tesis (R18) y el libro (R17) de De León contendrían la localización.",
+   "source_ids": [
+    "R19"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [],
+   "estado": "Citada como afectada o sepultada",
+   "feature_ids": [
+    "pue-candelaria"
+   ]
+  },
+  {
+   "id": "pue-geria",
+   "titulo": "La Geria (Gerias)",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "Lugar de cultivo citado entre los afectados (R26, R21); su topónimo sigue vigente en la actual zona de La Geria, que solo fue parcialmente cubierta.",
+   "detalle": [
+    {
+     "k": "Fuente",
+     "v": "R26; R21"
+    }
+   ],
+   "metodo_localizacion": "Sin geometría: las fuentes abiertas consultadas no permiten asignar coordenadas ni un radio razonable.",
+   "limitaciones": "No se publica ubicación en las fuentes abiertas; solo la tesis (R18) y el libro (R17) de De León contendrían la localización.",
+   "source_ids": [
+    "R26",
+    "R21"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [],
+   "estado": "Citada como afectada o sepultada",
+   "feature_ids": [
+    "pue-geria"
+   ]
+  },
+  {
+   "id": "pue-macintafe",
+   "titulo": "Macintafe (Masintafe)",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "Citado como afectado por arenas (R26, R21). Sin ancla toponímica en el NGBE.",
+   "detalle": [
+    {
+     "k": "Fuente",
+     "v": "R26; R21"
+    }
+   ],
+   "metodo_localizacion": "Sin geometría: las fuentes abiertas consultadas no permiten asignar coordenadas ni un radio razonable.",
+   "limitaciones": "No se publica ubicación en las fuentes abiertas; solo la tesis (R18) y el libro (R17) de De León contendrían la localización.",
+   "source_ids": [
+    "R26",
+    "R21"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [],
+   "estado": "Citada como afectada o sepultada",
+   "feature_ids": [
+    "pue-macintafe"
+   ]
+  },
+  {
+   "id": "pue-guagaro",
+   "titulo": "Guagaro (Guagal)",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "Citado en R26 («Guagaro»). Sin ancla toponímica.",
+   "detalle": [
+    {
+     "k": "Fuente",
+     "v": "R26"
+    }
+   ],
+   "metodo_localizacion": "Sin geometría: las fuentes abiertas consultadas no permiten asignar coordenadas ni un radio razonable.",
+   "limitaciones": "No se publica ubicación en las fuentes abiertas; solo la tesis (R18) y el libro (R17) de De León contendrían la localización.",
+   "source_ids": [
+    "R26"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [],
+   "estado": "Citada como afectada o sepultada",
+   "feature_ids": [
+    "pue-guagaro"
+   ]
+  },
+  {
+   "id": "pue-inaguaden",
+   "titulo": "Iñaguadén (Iguaden)",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "R19 menciona un cortijo de Iñaguadén al norte de Montaña Ortiz; R26 lo escribe «Iguaden». Sin coordenadas.",
+   "detalle": [
+    {
+     "k": "Fuente",
+     "v": "R19; R26"
+    }
+   ],
+   "metodo_localizacion": "Sin geometría: las fuentes abiertas consultadas no permiten asignar coordenadas ni un radio razonable.",
+   "limitaciones": "No se publica ubicación en las fuentes abiertas; solo la tesis (R18) y el libro (R17) de De León contendrían la localización.",
+   "source_ids": [
+    "R19",
+    "R26"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [],
+   "estado": "Citada como afectada o sepultada",
+   "feature_ids": [
+    "pue-inaguaden"
+   ]
+  },
+  {
+   "id": "pue-masdache",
+   "titulo": "Masdache",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "Citado en R26. El NGBE contiene «Volcán de Masdache» (28.99847, −13.66431), pero Masdache sigue siendo un núcleo habitado; no se asigna posición.",
+   "detalle": [
+    {
+     "k": "Fuente",
+     "v": "R26"
+    }
+   ],
+   "metodo_localizacion": "Sin geometría: las fuentes abiertas consultadas no permiten asignar coordenadas ni un radio razonable.",
+   "limitaciones": "No se publica ubicación en las fuentes abiertas; solo la tesis (R18) y el libro (R17) de De León contendrían la localización.",
+   "source_ids": [
+    "R26"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [],
+   "estado": "Citada como afectada o sepultada",
+   "feature_ids": [
+    "pue-masdache"
+   ]
+  },
+  {
+   "id": "pue-aguaclara",
+   "titulo": "Aguaclara (Agua Clara)",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "Casas aisladas de Aguaclara citadas por R16/R21. Sin ancla.",
+   "detalle": [
+    {
+     "k": "Fuente",
+     "v": "R16; R21"
+    }
+   ],
+   "metodo_localizacion": "Sin geometría: las fuentes abiertas consultadas no permiten asignar coordenadas ni un radio razonable.",
+   "limitaciones": "No se publica ubicación en las fuentes abiertas; solo la tesis (R18) y el libro (R17) de De León contendrían la localización.",
+   "source_ids": [
+    "R16",
+    "R21"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [],
+   "estado": "Citada como afectada o sepultada",
+   "feature_ids": [
+    "pue-aguaclara"
+   ]
+  },
+  {
+   "id": "pue-tegurrame",
+   "titulo": "Tegurrame",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "Citado en R16 dentro del ámbito del Parque. Sin ancla.",
+   "detalle": [
+    {
+     "k": "Fuente",
+     "v": "R16"
+    }
+   ],
+   "metodo_localizacion": "Sin geometría: las fuentes abiertas consultadas no permiten asignar coordenadas ni un radio razonable.",
+   "limitaciones": "No se publica ubicación en las fuentes abiertas; solo la tesis (R18) y el libro (R17) de De León contendrían la localización.",
+   "source_ids": [
+    "R16"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [],
+   "estado": "Citada como afectada o sepultada",
+   "feature_ids": [
+    "pue-tegurrame"
+   ]
+  },
+  {
+   "id": "pue-villaflor",
+   "titulo": "Villaflor",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "Citado en R16. Sin ancla.",
+   "detalle": [
+    {
+     "k": "Fuente",
+     "v": "R16"
+    }
+   ],
+   "metodo_localizacion": "Sin geometría: las fuentes abiertas consultadas no permiten asignar coordenadas ni un radio razonable.",
+   "limitaciones": "No se publica ubicación en las fuentes abiertas; solo la tesis (R18) y el libro (R17) de De León contendrían la localización.",
+   "source_ids": [
+    "R16"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [],
+   "estado": "Citada como afectada o sepultada",
+   "feature_ids": [
+    "pue-villaflor"
+   ]
+  },
+  {
+   "id": "pue-juan-gante",
+   "titulo": "Juan Gante",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "Citado en R21. Sin ancla.",
+   "detalle": [
+    {
+     "k": "Fuente",
+     "v": "R21"
+    }
+   ],
+   "metodo_localizacion": "Sin geometría: las fuentes abiertas consultadas no permiten asignar coordenadas ni un radio razonable.",
+   "limitaciones": "No se publica ubicación en las fuentes abiertas; solo la tesis (R18) y el libro (R17) de De León contendrían la localización.",
+   "source_ids": [
+    "R21"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [],
+   "estado": "Citada como afectada o sepultada",
+   "feature_ids": [
+    "pue-juan-gante"
+   ]
+  },
+  {
+   "id": "pue-san-andres",
+   "titulo": "San Andrés",
+   "capa": "pueblos_sepultados",
+   "categoria": "Núcleo de población sepultado",
+   "confianza": "bajo",
+   "resumen": "Citado en la lista de lugares de Viera recogida por R21. Sin ancla.",
+   "detalle": [
+    {
+     "k": "Fuente",
+     "v": "R21"
+    }
+   ],
+   "metodo_localizacion": "Sin geometría: las fuentes abiertas consultadas no permiten asignar coordenadas ni un radio razonable.",
+   "limitaciones": "No se publica ubicación en las fuentes abiertas; solo la tesis (R18) y el libro (R17) de De León contendrían la localización.",
+   "source_ids": [
+    "R21"
+   ],
+   "enlaces": [
+    {
+     "t": "Ficha de la obra de De León (R17)",
+     "u": "https://www.serviciodepublicaciones.com/producto/lanzarote-bajo-el-volcan/"
+    }
+   ],
+   "variantes": [],
+   "estado": "Citada como afectada o sepultada",
+   "feature_ids": [
+    "pue-san-andres"
+   ]
+  },
+  {
+   "id": "perf-hilario-ab",
+   "titulo": "Islote de Hilario — perfil GPR / EMI1 / magnético (a–b)",
+   "capa": "perfiles_geofisicos",
+   "categoria": "Perfil geofísico",
+   "confianza": "alto",
+   "resumen": "Perfil de GPR de 50 m (mayo de 2012; repetido en abril de 2015) que coincide con el perfil EMI1 (49 m) y con los primeros 50 m del perfil magnético de 75 m (noviembre de 2012). Cruza la anomalía térmica TA1 del Islote de Hilario. Se dibuja la traza a–b de la Fig. 6 de R08.",
+   "detalle": [
+    {
+     "k": "GPR",
+     "v": "Antena sin apantallar de 100 MHz (modo offset constante; CMP con 200 MHz); 50 m; mayo 2012 y abril 2015 (R08)"
+    },
+    {
+     "k": "EMI1",
+     "v": "49 m, 160 lecturas (mayo 2013)"
+    },
+    {
+     "k": "Magnetometría",
+     "v": "Overhauser, 75 m + 3 perfiles (nov. 2012)"
+    },
+    {
+     "k": "Resultado",
+     "v": "Cuatro zonas de alta resistividad superficial; bajos magnéticos ML1–ML3 coincidentes con la anomalía térmica"
+    }
+   ],
+   "metodo_localizacion": "Traza digitalizada manualmente de la Fig. 6a de R08, que está en coordenadas UTM zona 28N (E 621390–621420; N 3209270–3209300). Calibración con los ejes rotulados; error estimado ≈1–3 m. Longitud medida en la figura ≈48 m (la figura muestra solo el tramo cubierto por la malla magnética).",
+   "limitaciones": "La digitalización no es un dato original de los autores. ",
+   "source_ids": [
+    "R07",
+    "R08",
+    "R09"
+   ],
+   "enlaces": [
+    {
+     "t": "PDF abierto de R08",
+     "u": "https://digital.csic.es/bitstream/10261/178960/1/remotesensing-11-00675-v2.pdf"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "perf-hilario-ab"
+   ]
+  },
+  {
+   "id": "perf-hilario-cd",
+   "titulo": "Islote de Hilario — perfil magnético ortogonal (c–d)",
+   "capa": "perfiles_geofisicos",
+   "categoria": "Perfil geofísico",
+   "confianza": "alto",
+   "resumen": "Perfil extraído de la malla de magnetometría reducida al polo, ortogonal al a–b y usado para el modelado directo 2.75D (R08).",
+   "detalle": [
+    {
+     "k": "Modelado",
+     "v": "GM-SYS 2.75D"
+    }
+   ],
+   "metodo_localizacion": "Digitalizado de la Fig. 6a de R08 (UTM 28N).",
+   "limitaciones": "Posición por digitalización manual (±1–3 m).",
+   "source_ids": [
+    "R07",
+    "R08",
+    "R09"
+   ],
+   "enlaces": [],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "perf-hilario-cd"
+   ]
+  },
+  {
+   "id": "perf-calderas-quemadas",
+   "titulo": "Calderas Quemadas — perfil GPR + microgravedad + EMI",
+   "capa": "perfiles_geofisicos",
+   "categoria": "Perfil geofísico",
+   "confianza": "bajo",
+   "resumen": "Estudio de R04/R06: perfil GPR con hipérbolas hasta ≈9 m en cuatro zonas; tubos confirmados en dos (visibles en campo, a 5 y 17 m según R05; 6 m de anchura y techo ≈4 m en la zona A); modelo gravimétrico 2.5D con cuatro tubos y dos diques basálticos en los bordes; EMI: cuatro zonas de alta resistividad (profundidad de investigación ≈20 m). Las lavas son de la fase 3 de 1730–36.",
+   "detalle": [
+    {
+     "k": "Técnicas",
+     "v": "GPR 200 MHz (R05), microgravedad, EMI"
+    },
+    {
+     "k": "Profundidad",
+     "v": "GPR ≈9 m; EMI ≈20 m"
+    },
+    {
+     "k": "Tubos",
+     "v": "4 modelados; 2 confirmados visualmente"
+    }
+   ],
+   "metodo_localizacion": "Los artículos no publican coordenadas. R10 sitúa las «Calderas Quemadas» entre la Montaña Rajada y el macizo de Timanfaya. Se dibuja un círculo de 1500 m de radio centrado en el punto medio entre Montaña Rajada y Pico del Fuego (NGBE). OAPN (R09) describe un perfil de la Senda de los Geólogos con dos tubos aflorantes (coincidencia probable, no declarada).",
+   "limitaciones": "NO es la traza del perfil. La posición exacta debe solicitarse a los autores (Gómez-Ortiz, Solla, Montesinos, Arnoso).",
+   "source_ids": [
+    "R04",
+    "R05",
+    "R06",
+    "R10",
+    "R09"
+   ],
+   "enlaces": [
+    {
+     "t": "Resumen R04 (DOCTA-UCM)",
+     "u": "https://docta.ucm.es/entities/publication/372d9e9d-4d8c-4b92-955a-88560e202e5c"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "perf-calderas-quemadas"
+   ]
+  },
+  {
+   "id": "perf-chinero",
+   "titulo": "Zona de Chinero (1824) — perfiles GPR",
+   "capa": "perfiles_geofisicos",
+   "categoria": "Perfil geofísico",
+   "confianza": "bajo",
+   "resumen": "R05 aplica a perfiles en la zona del Chinero la firma obtenida en Calderas Quemadas: reflexiones interpretadas como techo y base de posibles tubos, con tamaños de 6–8 m de ancho y techo a ≈4–4,5 m. No había tubos visibles previos.",
+   "detalle": [
+    {
+     "k": "Dimensiones de tubos",
+     "v": "6–8 m de ancho; techo 4–4,5 m (modelo)"
+    },
+    {
+     "k": "Lavas",
+     "v": "Erupción de 1824 (Chinero)"
+    }
+   ],
+   "metodo_localizacion": "Sin coordenadas publicadas. Área circular de 800 m alrededor de la Montaña del Chinero (NGBE).",
+   "limitaciones": "NO es la traza del perfil; posición exacta no publicada.",
+   "source_ids": [
+    "R05",
+    "R10"
+   ],
+   "enlaces": [],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "perf-chinero"
+   ]
+  },
+  {
+   "id": "perf-oapn-gpr-24",
+   "titulo": "OAPN 360/2011 — 24 perfiles GPR en el Parque",
+   "capa": "perfiles_geofisicos",
+   "categoria": "Perfil geofísico (sin geometría)",
+   "confianza": "bajo",
+   "resumen": "R09: perfiles en diferentes zonas del Parque: coladas para localizar tubos (2), cenizas/piroclastos (2 perfiles), tubos (2 perfiles), anomalías térmicas (3 perfiles) y otros. El informe no incluye tabla de coordenadas.",
+   "detalle": [],
+   "metodo_localizacion": "Sin geometría: el informe publica figuras sin georreferenciar.",
+   "limitaciones": "Solicitar a los autores (Arnoso, Montesinos, Gorbatikov) el posicionado de las estaciones.",
+   "source_ids": [
+    "R09"
+   ],
+   "enlaces": [
+    {
+     "t": "Informe OAPN (PDF)",
+     "u": "https://www.miteco.gob.es/content/dam/miteco/es/parques-nacionales-oapn/red-parques-nacionales/programa-investigacion/4-caracterizacionestructuraldelparque89-106_tcm30-445424.pdf"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "perf-oapn-gpr-24"
+   ]
+  },
+  {
+   "id": "perf-oapn-msm-44",
+   "titulo": "OAPN 360/2011 — microsísmica de sondeo, 44 puntos",
+   "capa": "perfiles_geofisicos",
+   "categoria": "Perfil geofísico (sin geometría)",
+   "confianza": "bajo",
+   "resumen": "R09: perfiles de microsísmica en 44 puntos (campañas 2012 y 2014), con mediciones de 2–3 h por punto y estación de banda ancha del IGN como referencia. Discontinuidad estructural en el límite sur del Parque.",
+   "detalle": [],
+   "metodo_localizacion": "Sin geometría: el informe publica figuras sin georreferenciar.",
+   "limitaciones": "Solicitar a los autores (Arnoso, Montesinos, Gorbatikov) el posicionado de las estaciones.",
+   "source_ids": [
+    "R09"
+   ],
+   "enlaces": [
+    {
+     "t": "Informe OAPN (PDF)",
+     "u": "https://www.miteco.gob.es/content/dam/miteco/es/parques-nacionales-oapn/red-parques-nacionales/programa-investigacion/4-caracterizacionestructuraldelparque89-106_tcm30-445424.pdf"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "perf-oapn-msm-44"
+   ]
+  },
+  {
+   "id": "perf-oapn-geologos",
+   "titulo": "OAPN 360/2011 — microgravedad de la Senda de los Geólogos (42 estaciones)",
+   "capa": "perfiles_geofisicos",
+   "categoria": "Perfil geofísico (sin geometría)",
+   "confianza": "bajo",
+   "resumen": "R09: perfil de 42 estaciones equiespaciadas 1 m usado para el modelado directo de tubos con información previa de GPR y EMI; dos tubos afloran. Probablemente coincide con el perfil de Calderas Quemadas (R04), aunque no se declara.",
+   "detalle": [],
+   "metodo_localizacion": "Sin geometría: el informe publica figuras sin georreferenciar.",
+   "limitaciones": "Solicitar a los autores (Arnoso, Montesinos, Gorbatikov) el posicionado de las estaciones.",
+   "source_ids": [
+    "R09",
+    "R04"
+   ],
+   "enlaces": [
+    {
+     "t": "Informe OAPN (PDF)",
+     "u": "https://www.miteco.gob.es/content/dam/miteco/es/parques-nacionales-oapn/red-parques-nacionales/programa-investigacion/4-caracterizacionestructuraldelparque89-106_tcm30-445424.pdf"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "perf-oapn-geologos"
+   ]
+  },
+  {
+   "id": "tubo-calderas-quemadas",
+   "titulo": "Tubos de lava de Calderas Quemadas",
+   "capa": "tubos_lava",
+   "categoria": "Tubo de lava (geofísica)",
+   "confianza": "bajo",
+   "resumen": "Cuatro tubos someros (techo a pocos metros) detectados por GPR, microgravedad y EMI; dos de ellos son visibles en superficie. Los datos no han sido publicados como geometría.",
+   "detalle": [
+    {
+     "k": "Técnicas",
+     "v": "GPR, microgravedad, EMI"
+    },
+    {
+     "k": "Confirmación",
+     "v": "2 tubos visibles en campo (R05: a 5 y 17 m de perfil)"
+    }
+   ],
+   "metodo_localizacion": "Heredada del perfil (área aproximada).",
+   "limitaciones": "Sin coordenadas; véase ficha del perfil.",
+   "source_ids": [
+    "R04",
+    "R05",
+    "R06",
+    "R10"
+   ],
+   "enlaces": [],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "tubo-calderas-quemadas"
+   ]
+  },
+  {
+   "id": "tubo-chinero",
+   "titulo": "Posibles tubos de lava del Chinero (1824)",
+   "capa": "tubos_lava",
+   "categoria": "Tubo de lava (inferido)",
+   "confianza": "bajo",
+   "resumen": "Tubos inferidos por analogía con Calderas Quemadas: 6–8 m de ancho, techo 4–4,5 m (R05).",
+   "detalle": [],
+   "metodo_localizacion": "Heredada del perfil (área aproximada).",
+   "limitaciones": "Sin verificación de campo.",
+   "source_ids": [
+    "R05"
+   ],
+   "enlaces": [],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "tubo-chinero"
+   ]
+  },
+  {
+   "id": "tubo-naturalistas",
+   "titulo": "Cueva de los Naturalistas (o de Las Palomas)",
+   "capa": "tubos_lava",
+   "categoria": "Cavidad volcánica",
+   "confianza": "medio",
+   "resumen": "Cavidad en el área de las coladas de 1730–36; el Monumento Natural de La Cueva de los Naturalistas está incluido en la ficha IELIG IC1013 de las lavas de Timanfaya (R15). Punto de Wikidata (Q108394490).",
+   "detalle": [
+    {
+     "k": "Coordenadas",
+     "v": "29.01200, −13.65966 (Wikidata)"
+    }
+   ],
+   "metodo_localizacion": "Coordenada de Wikidata; el NGBE da el Monumento Natural en 29.00348, −13.66351 (1,0 km al SO); por eso se asigna ±300 m y confianza media.",
+   "limitaciones": "No se ha verificado la edad de la cavidad ni su relación con una colada concreta.",
+   "source_ids": [
+    "R15",
+    "R29",
+    "R27"
+   ],
+   "enlaces": [],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "tubo-naturalistas"
+   ]
+  },
+  {
+   "id": "geot-hilario-ta1",
+   "titulo": "Anomalía térmica TA1 — Islote de Hilario",
+   "capa": "anomalias_geotermicas",
+   "categoria": "Anomalía geotérmica",
+   "confianza": "alto",
+   "resumen": "Anomalía superficial de roca seca caliente (HDR): R08 recoge temperaturas de 250 a 605 °C en depósitos piroclásticos a <70 m (605 °C en un pozo de 13 m, según la bibliografía que cita) y la correlaciona con fuertes reflexiones GPR, alta resistividad EMI y mínimos magnéticos. Área superficial ≈12 m de diámetro; forma de cuenco hasta >45 m de profundidad. Los autores proponen hasta cuatro anomalías adicionales por analogía de firma.",
+   "detalle": [
+    {
+     "k": "Temperatura",
+     "v": "250–605 °C registradas a <70 m; 605 °C en pozo de 13 m (R08)"
+    },
+    {
+     "k": "Dimensiones superficiales",
+     "v": "círculo de ≈12 m de diámetro"
+    },
+    {
+     "k": "Coordenadas del centro digitalizado",
+     "v": "29.00584, -13.75336 (UTM 28N: E 621421, N 3209273)"
+    },
+    {
+     "k": "Cotejo",
+     "v": "GeoNames «Islote de Hilario» 29.00554, −13.75288 (≈50 m); NGBE 29.00391, −13.75043 (≈350 m)"
+    }
+   ],
+   "metodo_localizacion": "Círculo punteado de la Fig. 6a/b de R08 (UTM 28N), digitalizado manualmente. Error ≈1–3 m. El centro digitalizado queda a ≈50 m del punto de GeoNames y a ≈350 m del NGBE (puntos del topónimo del islote, no de la anomalía), lo que valida la calibración de ejes.",
+   "limitaciones": "Las temperaturas son medidas puntuales en pozos y el resto es modelado; acceso restringido en el Parque.",
+   "source_ids": [
+    "R08",
+    "R07",
+    "R09",
+    "R28",
+    "R27"
+   ],
+   "enlaces": [
+    {
+     "t": "PDF de R08",
+     "u": "https://digital.csic.es/bitstream/10261/178960/1/remotesensing-11-00675-v2.pdf"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "geot-hilario-ta1"
+   ]
+  },
+  {
+   "id": "geot-camelleros",
+   "titulo": "Laboratorio geotérmico de Camelleros",
+   "capa": "anomalias_geotermicas",
+   "categoria": "Anomalía geotérmica",
+   "confianza": "bajo",
+   "resumen": "Laboratorio con sondeos geotérmicos instrumentados y estación GNSS permanente CAME (instalada en mayo de 2014). R09 señala un aumento global de más de 20 °C desde 2004, con superación de 60 °C en alguna época, y deformación asociada medida con extensómetros e inclinómetros. Gravedad absoluta medida también en este lugar y en Mancha Blanca (2014).",
+   "detalle": [
+    {
+     "k": "Temperatura",
+     "v": ">60 °C en algún periodo (R09, medida ambiente en el laboratorio)"
+    },
+    {
+     "k": "Deformación",
+     "v": "15,0 µm/°C (E-O) y −11,3 µm/°C (N-S) (R09)"
+    }
+   ],
+   "metodo_localizacion": "Ancla a la «Senda de los Camelleros» (NGBE, 28.9931, −13.7437), radio 500 m; el laboratorio se menciona sin coordenadas.",
+   "limitaciones": "Posición aproximada; los sondeos y su cota no se publican.",
+   "source_ids": [
+    "R09",
+    "R34",
+    "R37",
+    "R38",
+    "R47"
+   ],
+   "enlaces": [],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "geot-camelleros"
+   ]
+  },
+  {
+   "id": "geot-adicionales",
+   "titulo": "Hasta cuatro anomalías térmicas adicionales (hipótesis de R08)",
+   "capa": "anomalias_geotermicas",
+   "categoria": "Anomalía geotérmica (sin geometría)",
+   "confianza": "bajo",
+   "resumen": "R08 indica que la firma geofísica de TA1 permitiría reconocer hasta cuatro anomalías más en zonas sin cartografiar de superficie; R10 recoge otros focos térmicos históricos (p. ej. Montaña de Timanfaya, Pico del Fuego, Camelleros, Hilario).",
+   "detalle": [],
+   "metodo_localizacion": "Sin geometría.",
+   "limitaciones": "Las anomalías históricas de Araña et al. (R47, R37) no están disponibles como datos abiertos.",
+   "source_ids": [
+    "R08",
+    "R10",
+    "R47",
+    "R37"
+   ],
+   "enlaces": [],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "geot-adicionales"
+   ]
+  },
+  {
+   "id": "grav-199-estaciones",
+   "titulo": "OAPN 360/2011 — 199 estaciones gravimétricas (3 campañas)",
+   "capa": "gravedad_magnetometria",
+   "categoria": "Gravimetría (sin geometría)",
+   "confianza": "bajo",
+   "resumen": "R09: tres campañas gravimétricas con 199 estaciones; modelo 3D hasta 3 km de profundidad con dos cuerpos lineales de baja densidad desde ≈1 km y otro mayor que continúa en profundidad. El informe no publica coordenadas.",
+   "detalle": [],
+   "metodo_localizacion": "Sin geometría: datos no publicados como coordenadas",
+   "limitaciones": "Solicitar los datos a los autores / OAPN.",
+   "source_ids": [
+    "R09"
+   ],
+   "enlaces": [],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "grav-199-estaciones"
+   ]
+  },
+  {
+   "id": "grav-absoluta",
+   "titulo": "Gravedad absoluta (Camelleros y Mancha Blanca)",
+   "capa": "gravedad_magnetometria",
+   "categoria": "Gravimetría (sin geometría)",
+   "confianza": "bajo",
+   "resumen": "R09: medidas de gravedad absoluta (2014) en el laboratorio de Camelleros y en el Centro de Visitantes de Mancha Blanca.",
+   "detalle": [],
+   "metodo_localizacion": "Sin geometría: datos no publicados como coordenadas",
+   "limitaciones": "Solicitar los datos a los autores / OAPN.",
+   "source_ids": [
+    "R09"
+   ],
+   "enlaces": [],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "grav-absoluta"
+   ]
+  },
+  {
+   "id": "mag-aeromagnetico",
+   "titulo": "Aeromagnetismo (vuelo IGN 1993): anomalía lineal positiva y discontinuidad sur",
+   "capa": "gravedad_magnetometria",
+   "categoria": "Magnetometría (sin geometría)",
+   "confianza": "bajo",
+   "resumen": "R09: el mapa a 500 m reducido al polo muestra una anomalía positiva lineal en Timanfaya, probablemente ligada al sistema de alimentación; a cota alta, anomalía dipolar de un gran cuerpo intrusivo (R36), equivalente al mapa de Bouguer (R35). La discontinuidad del sur del Parque podría asociarse a un contraste de magnetización.",
+   "detalle": [],
+   "metodo_localizacion": "Sin geometría: datos no publicados como coordenadas",
+   "limitaciones": "Solicitar los datos a los autores / OAPN.",
+   "source_ids": [
+    "R09",
+    "R35",
+    "R36",
+    "R52"
+   ],
+   "enlaces": [],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "mag-aeromagnetico"
+   ]
+  },
+  {
+   "id": "msm-discontinuidad",
+   "titulo": "Discontinuidad estructural al sur del Parque (microsísmica de sondeo)",
+   "capa": "gravedad_magnetometria",
+   "categoria": "Sísmica pasiva (sin geometría)",
+   "confianza": "bajo",
+   "resumen": "R09: «importante discontinuidad estructural claramente visible en el límite sur del Parque»; modelo de velocidades con zonas de baja velocidad (material blando/fracturado).",
+   "detalle": [],
+   "metodo_localizacion": "Sin geometría: datos no publicados como coordenadas",
+   "limitaciones": "Solicitar los datos a los autores / OAPN.",
+   "source_ids": [
+    "R09"
+   ],
+   "enlaces": [],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "msm-discontinuidad"
+   ]
+  },
+  {
+   "id": "regional-camacho",
+   "titulo": "Anomalía de Bouguer regional de Lanzarote",
+   "capa": "gravedad_magnetometria",
+   "categoria": "Gravimetría (sin geometría)",
+   "confianza": "bajo",
+   "resumen": "R35: modelo de anomalías corticales de Lanzarote a partir de datos gravimétricos (escala regional, no específica de Timanfaya).",
+   "detalle": [],
+   "metodo_localizacion": "Sin geometría: grid regional no obtenido",
+   "limitaciones": "La malla no se ha localizado como dato abierto.",
+   "source_ids": [
+    "R35"
+   ],
+   "enlaces": [],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "regional-camacho"
+   ]
+  },
+  {
+   "id": "mt-1986",
+   "titulo": "Magnetotelúrica 1986 (Ortiz et al.)",
+   "capa": "gravedad_magnetometria",
+   "categoria": "Magnetotelúrica (sin geometría)",
+   "confianza": "bajo",
+   "resumen": "R39: primeros sondeos MT en Timanfaya y Teide. Las ubicaciones de las estaciones no se han consultado.",
+   "detalle": [],
+   "metodo_localizacion": "Sin geometría: artículo no consultado",
+   "limitaciones": "Pendiente de lectura del artículo.",
+   "source_ids": [
+    "R39"
+   ],
+   "enlaces": [],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "mt-1986"
+   ]
+  },
+  {
+   "id": "insar-s1",
+   "titulo": "InSAR Sentinel-1: velocidad vertical 2016–2020",
+   "capa": "insar",
+   "categoria": "InSAR",
+   "confianza": "alto",
+   "resumen": "Subsidencia sostenida de los campos de lava de 1730–36: ≈6 mm/año sobre ≈20 km² en la parte central y occidental (R11), interpretada como enfriamiento y contracción de coladas de ≈100 m de espesor. La capa muestra el GeoTIFF Sentinel1_Vertical_Vel.tif (Zenodo, CC BY 4.0) recortado a Lanzarote central, con paleta propia (rojo = subsidencia, azul = elevación).",
+   "detalle": [
+    {
+     "k": "Periodo",
+     "v": "14-sep-2016 a 25-jun-2020 (Sentinel-1); Envisat 2004–2010 en el mismo dataset (no representado)"
+    },
+    {
+     "k": "Resolución",
+     "v": "≈30 m (≈0,00028°)"
+    },
+    {
+     "k": "Mínimo suavizado en el recorte",
+     "v": "−5,2 mm/año en 28.9987, −13.7476 (Montañas del Fuego)"
+    },
+    {
+     "k": "Valor mínimo bruto",
+     "v": "−8,7 mm/año"
+    }
+   ],
+   "metodo_localizacion": "Se asume EPSG:4326 como indica el GeoTIFF (la comprobación de metadatos se hizo con rasterio). Recorte lon −13.92…−13.52, lat 28.87…29.13; 936×1440 píxeles; píxeles sin coherencia transparentes.",
+   "limitaciones": "El InSAR solo mide en zonas con coherencia (la tefra y la vegetación reducen la señal). La velocidad es vertical bajo hipótesis de movimiento sin componente N–S. No es un dato de los autores el PNG ni los contornos derivados.",
+   "source_ids": [
+    "R11",
+    "R12",
+    "R45"
+   ],
+   "enlaces": [
+    {
+     "t": "Dataset Zenodo",
+     "u": "https://zenodo.org/records/6620524"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "insar-s1"
+   ]
+  },
+  {
+   "id": "insar-contornos",
+   "titulo": "Contornos de subsidencia derivados (≤2 y ≤3,5 mm/año)",
+   "capa": "insar",
+   "categoria": "InSAR (derivado)",
+   "confianza": "medio",
+   "resumen": "Polígonos calculados por este proyecto a partir del ráster de R12: ≈8,3 km² con velocidad suavizada ≤ −2 mm/año y ≈1,0 km² con ≤ −3,5 mm/año; ambos se concentran en la parte central de las coladas.",
+   "detalle": [
+    {
+     "k": "Método",
+     "v": "Suavizado gaussiano σ=3 píxeles (≈90 m), umbral, polígonos <0,2 km² eliminados, simplificación 0,0002°"
+    }
+   ],
+   "metodo_localizacion": "Procesamiento propio (script build/insar.py).",
+   "limitaciones": "El área ≤ −2 mm/año (8,3 km²) es menor que los ≈20 km² de R11 porque este último usa un criterio distinto y un mosaico de velocidad ajustada; no comparable directamente.",
+   "source_ids": [
+    "R11",
+    "R12"
+   ],
+   "enlaces": [],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "insar-contornos"
+   ]
+  },
+  {
+   "id": "cart-simancas",
+   "titulo": "Mapa de la erupción custodiado en el Archivo de Simancas",
+   "capa": "cartografia",
+   "categoria": "Cartografía histórica",
+   "confianza": "bajo",
+   "resumen": "R10 refiere el hallazgo en el Archivo de Simancas de información gráfica que sirvió de base para la copia del mapa de la erupción. Sin georreferenciar; no hemos localizado reproducción abierta.",
+   "detalle": [],
+   "metodo_localizacion": "No aplicable (sin geometría).",
+   "limitaciones": "Solicitar acceso al Archivo General de Simancas / PARES.",
+   "source_ids": [
+    "R10"
+   ],
+   "enlaces": [],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "cart-simancas"
+   ]
+  },
+  {
+   "id": "cart-ortofotos",
+   "titulo": "Ortofotos históricas GRAFCAN (1977, 1990) y PNOA",
+   "capa": "cartografia",
+   "categoria": "Cartografía / teledetección",
+   "confianza": "alto",
+   "resumen": "Capas WMS para comparar el paisaje previo a la urbanización reciente (1977, B/N, 50 cm/píxel) con la ortofoto actual. Útiles para localizar restos (muros, taros) en zonas sin lava. Se cargan en directo desde GRAFCAN e IGN.",
+   "detalle": [],
+   "metodo_localizacion": "Capas WMS (EPSG:3857) cargadas en vivo.",
+   "limitaciones": "Disponibilidad y condiciones de uso dependientes de GRAFCAN/IGN; los servidores pueden bloquear peticiones desde otros dominios o tardar.",
+   "source_ids": [
+    "R30",
+    "R31"
+   ],
+   "enlaces": [
+    {
+     "t": "Servicio WMS 1977",
+     "u": "https://idecan1.grafcan.es/ServicioWMS/Historico/Ortofotos/OrtoExpress_1977"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "cart-ortofotos"
+   ]
+  },
+  {
+   "id": "topon-viera",
+   "titulo": "Lista de lugares destruidos (Viera y Clavijo) y topónimos preeruptivos",
+   "capa": "toponimia",
+   "categoria": "Toponimia",
+   "confianza": "medio",
+   "resumen": "R24 cita la lista de Viera de lugares destruidos; R26 transcribe documentos del Cabildo con otra lista (Timanfaya, Los Rodeos, Mancha Blanca, Santa Catalina, Mazo, Jarretas, Tingafa, Peña Palomas, Testeina, La Geria, Macintafe, Mozaga, Guagaro, Masdache, Iguaden). El número de núcleos varía entre fuentes: 21 (De León, R19, R20), 24 (guía geológica IGME citada en R15), «más de 30» (R21).",
+   "detalle": [
+    {
+     "k": "21",
+     "v": "De León (R17/R18) — lista nominal no publicada en abierto"
+    },
+    {
+     "k": "24",
+     "v": "Guía geológica del Parque (IGME-OAPN), recogida en R15"
+    },
+    {
+     "k": ">30",
+     "v": "De León a ABC (R21: 11 grandes y 20 pequeñas)"
+    }
+   ],
+   "metodo_localizacion": "Sin geometría.",
+   "limitaciones": "La lista de los 21 núcleos de De León no está en ninguna fuente abierta consultada: este proyecto NO la reconstruye.",
+   "source_ids": [
+    "R15",
+    "R17",
+    "R18",
+    "R19",
+    "R20",
+    "R21",
+    "R24",
+    "R26"
+   ],
+   "enlaces": [],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "topon-viera"
+   ]
+  },
+  {
+   "id": "sim-modelo",
+   "titulo": "Simulación HIPOTÉTICA de la propagación de las coladas: método",
+   "capa": "simulacion",
+   "categoria": "Simulación hipotética",
+   "confianza": "bajo",
+   "resumen": "Módulo de simulación estocástica de la propagación de las coladas de 1730–1736 y 1824 sobre un modelo digital del terreno previo a las erupciones, fase por fase. Es una hipótesis de trabajo con parámetros supuestos o calibrados; no reconstruye hechos históricos.",
+   "detalle": [
+    {
+     "k": "ADVERTENCIA",
+     "v": "SIMULACIÓN HIPOTÉTICA. Resultado de un modelo con parámetros supuestos o calibrados, no un dato histórico."
+    },
+    {
+     "k": "MDT previo",
+     "v": "MDT actual (AWS Terrarium, rejilla UTM 28N de 50 m) menos un espesor de lava estimado dentro de los polígonos IGME (73/75/77 y 80), con adelgazamiento hacia los bordes; conos sustituidos por superficie interpolada. Escenarios de espesor medio 15, 20, 25 y 28,9 m (R13: 15–25 m y 4,2 km³ / 146 km²)."
+    },
+    {
+     "k": "Fases",
+     "v": "Diez centros de 1730–36 en cinco fases (R13, R01, R16) y tres de 1824 (R13); fechas muestreadas en rangos de las fuentes; cada fase parte del terreno que deja la anterior."
+    },
+    {
+     "k": "Volumen",
+     "v": "Volumen total del escenario repartido entre los tres episodios IGME según el área de sus polígonos y, dentro de cada uno, entre sus centros (supuesto). Nueces: 140 Mm³ (R13). 1824: 19 Mm³ (R13) repartidos por las áreas de R13."
+    },
+    {
+     "k": "Modelo",
+     "v": "Apilamiento estocástico de lóbulos de 2 m en celdas de 50 m, con elección del vecino ponderada por la pendiente descendente sobre la superficie topográfica + depósitos (inspirado en MrLavaLoba, R54; autómata de tipo DOWNFLOW, R55; código propio con numba; MrLavaLoba no se redistribuye por su licencia)."
+    },
+    {
+     "k": "Probabilidad",
+     "v": "40 simulaciones por escenario; la probabilidad de cobertura es la fracción de simulaciones que cubren la celda. La fecha de llegada se obtiene del reparto del volumen emitido a tasa constante en la ventana de cada centro (supuesto)."
+    },
+    {
+     "k": "Trazabilidad",
+     "v": "Cada parámetro está etiquetado como fuente, derivado, supuesto o calibrado en la tabla «Parámetros y trazabilidad» (panel Simulación) y en build/sim/params.json."
+    }
+   ],
+   "metodo_localizacion": "Código reproducible en build/sim/ (prepare_dem.py, model.py, simrun.py, run_all.py, export_web.py); descripción completa en docs/SIMULACION_COLADAS.md.",
+   "limitaciones": "Ver la ficha «Limitaciones del modelo» (sim-limitaciones).",
+   "source_ids": [
+    "R13",
+    "R01",
+    "R14",
+    "R16",
+    "R54",
+    "R55",
+    "R56",
+    "R32",
+    "R41"
+   ],
+   "enlaces": [
+    {
+     "t": "MrLavaLoba (referencia metodológica)",
+     "u": "https://doi.org/10.1016/j.jvolgeores.2017.11.016"
+    }
+   ],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "sim-modelo"
+   ]
+  },
+  {
+   "id": "sim-validacion",
+   "titulo": "Simulación hipotética: validación frente al mapa IGME",
+   "capa": "simulacion",
+   "categoria": "Simulación hipotética",
+   "confianza": "bajo",
+   "resumen": "Con el escenario base (S2, 20 m de espesor medio) y la huella P ≥ 0,5, la coincidencia con las coladas IGME de 1730–36 es IoU = 0,65 (precisión 0,76, exhaustividad 0,82, AUC 0,93). Parte de este ajuste es calibración sobre el mismo mapa.",
+   "detalle": [
+    {
+     "k": "ADVERTENCIA",
+     "v": "SIMULACIÓN HIPOTÉTICA. Métricas de ajuste a un mapa, no prueba de que el proceso real fuese el simulado."
+    },
+    {
+     "k": "1730–36, escenario base",
+     "v": "157 km² simulados frente a 146 km² IGME; sobrestimados 38 km², infravalorados 27 km². IoU medio de una simulación individual 0,63."
+    },
+    {
+     "k": "Sensibilidad al volumen",
+     "v": "S1 (15 m, 2,2 km³): IoU 0,59, sobre 28 km², infra 43 km²; S2 (20 m, 2,9 km³): IoU 0,65, sobre 38 km², infra 27 km²; S3 (25 m, 3,6 km³): IoU 0,65, sobre 50 km², infra 19 km²; S4 (28.9 m, 4,2 km³): IoU 0,64, sobre 57 km², infra 16 km²"
+    },
+    {
+     "k": "Validación cruzada espacial",
+     "v": "Calibrando con las fases 1–3 y evaluando en las 4–5: IoU 0,66 (óptimo posible 0,66); a la inversa: 0,61 (0,63). Los pocos parámetros efectivos del modelo se transfieren bien entre zonas, pero esto no valida el mecanismo físico."
+    },
+    {
+     "k": "1824",
+     "v": "IoU 0,41, precisión 0,60, exhaustividad 0,57; área simulada 2,3 km² frente a 2,4 km² (IGME). Longitud de la colada de Nuevo del Fuego: 5,8 km (P10–P90 5,0–6,8) frente a 6,34 km (R13); alcanza el 90 % de su longitud el 1824-10-03–1824-10-04 (R13: llegada a la costa el 3-oct-1824). Tao y Tinguatón: longitudes sobrestimadas (3,5 y 4,8 km frente a 0,4 y 1,35 km)."
+    },
+    {
+     "k": "Nueces",
+     "v": "Volumen asignado 140 Mm³ (R13: 140 ± 30). La colada simulada de Nueces es mucho más corta que los 21,7 km documentados (R13): el modelo no reproduce los flujos largos pāhoehoe hasta Arrecife (infravaloración en el este)."
+    },
+    {
+     "k": "Núcleos",
+     "v": "Fechas simuladas de cobertura frente a documentadas: Tingafa 1730-10-19 (documentada ≈7-mar-1731, R24), Santa Catalina 1730-10-19 (7-sep-1730 según R21, sin contrastar), Chimanfaya 1730-11-15 (sep-1730, R16). Desajustes de semanas a meses; además los anclajes son conos (no independientes) e inciertos 0,7–2 km."
+    }
+   ],
+   "metodo_localizacion": "IoU = intersección/unión de las celdas con lava simulada (P ≥ umbral) y celdas de coladas IGME (unidades 73, 75, 77; 80 para 1824) en rejilla de 50 m; AUC calculada con la probabilidad por celda. Mapa de zonas sobrestimadas/infravaloradas: modo «Validación frente a IGME» del panel Simulación.",
+   "limitaciones": "El mapa IGME se usó para calibrar (tipo «calibrado») y para validar: no hay validación independiente completa. 1824 tampoco es independiente porque un parámetro estructural se eligió observando la longitud de Nuevo del Fuego.",
+   "source_ids": [
+    "R13",
+    "R01",
+    "R14",
+    "R16",
+    "R54",
+    "R55",
+    "R56",
+    "R32",
+    "R41"
+   ],
+   "enlaces": [],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "sim-validacion"
+   ]
+  },
+  {
+   "id": "sim-limitaciones",
+   "titulo": "Limitaciones del modelo de simulación",
+   "capa": "simulacion",
+   "categoria": "Simulación hipotética",
+   "confianza": "bajo",
+   "resumen": "La simulación es una hipótesis de trabajo: el modelo no resuelve la física de la lava, el terreno previo es una estimación y la cronología posterior a 1731 está mal documentada. Úsese solo para explorar escenarios, nunca como reconstrucción ni para decisiones de ordenación o seguridad.",
+   "detalle": [
+    {
+     "k": "ADVERTENCIA",
+     "v": "SIMULACIÓN HIPOTÉTICA. No es un dato histórico ni una reconstrucción."
+    },
+    {
+     "k": "Física",
+     "v": "Sin reología, temperatura, canales/tubos, inercia, ni diferencia entre ´a´ā y pāhoehoe; un lóbulo = 2 m en una celda de 50 m; la propagación sólo depende de la pendiente y de un peso residual (calibrado). Sin tasa de emisión variable: el tiempo se reparte a tasa constante por centro."
+    },
+    {
+     "k": "Terreno previo",
+     "v": "MDT actual (Terrarium; resolución nativa ≈ 17 m y precisión vertical de metros a decenas de metros según la fuente) menos un espesor medio uniforme por escenario con borde adelgazado (supuesto). Ignora el espesor real variable (R13: hasta ≈50 m en la costa oeste), los tefras (≈25 km² de lapilli y arenas), los hundimientos posteriores (R11) y la batimetría real."
+    },
+    {
+     "k": "Centros y volúmenes",
+     "v": "Ubicación del centro de Nueces desconocida (supuesto: cono IGME de la unidad 78); Quemadas y dos de las tres bocas de Fuego tomadas de polígonos IGME (supuesto). Reparto del volumen por episodios IGME y área más próxima (supuesto); hipótesis de que los episodios IGME 1/2/3 equivalen a las fases 1–2/3–4/5 (R56). Los volúmenes de las fuentes excluyen la lava perdida en el mar y los tefras (R13)."
+    },
+    {
+     "k": "Cronología",
+     "v": "Documentación escasa tras 1731 (R13): el inicio de Nueces es discutido (feb-1733 o mar–abr-1736), el fin de la erupción podría ser 1735 y la actividad de Fuego fue discontinua. Las fechas simuladas de llegada no tienen sentido a escala de días salvo en 1824."
+    },
+    {
+     "k": "Solapamiento de centros",
+     "v": "Las fases con ventanas solapadas (p. ej. Santa Catalina y Pico Partido) se simulan secuencialmente, no a la vez."
+    },
+    {
+     "k": "Calibración",
+     "v": "Los parámetros del modelo se ajustaron al mismo mapa IGME con el que se valida; sólo la validación cruzada espacial aporta una prueba parcial. Un parámetro estructural (longitud mínima de cadena) se escogió viendo la longitud de la colada de 1824."
+    },
+    {
+     "k": "Fallos conocidos",
+     "v": "Flujos largos y finos (Nueces → Arrecife; 21,7 km) infravalorados; longitudes de Tao y Tinguatón sobrestimadas; deltas costeros dependientes de la batimetría actual; fechas de cobertura de núcleos con desajustes de semanas a meses; las posiciones de los núcleos son aproximadas (incertidumbre 0,7–2,5 km)."
+    },
+    {
+     "k": "Identificaciones 1824",
+     "v": "Que Chinero = Nuevo del Fuego, Volcán Nuevo = Tinguatón y el cono de Pico Perneo = Tao es una inferencia propia basada en longitudes y áreas de R13 (ver fichas de esos conos), no una atribución publicada."
+    }
+   ],
+   "metodo_localizacion": "Evaluar siempre con la ficha de validación (sim-validacion) y la tabla de parámetros. Cualquier uso de las cifras debe citar que proceden de una simulación hipotética.",
+   "limitaciones": "Este modelo no sustituye a estudios de peligrosidad volcánica ni a la cartografía geológica oficial.",
+   "source_ids": [
+    "R13",
+    "R01",
+    "R14",
+    "R16",
+    "R54",
+    "R55",
+    "R56",
+    "R32",
+    "R41"
+   ],
+   "enlaces": [],
+   "variantes": [],
+   "estado": null,
+   "feature_ids": [
+    "sim-limitaciones"
+   ]
+  }
+ ]
+}

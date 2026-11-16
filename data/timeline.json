@@ -1,0 +1,522 @@
+{
+ "eventos": [
+  {
+   "id": "f1",
+   "inicio": "1730-09-01",
+   "fin": "1731-02-28",
+   "tipo": "erupcion",
+   "titulo": "Fase 1 — Volcán del Cuervo y bocas de Santa Catalina / Maso",
+   "descripcion": "Comienza el 1-sep-1730 con el Volcán del Cuervo; en octubre se abren tres bocas sobre Santa Catalina y otra junto a Maso. Cesa a finales de febrero de 1731. Afecta a Chimanfaya, Rodeo, Mancha Blanca, Santa Catalina, Maso, Chupadero y la vega de Uga.",
+   "source_ids": [
+    "R16",
+    "R01",
+    "R21"
+   ],
+   "ficha_ids": [
+    "cono-cuervo",
+    "cono-rilla",
+    "cono-pico-partido",
+    "pue-chimanfaya",
+    "pue-santa-catalina",
+    "pue-rodeos",
+    "pue-mazo",
+    "pue-chupadero"
+   ],
+   "fecha_aproximada": false,
+   "fase": 1,
+   "fecha_texto": "1730-09-01 → 1731-02-28"
+  },
+  {
+   "id": "h1",
+   "inicio": "1730-09-07",
+   "fin": "1730-09-07",
+   "tipo": "documento",
+   "titulo": "Relato de Curbelo: destrucción de Santa Catalina (fecha según R21)",
+   "descripcion": "Citada por ABC a partir del relato del cura de Yaiza.",
+   "source_ids": [
+    "R21",
+    "R50"
+   ],
+   "ficha_ids": [
+    "pue-santa-catalina"
+   ],
+   "fecha_aproximada": false,
+   "fase": null,
+   "fecha_texto": "1730-09-07"
+  },
+  {
+   "id": "h2",
+   "inicio": "1730-10-17",
+   "fin": "1730-10-17",
+   "tipo": "documento",
+   "titulo": "Carta del Cabildo de Lanzarote",
+   "descripcion": "Enumera lugares afectados (Peña Palomas, Testeina, Macintafe, etc.).",
+   "source_ids": [
+    "R26",
+    "R50"
+   ],
+   "ficha_ids": [
+    "pue-pena-palomas",
+    "pue-testeina",
+    "pue-macintafe"
+   ],
+   "fecha_aproximada": false,
+   "fase": null,
+   "fecha_texto": "1730-10-17"
+  },
+  {
+   "id": "f2",
+   "inicio": "1731-03-01",
+   "fin": "1731-06-30",
+   "tipo": "erupcion",
+   "titulo": "Fase 2 — Montañas del Señalo",
+   "descripcion": "Un mes tras el fin de la fase 1 entran en erupción las Montañas del Señalo; 4 episodios eruptivos; termina hacia finales de junio de 1731. Lavas hasta Tingafa (7-mar-1731 según von Buch).",
+   "source_ids": [
+    "R16",
+    "R24",
+    "R23"
+   ],
+   "ficha_ids": [
+    "cono-senalo",
+    "pue-tingafa"
+   ],
+   "fecha_aproximada": true,
+   "fase": 2,
+   "fecha_texto": "1731-03-01 → 1731-06-30"
+  },
+  {
+   "id": "f3",
+   "inicio": "1731-06-30",
+   "fin": "1732-01-15",
+   "tipo": "erupcion",
+   "titulo": "Fase 3 — Quemado, Rajada y lavas hacia el oeste",
+   "descripcion": "Comienza a ≈13 km de los primeros centros con una erupción submarina; volcanes El Quemado y Montaña Rajada; termina a mediados de enero de 1732. En enero de 1732 las lavas de Montaña Quemada sepultan la capilla de San Juan (Buen Lugar).",
+   "source_ids": [
+    "R16"
+   ],
+   "ficha_ids": [
+    "cono-rajada",
+    "cono-quemada",
+    "pue-buen-lugar"
+   ],
+   "fecha_aproximada": true,
+   "fase": 3,
+   "fecha_texto": "1731-06-30 → 1732-01-15"
+  },
+  {
+   "id": "h3",
+   "inicio": "1731-12-28",
+   "fin": "1731-12-28",
+   "tipo": "documento",
+   "titulo": "Último registro del diario de Curbelo",
+   "descripcion": "El diario del cura de Yaiza termina bruscamente el 28-dic-1731; la Real Audiencia cesa antes (12-abr-1731). La información posterior es menos detallada.",
+   "source_ids": [
+    "R13",
+    "R16"
+   ],
+   "ficha_ids": [],
+   "fecha_aproximada": false,
+   "fase": null,
+   "fecha_texto": "1731-12-28"
+  },
+  {
+   "id": "f4",
+   "inicio": "1732-01-15",
+   "fin": "1736-02-28",
+   "tipo": "erupcion",
+   "titulo": "Fase 4 — Montañas del Fuego (≈4 años)",
+   "descripcion": "Concentra durante unos cuatro años la actividad y forma las Montañas del Fuego; sin testimonios de primera mano. El fin (feb 1736) es aproximado: R16 dice «cuatro años» desde inicios de 1732.",
+   "source_ids": [
+    "R16"
+   ],
+   "ficha_ids": [
+    "cono-timanfaya"
+   ],
+   "fecha_aproximada": true,
+   "fase": 4,
+   "fecha_texto": "1732-01-15 → 1736-02-28"
+  },
+  {
+   "id": "h4",
+   "inicio": "1733-03-01",
+   "fin": "1733-03-31",
+   "tipo": "documento",
+   "titulo": "Visita de Riviere / Dávila: 64 vecinos en Tingafa",
+   "descripcion": "Dato citado en R24 y R20 (fecha: marzo de 1733 según R20).",
+   "source_ids": [
+    "R24",
+    "R20"
+   ],
+   "ficha_ids": [
+    "pue-tingafa"
+   ],
+   "fecha_aproximada": true,
+   "fase": null,
+   "fecha_texto": "1733-03-01 → 1733-03-31"
+  },
+  {
+   "id": "f5",
+   "inicio": "1736-03-01",
+   "fin": "1736-04-16",
+   "tipo": "erupcion",
+   "titulo": "Fase 5 — Montaña de las Nueces y Montaña Colorada",
+   "descripcion": "Última fase, de ≈1 mes (marzo–abril de 1736); según R01 la erupción finaliza el 16-abr-1736 (2056 días en total). Pallarés (2007) cuestiona la fecha final (R13).",
+   "source_ids": [
+    "R16",
+    "R01",
+    "R13",
+    "R41"
+   ],
+   "ficha_ids": [
+    "cono-colorada"
+   ],
+   "fecha_aproximada": true,
+   "fase": 5,
+   "fecha_texto": "1736-03-01 → 1736-04-16"
+  },
+  {
+   "id": "e1824a",
+   "inicio": "1824-07-31",
+   "fin": "1824-08-22",
+   "tipo": "erupcion",
+   "titulo": "1824 — Volcán de Tao",
+   "descripcion": "31-jul-1824, ≈7 h; termina el 22-ago; amenaza a Tiagua.",
+   "source_ids": [
+    "R16",
+    "R10"
+   ],
+   "ficha_ids": [
+    "cono-tao-1824"
+   ],
+   "fecha_aproximada": false,
+   "fase": "1824",
+   "fecha_texto": "1824-07-31 → 1824-08-22"
+  },
+  {
+   "id": "e1824b",
+   "inicio": "1824-09-29",
+   "fin": "1824-10-04",
+   "tipo": "erupcion",
+   "titulo": "1824 — Nuevo del Fuego",
+   "descripcion": "Del 29-sep al 4-oct-1824; lavas hasta el mar (Islote de las Tabaibas según R16).",
+   "source_ids": [
+    "R16",
+    "R10"
+   ],
+   "ficha_ids": [
+    "cono-chinero",
+    "cono-volcan-nuevo"
+   ],
+   "fecha_aproximada": false,
+   "fase": "1824",
+   "fecha_texto": "1824-09-29 → 1824-10-04"
+  },
+  {
+   "id": "e1824c",
+   "inicio": "1824-10-16",
+   "fin": "1824-10-24",
+   "tipo": "erupcion",
+   "titulo": "1824 — Tinguatón (Bocas del Diablo)",
+   "descripcion": "Del 16 al 24-oct-1824; desde el 17-oct emite agua en lugar de lava.",
+   "source_ids": [
+    "R16"
+   ],
+   "ficha_ids": [],
+   "fecha_aproximada": false,
+   "fase": "1824",
+   "fecha_texto": "1824-10-16 → 1824-10-24"
+  },
+  {
+   "id": "h5",
+   "inicio": "1825-01-01",
+   "fin": "1825-12-31",
+   "tipo": "documento",
+   "titulo": "Leopold von Buch visita Lanzarote y publica la erupción",
+   "descripcion": "Fuente citada por R24 para la lava que alcanza Tingafa el 7-mar-1731.",
+   "source_ids": [
+    "R24"
+   ],
+   "ficha_ids": [],
+   "fecha_aproximada": true,
+   "fase": null,
+   "fecha_texto": "1825"
+  },
+  {
+   "id": "s1",
+   "inicio": "1973-01-01",
+   "fin": "1973-12-31",
+   "tipo": "estudio",
+   "titulo": "Araña et al.: primeras anomalías térmicas",
+   "descripcion": "Primera caracterización de anomalías térmicas de Timanfaya (Geothermics).",
+   "source_ids": [
+    "R47",
+    "R37"
+   ],
+   "ficha_ids": [
+    "geot-adicionales"
+   ],
+   "fecha_aproximada": true,
+   "fase": null,
+   "fecha_texto": "1973"
+  },
+  {
+   "id": "h6",
+   "inicio": "1974-01-01",
+   "fin": "1974-12-31",
+   "tipo": "documento",
+   "titulo": "Creación del Parque Nacional de Timanfaya",
+   "descripcion": "Declarado en 1974 según la guía geológica IGME-OAPN citada en R15.",
+   "source_ids": [
+    "R15"
+   ],
+   "ficha_ids": [],
+   "fecha_aproximada": true,
+   "fase": null,
+   "fecha_texto": "1974"
+  },
+  {
+   "id": "s2",
+   "inicio": "1986-01-01",
+   "fin": "1986-12-31",
+   "tipo": "estudio",
+   "titulo": "Magnetotelúrica en Teide y Timanfaya",
+   "descripcion": "Ortiz et al., J. Volcanol. Geotherm. Res.",
+   "source_ids": [
+    "R39"
+   ],
+   "ficha_ids": [
+    "mt-1986"
+   ],
+   "fecha_aproximada": true,
+   "fase": null,
+   "fecha_texto": "1986"
+  },
+  {
+   "id": "s3",
+   "inicio": "1992-01-01",
+   "fin": "1992-12-31",
+   "tipo": "estudio",
+   "titulo": "Carracedo et al.: reconstrucción de la erupción",
+   "descripcion": "Cinco fases; 2056 días; ≈200 km²; 3–5 km³.",
+   "source_ids": [
+    "R01",
+    "R02"
+   ],
+   "ficha_ids": [],
+   "fecha_aproximada": true,
+   "fase": null,
+   "fecha_texto": "1992"
+  },
+  {
+   "id": "s4",
+   "inicio": "2004-01-01",
+   "fin": "2004-12-31",
+   "tipo": "estudio",
+   "titulo": "Mapa geológico 1:25.000 (IGME) de Lanzarote",
+   "descripcion": "Hojas MAGNA 1:25.000 y mapa continuo (base de las capas de coladas y conos).",
+   "source_ids": [
+    "R14"
+   ],
+   "ficha_ids": [],
+   "fecha_aproximada": true,
+   "fase": null,
+   "fecha_texto": "2004"
+  },
+  {
+   "id": "s8",
+   "inicio": "2012-01-01",
+   "fin": "2014-12-31",
+   "tipo": "estudio",
+   "titulo": "Campañas OAPN 360/2011: gravimetría, microsísmica, GPR, geomagnetismo",
+   "descripcion": "199 estaciones de gravedad, 44 puntos de microsísmica, 24 perfiles GPR; gravedad absoluta en 2014.",
+   "source_ids": [
+    "R09"
+   ],
+   "ficha_ids": [
+    "grav-199-estaciones",
+    "perf-oapn-gpr-24",
+    "perf-oapn-msm-44",
+    "grav-absoluta"
+   ],
+   "fecha_aproximada": true,
+   "fase": null,
+   "fecha_texto": "2012–2014"
+  },
+  {
+   "id": "s5",
+   "inicio": "2012-05-01",
+   "fin": "2012-05-31",
+   "tipo": "estudio",
+   "titulo": "GPR 2012 en el Islote de Hilario (mayo)",
+   "descripcion": "Perfil de 50 m, primera campaña.",
+   "source_ids": [
+    "R08",
+    "R07"
+   ],
+   "ficha_ids": [
+    "perf-hilario-ab",
+    "geot-hilario-ta1"
+   ],
+   "fecha_aproximada": false,
+   "fase": null,
+   "fecha_texto": "mayo 2012"
+  },
+  {
+   "id": "s6",
+   "inicio": "2012-11-01",
+   "fin": "2012-11-30",
+   "tipo": "estudio",
+   "titulo": "Magnetometría 2012 en el Islote de Hilario (noviembre)",
+   "descripcion": "Perfil de 75 m + 3 perfiles.",
+   "source_ids": [
+    "R07",
+    "R08"
+   ],
+   "ficha_ids": [
+    "perf-hilario-cd",
+    "perf-hilario-ab"
+   ],
+   "fecha_aproximada": false,
+   "fase": null,
+   "fecha_texto": "noviembre 2012"
+  },
+  {
+   "id": "s7",
+   "inicio": "2013-05-01",
+   "fin": "2013-05-31",
+   "tipo": "estudio",
+   "titulo": "EMI 2013 en el Islote de Hilario (mayo)",
+   "descripcion": "Tres perfiles; EMI1 de 49 m.",
+   "source_ids": [
+    "R08"
+   ],
+   "ficha_ids": [
+    "perf-hilario-ab"
+   ],
+   "fecha_aproximada": false,
+   "fase": null,
+   "fecha_texto": "mayo 2013"
+  },
+  {
+   "id": "s9",
+   "inicio": "2014-05-01",
+   "fin": "2014-05-31",
+   "tipo": "estudio",
+   "titulo": "Instalación de la estación GNSS CAME (Camelleros)",
+   "descripcion": "Mayo de 2014 (R09).",
+   "source_ids": [
+    "R09"
+   ],
+   "ficha_ids": [
+    "geot-camelleros"
+   ],
+   "fecha_aproximada": false,
+   "fase": null,
+   "fecha_texto": "mayo 2014"
+  },
+  {
+   "id": "s10",
+   "inicio": "2014-07-01",
+   "fin": "2014-07-31",
+   "tipo": "estudio",
+   "titulo": "Gómez-Ortiz et al. (J. Appl. Geophys.): tubos de lava de Calderas Quemadas",
+   "descripcion": "Publicación 2014 (109:15–26).",
+   "source_ids": [
+    "R04",
+    "R06"
+   ],
+   "ficha_ids": [
+    "perf-calderas-quemadas",
+    "tubo-calderas-quemadas"
+   ],
+   "fecha_aproximada": true,
+   "fase": null,
+   "fecha_texto": "2014"
+  },
+  {
+   "id": "s11",
+   "inicio": "2015-04-01",
+   "fin": "2015-04-30",
+   "tipo": "estudio",
+   "titulo": "Repetición del GPR en el Islote de Hilario (abril)",
+   "descripcion": "Variaciones sutiles de la señal.",
+   "source_ids": [
+    "R08"
+   ],
+   "ficha_ids": [
+    "perf-hilario-ab"
+   ],
+   "fecha_aproximada": false,
+   "fase": null,
+   "fecha_texto": "abril 2015"
+  },
+  {
+   "id": "s12",
+   "inicio": "2018-01-01",
+   "fin": "2018-12-31",
+   "tipo": "estudio",
+   "titulo": "Taller de geolocalización de aldeas (Fundación César Manrique)",
+   "descripcion": "Taller de José de León (octubre de 2018).",
+   "source_ids": [
+    "R25",
+    "R19"
+   ],
+   "ficha_ids": [
+    "topon-viera"
+   ],
+   "fecha_aproximada": true,
+   "fase": null,
+   "fecha_texto": "octubre 2018"
+  },
+  {
+   "id": "s13",
+   "inicio": "2020-01-01",
+   "fin": "2020-12-31",
+   "tipo": "estudio",
+   "titulo": "InSAR Sentinel-1 (serie 2016–2020)",
+   "descripcion": "14-sep-2016 a 25-jun-2020.",
+   "source_ids": [
+    "R11",
+    "R12"
+   ],
+   "ficha_ids": [
+    "insar-s1"
+   ],
+   "fecha_aproximada": true,
+   "fase": null,
+   "fecha_texto": "2016–2020"
+  },
+  {
+   "id": "s15",
+   "inicio": "2021-01-01",
+   "fin": "2021-12-31",
+   "tipo": "estudio",
+   "titulo": "Longpré & Felpeto: revisión de parámetros eruptivos",
+   "descripcion": "Área ≈146 km²; fisura ≥14,4 km.",
+   "source_ids": [
+    "R13"
+   ],
+   "ficha_ids": [],
+   "fecha_aproximada": true,
+   "fase": null,
+   "fecha_texto": "2021"
+  },
+  {
+   "id": "s14",
+   "inicio": "2022-01-01",
+   "fin": "2022-12-31",
+   "tipo": "estudio",
+   "titulo": "Purcell et al.: subsidencia de las coladas de Timanfaya",
+   "descripcion": "G-cubed 2022: ≈6 mm/año, ≈20 km².",
+   "source_ids": [
+    "R11"
+   ],
+   "ficha_ids": [
+    "insar-s1"
+   ],
+   "fecha_aproximada": true,
+   "fase": null,
+   "fecha_texto": "2022"
+  }
+ ]
+}
