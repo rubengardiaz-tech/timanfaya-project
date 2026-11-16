@@ -6,9 +6,10 @@ const S=window.TIMANFAYA_SIM; if(!S) return;
 const J=S.json, $=s=>document.querySelector(s), esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const EPOCH=Date.parse('1730-09-01T00:00:00Z'), DAY=86400000;
 const iso=d=>new Date(EPOCH+Math.round(d)*DAY).toISOString().slice(0,10);
-const PAL=['#1f77b4','#17becf','#2ca02c','#ff7f0e','#d62728','#9467bd'];           // fases 1–5 (índice 1..5)
+const PAL=['#8a8a8a','#1f77b4','#17becf','#2ca02c','#ff7f0e','#d62728','#ff4fa3'];           // índice = nº de fase 1–5 (el 0 = sin fase); 6 = lóbulo distal supuesto de la 77
+const EPI={1:{c:'#2166ac',n:'1.er episodio (unidad 73): fases 1–2'},2:{c:'#f4a300',n:'2.º episodio (unidad 75): fases 3–4'},3:{c:'#c2185b',n:'3.er episodio (unidad 77): fase 5'}}, EPOF=[0,1,1,2,2,3,3], LOBC='#ff4fa3';   // fase de Carracedo → episodio IGME
 const hex=h=>[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)];
-const st={on:false,show1730:true,show1824:true,mode:'prob',pmin:.5,unc:true,fill:false,cutDay:Infinity};
+const st={lobe:true,u77:false,on:false,show1730:true,show1824:true,mode:'prob',pmin:.5,unc:true,fill:false,cutDay:Infinity};
 const sims={}; let map,api,ready=false,anim=null;
 
 function loadPx(uri){return new Promise(res=>{const im=new Image();im.onerror=()=>res(null);im.onload=()=>{const c=document.createElement('canvas');c.width=im.width;c.height=im.height;const x=c.getContext('2d',{willReadFrequently:true});x.drawImage(im,0,0);res(x.getImageData(0,0,im.width,im.height));};im.src=uri;});}
@@ -80,7 +81,9 @@ function draw(o){
     const t50=o.t50[i],a=o.d10[i]/5,b=o.d90[i]/5,t10=t50-a*a,t90=t50+b*b,pp=p/255;
     let cls=0;if(cut>=t90)cls=3;else if(cut>=t50)cls=2;else if(unc&&cut>=t10)cls=1;
     if(!cls)continue;
-    let c; if(cls===1)c=[255,214,64]; else if(mode==='fase')c=hex(PAL[o.ph[i]]||PAL[0]); else if(o.key==='1824')c=cls===3?[110,40,160]:[160,90,205]; else c=cls===3?[196,40,24]:[232,104,40];
+    const fz=o.ph[i]-1; if(fz===6&&!st.lobe&&o.key!=='1824')continue;   // lóbulo distal supuesto de la 77 (pseudo-fase 6): se puede ocultar
+      // el PNG guarda fase+1 (0 = sin dato): se decodifica aquí (antes se usaba sin restar 1 y todos los colores salían desplazados)
+    let c; if(cls===1)c=[255,214,64]; else if(o.key==='1824')c=cls===3?[110,40,160]:[160,90,205]; else if(mode==='fase')c=hex(PAL[fz>=1&&fz<=6?fz:0]); else if(mode==='epis')c=hex(fz===6?LOBC:fz>=1&&fz<=5?EPI[EPOF[fz]].c:'#8a8a8a'); else c=cls===3?[196,40,24]:[232,104,40];
     D[j]=c[0];D[j+1]=c[1];D[j+2]=c[2];D[j+3]=cls===3?(110+120*pp):cls===2?(80+110*pp):(60+80*pp);
   }
   paintTiles(o);
@@ -92,6 +95,7 @@ function applyVis(){
   if(!ready)return; const v=st.on?'visible':'none';
   [['1730',st.show1730],['1824',st.show1824]].forEach(([k,s])=>{(sims[k]?sims[k].tiles:[]).forEach(t=>{const l='sim-'+t.id+'-r';if(map.getLayer(l))map.setLayoutProperty(l,'visibility',st.on&&s?'visible':'none');});});
   ['sim-nuc-c','sim-nuc-l','sim-vent-c','sim-costa-l'].forEach(l=>{if(map.getLayer(l))map.setLayoutProperty(l,'visibility',v);});
+  if(map.getLayer('sim-u77-l'))map.setLayoutProperty('sim-u77-l','visibility',st.on&&st.u77?'visible':'none');
   const f=st.on&&!st.fill?0:null;
   [['col1730-f',.62],['col1824-f',.7]].forEach(([l,o])=>{if(map.getLayer(l))map.setPaintProperty(l,'fill-opacity',f===0?0.04:o);});
   const w=$('#simwarn'); if(w)w.hidden=!st.on; $('#btnSim').classList.toggle('on',st.on); $('#simpanel').hidden=!st.on;
@@ -125,6 +129,7 @@ function openParams(){
   P.fases_1730.centros.forEach(c=>{const b=c.bocas?c.bocas.map(x=>x.lon.toFixed(4)+', '+x.lat.toFixed(4)).join(' / '):(c.lon.toFixed(4)+', '+c.lat.toFixed(4));
     add(`${c.nombre} · ubicación (lon, lat)`,b,/SUPUESTO|supuesto/.test(c.coord_fuente)?'supuesto':'fuente',c.coord_fuente);
     add(`${c.nombre} · fechas`,'inicio '+c.inicio.join('…')+' · fin '+c.fin.join('…'),c.tipo_fecha,c.fecha_fuente);});
+  {const L=P.fases_1730.lobulo_distal_77; grp('Lóbulo distal de la unidad 77 (SUPUESTO derivado de IGME; circular)'); add('Nota',L._nota.slice(0,70)+'…','supuesto',L._nota); Object.entries(L).filter(([k])=>k!=='_nota').forEach(([k,o])=>add(k.replace(/_/g,' '),o.valor,o.tipo,o.nota));}
   add('Asignación del volumen por centro',P.fases_1730.asignacion_volumen.slice(0,60)+'…','supuesto',P.fases_1730.asignacion_volumen);
   grp('Fases 1824');
   const v=P.fases_1824.volumen_total_m3; add('Volumen total (m³)',v.valor+' (rango '+v.rango.join('–')+')',v.tipo,v.fuente);
@@ -149,6 +154,12 @@ function openValid(){
   modal(`<h2>Validación frente a los polígonos IGME</h2><div class="simwarn2">SIMULACIÓN HIPOTÉTICA. Coincidencia con las coladas IGME (unidades 73, 75, 77) en celdas de ${J.dx_m} m, con la huella «P ≥ ${J.umbral}» sobre ${J.n_simulaciones} simulaciones. Parte del ajuste es <b>calibración sobre el mismo mapa</b> (ver tipo «calibrado» en los parámetros); no es validación independiente.</div>
   <h3>1730–1736 por escenario de volumen</h3><table class="refs simp"><thead><tr><th>Esc.</th><th>Espesor (m)</th><th>V (km³)</th><th>IoU</th><th>Precisión</th><th>Exhaustividad</th><th>F1</th><th>AUC (P)</th><th>km² simulados</th><th>km² sobrestimados</th><th>km² infravalorados</th></tr></thead><tbody>${rows}</tbody></table>
   <p class="mini">Área IGME observada: ${f1(E[J.escenario_base].km2_obs,1)} km². IoU = intersección/unión; precisión = fracción simulada que es lava IGME; exhaustividad = fracción de lava IGME cubierta; AUC = capacidad de la probabilidad para separar celdas con/sin lava IGME. Validación cruzada espacial (calibrar en fases 1–3 y evaluar en 4–5): IoU ${f1(J.cv.A_en_B.IoU_B)} (óptimo posible ${f1(J.cv.A_en_B.IoU_B_mejor_posible)}); a la inversa (calibrar en 4–5, evaluar en 1–3): IoU ${f1(J.cv.B_en_A.IoU_A)} (${f1(J.cv.B_en_A.IoU_A_mejor_posible)}).</p>
+  <h3>Con y sin el lóbulo distal de la unidad 77 <span class="tag t-no">supuesto, derivado de IGME · CIRCULAR</span></h3>
+  <div class="simwarn2">La simulación base incluye un <b>lóbulo distal de la unidad 77 emitido por separado</b> (≈${f1(J.escenarios[J.escenario_base].por_unidad['77_lobulo_distal'].km2,1)} km², ≈${f1(J.escenarios[J.escenario_base].volumen_lobulo_distal_Mm3,0)} Mm³ en el escenario base, ≈21 % del volumen de la 77; boca = extremo aguas arriba del polígono; ${J.parametros_lobulo_n_cadenas} cadenas). Su <b>geometría sale del mismo mapa IGME con el que se valida</b>: la mejora en esa zona es <b>circular</b> (por construcción) y <b>no demuestra capacidad predictiva</b>. Las cifras «sin lóbulo» son las del modelo sin ese supuesto; la cifra más honesta para comparar el resto de la isla es el <b>IoU excluyendo el polígono del lóbulo</b>.</div>
+  <table class="refs simp"><thead><tr><th>Esc.</th><th>IoU sin / con</th><th>IoU fuera del polígono del lóbulo, sin / con</th><th>Exhaustividad 77 sin / con</th><th>Exhaustividad del lóbulo sin / con (circular)</th><th>km² sobrestimados sin / con</th></tr></thead><tbody>${sc.map(k=>{const c=E[k].con_lobulo,s0=E[k].sin_lobulo,p=x=>f1(x*100,0)+' %',pr=(u,w)=>p(u.por_unidad[w].recall);return `<tr><td>${k}${k===J.escenario_base?' ★':''}</td><td>${f1(s0.IoU,3)} → <b>${f1(c.IoU,3)}</b></td><td>${f1(s0.IoU_sin_poligono_lobulo,3)} → ${f1(c.IoU_sin_poligono_lobulo,3)}</td><td>${pr(s0,'77')} → <b>${pr(c,'77')}</b></td><td>${pr(s0,'77_lobulo_distal')} → ${pr(c,'77_lobulo_distal')}</td><td>${f1(s0.km2_sobre,0)} → ${f1(c.km2_sobre,0)}</td></tr>`;}).join('')}</tbody></table>
+  <h3>Exhaustividad por unidad IGME, con lóbulo (fracción del área cubierta con P ≥ ${J.umbral}, solo tierra)</h3>
+  <table class="refs simp"><thead><tr><th>Esc.</th><th>73 · 1.er episodio (${f1(E[J.escenario_base].por_unidad['73'].km2,1)} km²)</th><th>75 · 2.º (${f1(E[J.escenario_base].por_unidad['75'].km2,1)} km²)</th><th><b>77 · 3.er (${f1(E[J.escenario_base].por_unidad['77'].km2,1)} km²)</b></th><th>77: cuerpo principal (${f1(E[J.escenario_base].por_unidad['77_principal'].km2,1)} km²)</th><th>77: lóbulo distal, supuesto (${f1(E[J.escenario_base].por_unidad['77_lobulo_distal'].km2,1)} km²)</th></tr></thead><tbody>${sc.map(k=>{const u=E[k].por_unidad,p=x=>f1(x*100,0)+' %';return `<tr><td>${k}${k===J.escenario_base?' ★':''}</td><td>${p(u['73'].recall)}</td><td>${p(u['75'].recall)}</td><td><b>${p(u['77'].recall)}</b></td><td>${p(u['77_principal'].recall)}</td><td>${p(u['77_lobulo_distal'].recall)}</td></tr>`;}).join('')}</tbody></table>
+  <p class="mini"><b>Sensibilidad del lóbulo (escenario base).</b> ${J.sweep_distal.filter(r=>r.F<=90).map(r=>`F=${r.F}: IoU ${f1(r.IoU,3)}, lóbulo ${f1(r.recall_lobulo*100,0)} %`).join(' · ')}. Con pocas cadenas (F=10) el lóbulo se cubre casi entero (≈96 %) pero el IoU fuera de su polígono baja; se adopta F=${J.parametros_lobulo_n_cadenas} (compromiso, calibrado sobre IGME). Sin el lóbulo, la simulación no alcanzaba esa zona (≈1 %) pese a que el MDT permite una bajada continua desde las bocas; con él, además, se sobrestiman unos km² más fuera de IGME. Activar «contorno de la unidad 77» muestra el polígono IGME sobre la simulación; «lóbulo distal de la 77» lo oculta/muestra.</p>
   <h3>Recorte a la línea de costa real</h3><p class="mini">Estas métricas se calculan <b>solo sobre tierra</b> (línea de costa actual del IGN). Sin recorte, el escenario base daba IoU ${f1(E[J.escenario_base].sin_recorte.IoU)} (${f1(E[J.escenario_base].sin_recorte.km2_pred,0)} km² simulados). La diferencia es el área que la simulación coloca <b>sobre el mar</b>: ${f1(J.mar.km2_mar_P_ge_umbral,1)} km² con P ≥ ${J.umbral} (${f1(J.mar.pct_huella_en_mar,1)} % de la huella) y ${f1(J.mar.fraccion_volumen_depositado_en_mar_pct,1)} % del volumen depositado, hasta ${f1(J.mar.distancia_costa_m_max/1000,1)} km mar adentro. Es un <b>artefacto del modelo</b>: el MDT (Terrarium) representa el mar como una superficie plana a 0 m y la lava solo se pierde por debajo de ${J.mar.limite_mar_modelo_m} m, de modo que se extiende sobre ese «llano». Los polígonos IGME apenas salen de la costa actual (${f1(J.mar.km2_igme_1730_fuera_costa_actual,2)} km²): las plataformas de lava que ganaron terreno al mar en 1730–36 ya forman parte de la costa actual y están dentro de la huella válida. Lo que no queda cartografiado (deltas sumergidos o erosionados) no puede evaluarse con estos datos.</p>
   <h3>1824 (mismos parámetros del modelo)</h3><p>IoU ${f1(m24.IoU)} · precisión ${f1(m24.precision)} · exhaustividad ${f1(m24.recall)} · AUC ${f1(m24.AUC)} · área simulada ${f1(m24.km2_pred,1)} km² frente a ${f1(m24.km2_obs,1)} km² (IGME). <b>Atención:</b> un parámetro estructural (longitud mínima de cadena) se eligió viendo la longitud de la colada de Nuevo del Fuego, por lo que 1824 no es una prueba totalmente independiente.</p>
   <table class="refs simp"><thead><tr><th>Centro 1824</th><th>V (Mm³)</th><th>Longitud R13 (km)</th><th>Longitud simulada, mediana (P10–P90)</th><th>Fecha en que alcanza el 90 % de su longitud (P10…P90)</th></tr></thead><tbody>${rc}</tbody></table>
@@ -169,6 +180,7 @@ function build(){
   ['1730','1824'].forEach(k=>{sims[k].tiles.forEach(t=>{
     map.addSource('sim-'+t.id,{type:'canvas',canvas:t.cv,coordinates:t.coords,animate:false});
     map.addLayer({id:'sim-'+t.id+'-r',type:'raster',source:'sim-'+t.id,paint:{'raster-opacity':.82,'raster-resampling':'nearest','raster-fade-duration':0},layout:{visibility:'none'}},first);});});
+  if(map.getSource('col1730'))map.addLayer({id:'sim-u77-l',type:'line',source:'col1730',filter:['all',['==',['get','tipo'],'colada'],['in',['get','unidad_IGME'],['literal',['77','77a']]]],paint:{'line-color':'#c2185b','line-width':2.2,'line-dasharray':[2,1.2]},layout:{visibility:'none'}});
   map.addSource('sim-costa',{type:'geojson',data:{type:'Feature',properties:{},geometry:{type:'MultiPolygon',coordinates:J.costa||[]}}});
   map.addLayer({id:'sim-costa-l',type:'line',source:'sim-costa',paint:{'line-color':'#0d47a1','line-width':1.1,'line-opacity':.9},layout:{visibility:'none'}});
   map.addSource('sim-nuc',{type:'geojson',data:{type:'FeatureCollection',features:[]}});
@@ -184,10 +196,12 @@ function panel(){
   d.innerHTML=`<div class="sh"><b>Simulación hipotética de coladas</b><button id="sim-x" aria-label="Cerrar">×</button></div>
   <div class="simwarn2"><b>⚠ SIMULACIÓN HIPOTÉTICA.</b> Resultado de un modelo estocástico con parámetros supuestos o calibrados sobre el mapa IGME. <b>No es una reconstrucción ni un dato histórico</b> y no debe usarse para decisiones de ordenación, seguridad o valoración de bienes. <a href="#" id="sim-lim">Limitaciones del modelo</a></div>
   <div class="srow"><label><input type="checkbox" id="sim-c1730" checked> 1730–36</label> <label><input type="checkbox" id="sim-c1824" checked> 1824</label></div>
-  <div class="srow">Modo <select id="sim-mode"><option value="prob">Probabilidad y fecha de llegada</option><option value="fase">Color por fase del centro</option><option value="valid">Validación frente a IGME</option></select></div>
+  <div class="srow">Modo <select id="sim-mode"><option value="prob">Probabilidad y fecha de llegada</option><option value="fase">Color por fase del centro</option><option value="epis">Color por episodio IGME (1.º/2.º/3.º)</option><option value="valid">Validación frente a IGME</option></select></div>
   <div class="srow">P mínima de cobertura <input type="range" id="sim-p" min="10" max="90" step="10" value="50"><b id="sim-pv">0,5</b></div>
   <div class="srow"><label><input type="checkbox" id="sim-unc" checked> banda de incertidumbre del frente (P10–P90)</label></div>
   <div class="srow"><label><input type="checkbox" id="sim-fill"> rellenar polígonos IGME (reales)</label></div>
+  <div class="srow"><label><input type="checkbox" id="sim-lobe" checked> lóbulo distal de la 77 <b>(SUPUESTO derivado de IGME)</b></label></div>
+  <div class="srow"><label><input type="checkbox" id="sim-u77"> contorno de la unidad 77 (IGME, 3.er episodio)</label></div>
   <div class="srow" role="radiogroup" aria-labelledby="sim-spd-l"><span id="sim-spd-l"><b>Velocidad</b></span>
     <label><input type="radio" class="vel" name="velsim" value="lenta"> Lenta <small>1 mes/s</small></label>
     <label><input type="radio" class="vel" name="velsim" value="normal"> Normal <small>3 meses/s</small></label>
@@ -208,6 +222,8 @@ function panel(){
   $('#sim-p').oninput=e=>{st.pmin=e.target.value/100;$('#sim-pv').textContent=String(st.pmin).replace('.',',');drawAll();};
   $('#sim-unc').onchange=e=>{st.unc=e.target.checked;drawAll();};
   $('#sim-fill').onchange=e=>{st.fill=e.target.checked;applyVis();};
+  $('#sim-lobe').onchange=e=>{st.lobe=e.target.checked;drawAll();};
+  $('#sim-u77').onchange=e=>{st.u77=e.target.checked;applyVis();};
   $('#sim-b-par').onclick=openParams;$('#sim-b-fas').onclick=openFases;$('#sim-b-val').onclick=openValid;
   $('#sim-lim').onclick=e=>{e.preventDefault();api.openFicha('sim-limitaciones');};
   $('#sim-end').onclick=()=>{stopAnim();api.setCut(Infinity);};
@@ -220,7 +236,8 @@ function panel(){
 }
 function legend(){const el=$('#sim-leg');if(!el)return;const sw=(c,t)=>`<span class="sw" style="background:${c}"></span>${t}`;
   el.innerHTML=st.mode==='valid'?[sw('rgb(46,160,67)','coincide con IGME'),sw('rgb(214,39,40)','sobrestimado (simulado, no IGME)'),sw('rgb(31,90,220)','infravalorado (IGME, no simulado)')].join(' · ')
-   :st.mode==='fase'?PAL.slice(1).map((c,i)=>sw(c,'fase '+(i+1))).join(' · ')+' · '+sw('#ffd640','frente incierto')
+   :st.mode==='fase'?PAL.slice(1,6).map((c,i)=>sw(c,'fase '+(i+1))).join(' · ')+' · '+sw(LOBC,'lóbulo distal 77 (supuesto, derivado de IGME)')+' · '+sw('#6e28a0','1824')+' · '+sw('#ffd640','frente incierto')+'<br>Fases de Carracedo et al.; las 1–2 forman el 1.er episodio IGME, la 3–4 el 2.º y la 5 el 3.º.'
+   :st.mode==='epis'?[1,2,3].map(k=>sw(EPI[k].c,EPI[k].n)).join(' · ')+' · '+sw(LOBC,'lóbulo distal 77 (supuesto, derivado de IGME)')+' · '+sw('#6e28a0','1824')+' · '+sw('#ffd640','frente incierto')+'<br>Color = episodio IGME del centro que más veces cubre la celda (equivalencia fases ↔ episodios: hipótesis de R56).'
    :[sw('#c42818','1730–36 cubierto (≥P90 de la fecha)'),sw('#e86828','cubierto (mediana)'),sw('#6e28a0','1824 cubierto'),sw('#ffd640','frente incierto (P10–P50)')].join(' · ')+'<br>La opacidad crece con la probabilidad de cobertura.';}
 const MONTH=30.4375*DAY, SEGS=[[Date.parse('1730-08-31T00:00:00Z'),Date.parse('1736-05-01T00:00:00Z'),1],[Date.parse('1824-07-25T00:00:00Z'),Date.parse('1824-11-01T00:00:00Z'),1/6]];
 const nf=x=>String(+x.toFixed(2)).replace('.',',');

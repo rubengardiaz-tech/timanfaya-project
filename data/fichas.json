@@ -2588,7 +2588,7 @@
     },
     {
      "k": "Fases",
-     "v": "Diez centros de 1730–36 en cinco fases (R13, R01, R16) y tres de 1824 (R13); fechas muestreadas en rangos de las fuentes; cada fase parte del terreno que deja la anterior."
+     "v": "Diez centros de 1730–36 en cinco fases (R13, R01, R16) más, como supuesto derivado de IGME, un lóbulo distal de la unidad 77 emitido aparte (ver limitaciones), y tres centros de 1824 (R13); fechas muestreadas en rangos de las fuentes; cada fase parte del terreno que deja la anterior."
     },
     {
      "k": "Volumen",
@@ -2639,7 +2639,7 @@
    "capa": "simulacion",
    "categoria": "Simulación hipotética",
    "confianza": "bajo",
-   "resumen": "Con el escenario base (S2, 20 m de espesor medio) y la huella P ≥ 0,5, la coincidencia con las coladas IGME de 1730–36 es IoU = 0,70 (precisión 0,83, exhaustividad 0,82, AUC 0,92). Parte de este ajuste es calibración sobre el mismo mapa.",
+   "resumen": "Con el escenario base (S2, 20 m de espesor medio) y la huella P ≥ 0,5, la coincidencia con las coladas IGME de 1730–36 es IoU = 0,71 (precisión 0,82, exhaustividad 0,85, AUC 0,94). Parte de este ajuste es calibración sobre el mismo mapa.",
    "detalle": [
     {
      "k": "ADVERTENCIA",
@@ -2647,11 +2647,15 @@
     },
     {
      "k": "1730–36, escenario base",
-     "v": "143 km² simulados frente a 146 km² IGME; sobrestimados 25 km², infravalorados 27 km². IoU medio de una simulación individual 0,68."
+     "v": "151 km² simulados frente a 146 km² IGME; sobrestimados 28 km², infravalorados 22 km². IoU medio de una simulación individual 0,69."
+    },
+    {
+     "k": "Con y sin el lóbulo distal de la 77 (circular)",
+     "v": "IoU 0,698 sin lóbulo → 0,712 con lóbulo (escenario base; precisión 0,83 → 0,82, exhaustividad 0,82 → 0,85). Exhaustividad por unidad (con lóbulo): 73 72 %, 75 92 %, 77 82 % (sin lóbulo 67 %). El lóbulo se construye con la geometría IGME: esa parte de la mejora es circular. Las demás métricas de esta ficha incluyen el lóbulo; IoU fuera de su polígono: 0,727 sin → 0,709 con."
     },
     {
      "k": "Sensibilidad al volumen",
-     "v": "S1 (15 m, 2,2 km³): IoU 0,62, sobre 20 km², infra 43 km²; S2 (20 m, 2,9 km³): IoU 0,70, sobre 25 km², infra 27 km²; S3 (25 m, 3,6 km³): IoU 0,72, sobre 30 km², infra 19 km²; S4 (28.9 m, 4,2 km³): IoU 0,72, sobre 34 km², infra 16 km²"
+     "v": "S1 (15 m, 2,2 km³): IoU 0,62, sobre 25 km², infra 39 km²; S2 (20 m, 2,9 km³): IoU 0,71, sobre 28 km², infra 22 km²; S3 (25 m, 3,6 km³): IoU 0,75, sobre 31 km², infra 13 km²; S4 (28.9 m, 4,2 km³): IoU 0,75, sobre 35 km², infra 10 km²"
     },
     {
      "k": "Validación cruzada espacial",
@@ -2667,7 +2671,7 @@
     },
     {
      "k": "Núcleos",
-     "v": "Fechas simuladas de cobertura frente a documentadas: Tingafa 1730-10-19 (documentada ≈7-mar-1731, R24), Santa Catalina 1730-10-19 (7-sep-1730 según R21, sin contrastar), Chimanfaya 1730-11-15 (sep-1730, R16). Desajustes de semanas a meses; además los anclajes son conos (no independientes) e inciertos 0,7–2 km."
+     "v": "Fechas simuladas de cobertura frente a documentadas: Tingafa 1730-10-19 (documentada ≈7-mar-1731, R24), Santa Catalina 1730-10-20 (7-sep-1730 según R21, sin contrastar), Chimanfaya 1730-11-10 (sep-1730, R16). Desajustes de semanas a meses; además los anclajes son conos (no independientes) e inciertos 0,7–2 km."
     }
    ],
    "metodo_localizacion": "IoU = intersección/unión de las celdas con lava simulada (P ≥ umbral) y celdas de coladas IGME (unidades 73, 75, 77; 80 para 1824) en rejilla de 50 m; AUC calculada con la probabilidad por celda. Mapa de zonas sobrestimadas/infravaloradas: modo «Validación frente a IGME» del panel Simulación.",
@@ -2729,7 +2733,11 @@
     },
     {
      "k": "Mar y línea de costa",
-     "v": "El MDT Terrarium no incluye batimetría alrededor de Lanzarote: el mar es una superficie plana a 0 m. El modelo solo pierde lava por debajo de -10 m, de modo que la lava se extendía sobre ese llano (13,4 km² con P ≥ 0,5, el 8,5 % de la huella y el 4,9 % del volumen, hasta 2,1 km mar adentro). Es un artefacto del MDT, no una predicción de lava en el mar: la huella se recorta a la línea de costa ACTUAL (IGN, CC BY 4.0) y la validación se calcula solo en tierra (IoU 0,70 frente a 0,65 sin recorte; la mejora procede de eliminar ese área, no de un mejor modelo). Los polígonos IGME salen de la costa actual en solo 0,05 km²: las plataformas de lava que ganaron terreno al mar ya forman parte de la costa. No se simulan deltas sumergidos ni lava bajo el mar, y la costa de 1730 pudo ser distinta."
+     "v": "El MDT Terrarium no incluye batimetría alrededor de Lanzarote: el mar es una superficie plana a 0 m. El modelo solo pierde lava por debajo de -10 m, de modo que la lava se extendía sobre ese llano (13,4 km² con P ≥ 0,5, el 8,1 % de la huella y el 4,9 % del volumen, hasta 2,1 km mar adentro). Es un artefacto del MDT, no una predicción de lava en el mar: la huella se recorta a la línea de costa ACTUAL (IGN, CC BY 4.0) y la validación se calcula solo en tierra (IoU 0,71 frente a 0,66 sin recorte; la mejora procede de eliminar ese área, no de un mejor modelo). Los polígonos IGME salen de la costa actual en solo 0,05 km²: las plataformas de lava que ganaron terreno al mar ya forman parte de la costa. No se simulan deltas sumergidos ni lava bajo el mar, y la costa de 1730 pudo ser distinta."
+    },
+    {
+     "k": "Lóbulo distal de la unidad 77 (SUPUESTO derivado de IGME; CIRCULAR)",
+     "v": "Sin él, la unidad 77 (3.er episodio IGME, 32 km²) se cubría en un 67 % (cuerpo principal 87 %; lóbulo distal de 6,8 km² a ≈8 km de Nueces: 0 %), aunque el MDT permite una bajada continua. A petición del usuario se simula aparte: ≈135 Mm³ (≈21 % del volumen de la 77, restado a Colorada), boca = extremo aguas arriba del polígono, F = 20 cadenas calibrado. Con él: IoU 0,698 → 0,712; exhaustividad de la 77 67 % → 82 %; del lóbulo 0 % → 79 %; sobrestimado 24,6 → 27,7 km². La geometría del lóbulo sale del mismo mapa IGME con el que se valida, de modo que esa mejora es circular (por construcción) y no demuestra capacidad predictiva; fuera del polígono del lóbulo el IoU pasa de 0,727 a 0,709. Ver docs/SIMULACION_COLADAS.md §3.1b."
     },
     {
      "k": "Fallos conocidos",

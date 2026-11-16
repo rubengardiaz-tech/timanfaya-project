@@ -7,7 +7,7 @@ Autor del proyecto: Rubén Díaz García (CC BY 4.0). Código reproducible: `bui
 ## 1. Qué hace
 
 1. **MDT previo a 1730** (y a 1824): MDT actual (AWS Terrarium, mosaico z13, remuestreado a una rejilla UTM 28N de 50 m) menos un espesor de lava estimado dentro de los polígonos IGME (coladas 73/75/77 y 80), con borde adelgazado, y conos sustituidos por una superficie armónica interpolada (`prepare_dem.py`).
-2. **Fases y fechas**: diez centros de 1730–36 agrupados en las cinco fases de R13/R01/R16 y tres de 1824 (R13), con rangos de fechas y volúmenes (`params.json`).
+2. **Fases y fechas**: diez centros de 1730–36 (más el lóbulo distal supuesto de la unidad 77, §3.1b) agrupados en las cinco fases de R13/R01/R16 y tres de 1824 (R13), con rangos de fechas y volúmenes (`params.json`).
 3. **Modelo abierto propio**: apilamiento estocástico de lóbulos sobre el terreno que actualiza cada depósito (`model.py`, numba), ejecutado fase a fase (cada fase parte del terreno que deja la anterior) y repetido 40 veces por escenario (`simrun.py`, `run_all.py`).
 4. **Validación** frente a los polígonos IGME (IoU, precisión, exhaustividad, AUC, mapa de zonas sobrestimadas e infravaloradas) y frente a datos de R13 (longitudes, fecha de llegada a la costa en 1824) y de las fechas de núcleos.
 5. **Animación 2D/3D** en el visor sincronizada con la línea temporal, con núcleos sepultados coloreados según el momento estimado en que la simulación los cubre y su incertidumbre.
@@ -28,14 +28,15 @@ Fuentes de fechas: R13 (Fig. 7, Tabla 1, basadas en R01 y Pallarés Padilla 2007
 |---|---|---|---|---|---|---|---|
 | 1 | Caldera de los Cuervos | 1 | 1730-09-01 (1730-09-01 – 1730-09-01) | 1730-09-19 (1730-09-19 – 1730-09-19) | 25 | 3.4 | fuente |
 | 1 | Santa Catalina (Caldera de la Rilla, candidata) | 1 | 1730-10-10 (1730-10-10 – 1730-10-10) | 1730-10-31 (1730-10-31 – 1730-10-31) | 14 | 2.3 | fuente |
-| 1 | Pico Partido | 1 | 1730-10-10 (1730-10-10 – 1730-10-10) | 1731-01-18 (1731-01-02 – 1731-01-30) | 601 | 39.9 | fuente |
-| 2 | Montañas del Señalo | 1 | 1731-03-11 (1731-03-01 – 1731-03-19) | 1731-07-18 (1731-07-03 – 1731-07-28) | 90 | 1.7 | fuente+supuesto |
-| 3 | Volcán El Quemado | 2 | 1731-07-01 (1731-06-23 – 1731-07-10) | 1731-09-03 (1731-08-28 – 1731-09-09) | 354 | 24.2 | fuente+supuesto |
-| 3 | Montaña Rajada | 2 | 1731-09-03 (1731-08-28 – 1731-09-09) | 1731-11-05 (1731-10-29 – 1731-11-10) | 198 | 16.9 | fuente+supuesto |
-| 3 | Calderas Quemadas | 2 | 1731-11-05 (1731-10-29 – 1731-11-10) | 1732-01-09 (1731-12-29 – 1732-01-14) | 361 | 6.9 | fuente+supuesto |
-| 4 | Montañas del Fuego (3 bocas) | 2 | 1732-01-30 (1732-01-03 – 1732-02-27) | 1735-07-22 (1735-02-26 – 1736-02-12) | 630 | 36.7 | supuesto |
-| 5 | Montaña de las Nueces | 3 | 1736-03-14 (1736-03-11 – 1736-03-19) | 1736-04-05 (1736-04-02 – 1736-04-09) | 140 | 5.1 | fuente |
-| 5 | Montaña Colorada | 3 | 1736-04-06 (1736-04-02 – 1736-04-09) | 1736-04-16 (1736-04-16 – 1736-04-16) | 500 | 19.5 | fuente |
+| 1 | Pico Partido | 1 | 1730-10-10 (1730-10-10 – 1730-10-10) | 1731-01-20 (1731-01-04 – 1731-01-28) | 601 | 39.9 | fuente |
+| 2 | Montañas del Señalo | 1 | 1731-03-10 (1731-03-02 – 1731-03-19) | 1731-07-18 (1731-07-02 – 1731-07-28) | 90 | 1.7 | fuente+supuesto |
+| 3 | Volcán El Quemado | 2 | 1731-07-02 (1731-06-21 – 1731-07-09) | 1731-09-03 (1731-08-26 – 1731-09-08) | 354 | 24.2 | fuente+supuesto |
+| 3 | Montaña Rajada | 2 | 1731-09-03 (1731-08-26 – 1731-09-08) | 1731-11-03 (1731-10-29 – 1731-11-10) | 198 | 16.9 | fuente+supuesto |
+| 3 | Calderas Quemadas | 2 | 1731-11-03 (1731-10-29 – 1731-11-10) | 1732-01-05 (1731-12-29 – 1732-01-14) | 361 | 6.9 | fuente+supuesto |
+| 4 | Montañas del Fuego (3 bocas) | 2 | 1732-01-29 (1732-01-05 – 1732-02-22) | 1735-07-17 (1735-01-20 – 1735-12-21) | 630 | 36.7 | supuesto |
+| 5 | Montaña de las Nueces | 3 | 1736-03-16 (1736-03-11 – 1736-03-19) | 1736-04-05 (1736-04-02 – 1736-04-10) | 140 | 5.1 | fuente |
+| 5 | Montaña Colorada | 3 | 1736-04-05 (1736-04-02 – 1736-04-09) | 1736-04-16 (1736-04-16 – 1736-04-16) | 365 | 14.2 | fuente |
+| 5 | Lóbulo distal de la unidad 77 (SUPUESTO derivado de IGME) | 3 | 1736-03-16 (1736-03-11 – 1736-03-20) | 1736-04-05 (1736-04-02 – 1736-04-09) | 135 | 14.7 | supuesto |
 
 - Ubicaciones: NGBE (R27) salvo: Quemadas y dos bocas de Fuego (centroides de conos IGME, **supuesto**), **Nueces: ubicación desconocida** (supuesto: cono IGME unidad 78 de 0,09 km² próximo a Colorada) y Tao (inferida, ver §5).
 - Volumen: el volumen total del escenario se reparte entre los tres episodios IGME en proporción al área de sus polígonos de colada (73: 36,5; 75: 77,2; 77: 31,7 km²) y, dentro de cada episodio, entre sus centros según el polígono más próximo (supuesto). **Nueces tiene 140 Mm³ fijos (R13: 140 ± 30)**; Colorada recibe el resto del episodio 3. La hipótesis «episodios IGME 1/2/3 = fases 1–2/3–4/5» procede de R56 (guía geológica IGME).
@@ -63,15 +64,50 @@ Inspirado en MrLavaLoba (R54) y en la familia de autómatas de pendiente tipo DO
 ### 3.1 1730–1736 frente a IGME (unidades 73, 75, 77; 145.5 km²; huella P ≥ 0.5; 40 simulaciones)
 | Escenario | Espesor (m) | V (km³) | IoU | Precisión | Exhaustividad | F1 | AUC | km² simulados | km² sobrestimados | km² infravalorados | Lava perdida en el mar |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| S1 | 15 | 2.18 | 0.62 | 0.83 | 0.70 | 0.76 | 0.89 | 123 | 20 | 43 | 0.0 % |
-| S2 (base) | 20 | 2.91 | 0.70 | 0.83 | 0.82 | 0.82 | 0.92 | 143 | 25 | 27 | 0.1 % |
-| S3 | 25 | 3.64 | 0.72 | 0.81 | 0.87 | 0.84 | 0.94 | 156 | 30 | 19 | 1.0 % |
-| S4 | 28.9 | 4.21 | 0.72 | 0.79 | 0.89 | 0.84 | 0.93 | 163 | 34 | 16 | 2.5 % |
+| S1 | 15 | 2.18 | 0.62 | 0.81 | 0.73 | 0.77 | 0.90 | 131 | 25 | 39 | 0.0 % |
+| S2 (base) | 20 | 2.91 | 0.71 | 0.82 | 0.85 | 0.83 | 0.94 | 151 | 28 | 22 | 0.1 % |
+| S3 | 25 | 3.64 | 0.75 | 0.81 | 0.91 | 0.85 | 0.96 | 164 | 31 | 13 | 1.0 % |
+| S4 | 28.9 | 4.21 | 0.75 | 0.80 | 0.93 | 0.86 | 0.96 | 171 | 35 | 10 | 2.5 % |
 
-- Escenario base S2: IoU medio de una simulación individual 0.68; área media por simulación 156.6 ± 0.9 km². IoU según el umbral de probabilidad: P≥0.1: 0.69 · P≥0.2: 0.70 · P≥0.3: 0.70 · P≥0.4: 0.70 · P≥0.5: 0.70 · P≥0.6: 0.69 · P≥0.7: 0.69 · P≥0.8: 0.67 · P≥0.9: 0.65.
+- Escenario base S2: IoU medio de una simulación individual 0.69; área media por simulación 166.1 ± 1.1 km². IoU según el umbral de probabilidad: P≥0.1: 0.68 · P≥0.2: 0.70 · P≥0.3: 0.71 · P≥0.4: 0.71 · P≥0.5: 0.71 · P≥0.6: 0.71 · P≥0.7: 0.70 · P≥0.8: 0.69 · P≥0.9: 0.66.
 - La coincidencia es poco sensible al volumen (S2–S4), pero el área sobrestimada crece con él y la infravalorada decrece.
 - **Mapa de zonas sobrestimadas e infravaloradas**: modo «Validación frente a IGME» del visor (verde = coincide, rojo = sobrestimado, azul = infravalorado). Sobrestimación principal (tras recortar a la costa): bordes del campo; antes del recorte, además, una mancha sobre el mar al oeste (artefacto del MDT plano, §3.4); infravaloración principal: flujos largos y estrechos hacia el este/noreste (colada de las Nueces) y el norte.
 - Nueces: el modelo da una colada de ≈4.0 km frente a 21,7 km (R13): **fallo conocido**.
+
+### 3.1b Exhaustividad por unidad IGME y el lóbulo distal de la unidad 77 (supuesto circular)
+Fracción del área IGME cubierta con P ≥ 0.5 (solo tierra), **con** el lóbulo distal simulado. Unidades: 73 = 1.er episodio (36.5 km²), 75 = 2.º (77.1 km²), 77 = 3.er (32.0 km², 22 % del área IGME). La 77 se desglosa en cuerpo principal (24.6 km²) y lóbulo distal (6.8 km², un único polígono no conexo con el principal; hay además seis fragmentos menores, 0,67 km² en total, que no se simulan aparte).
+
+| Escenario | 73 | 75 | 77 | 77 cuerpo principal | 77 lóbulo distal (circular) |
+|---|---|---|---|---|---|
+| S1 | 57 % | 82 % | 70 % | 73 % | 63 % |
+| S2 (base) | 72 % | 92 % | 82 % | 85 % | 79 % |
+| S3 | 84 % | 94 % | 91 % | 94 % | 88 % |
+| S4 | 90 % | 94 % | 96 % | 98 % | 97 % |
+
+**Qué ocurría sin el lóbulo.** En la versión anterior la 77 se cubría en un 67 %: el cuerpo principal en un 87 % y las partes aisladas (en esencia ese lóbulo, un polígono estrecho hacia el este a ≈8 km de la boca supuesta de Nueces) en un 1 %. No era un problema del MDT: existe una bajada continua desde las bocas hasta él. Era un fallo del modelo: el volumen del 3.er episodio se repartía por el área de todos sus polígonos pero la lava se acumulaba cerca de las bocas. Ajustar γ, wmin o la longitud mínima de cadena no lo resolvió (prueba exploratoria).
+
+**Corrección aplicada (a petición del usuario): lóbulo distal emitido por separado — SUPUESTO derivado de IGME.** Se simula como un centro más (`lobulo_distal_77`, pseudo-fase 6 en el mapa), con (i) volumen = área del lóbulo / área de la 77 ≈ 21 % del volumen del 3.er episodio (≈135 Mm³ en el escenario base), restado a Colorada (Nueces mantiene sus 140 Mm³, R13); (ii) boca en el **extremo aguas arriba del polígono** (su celda de mayor cota actual, borde oeste; 29.0229° N, -13.6073° E): el diagnóstico previo hablaba de una «entrada NE», pero era un artefacto de una búsqueda de camino sin pendiente; (iii) las ventanas de fechas de Nueces (sin fuente propia) y (iv) F = 20 cadenas (en vez de 200), valor calibrado porque el lóbulo exige cadenas largas (≈14 km).
+
+**Esto es circular.** La geometría del lóbulo (dónde está, su área, su boca y por tanto su volumen) procede del mismo mapa IGME con el que se valida, y F se calibró sobre él: la mejora en esa zona es **por construcción** y no demuestra capacidad predictiva del modelo. Por eso se dan las métricas con y sin el lóbulo y, como cifra no circular para el resto de la isla, el IoU **excluyendo el polígono del lóbulo** del cálculo. Obsérvese que fuera de ese polígono el IoU **empeora** con el lóbulo (porque se resta volumen a Colorada y se sobrestima algo más): el lóbulo mejora el IoU global solo por la zona que se le regala.
+
+| Escenario | IoU sin lóbulo | IoU con lóbulo | IoU sin el polígono del lóbulo: sin | … con | Exhaust. 77 sin | … con | Exhaust. lóbulo sin | … con (circular) | km² sobrest. sin | … con |
+|---|---|---|---|---|---|---|---|---|---|---|
+| S1 | 0.617 | 0.624 | 0.643 | 0.624 | 57 % | 70 % | 0 % | 63 % | 20.4 | 24.5 |
+| S2 (base) | 0.698 | 0.712 | 0.727 | 0.709 | 67 % | 82 % | 0 % | 79 % | 24.6 | 27.7 |
+| S3 | 0.721 | 0.747 | 0.750 | 0.741 | 73 % | 91 % | 0 % | 88 % | 29.8 | 31.4 |
+| S4 | 0.723 | 0.754 | 0.752 | 0.745 | 76 % | 96 % | 0 % | 97 % | 33.7 | 34.8 |
+
+Sensibilidad al número de cadenas F del lóbulo (escenario base, 40 simulaciones; `sweep_distal.py`):
+
+| F | IoU global | IoU sin el polígono del lóbulo | Exhaust. 77 | Exhaust. lóbulo | km² sobrest. |
+|---|---|---|---|---|---|
+| 10 | 0.711 | 0.701 | 82 % | 96 % | 28.2 |
+| 20 (adoptado) | 0.712 | 0.709 | 82 % | 79 % | 27.7 |
+| 40 | 0.701 | 0.708 | 77 % | 53 % | 28.0 |
+| 90 | 0.692 | 0.705 | 72 % | 37 % | 28.2 |
+| 200 | 0.691 | 0.709 | 68 % | 25 % | 26.8 |
+
+Con pocas cadenas (F = 10) el lóbulo se cubre casi entero pero el IoU fuera de su polígono baja; con muchas (F = 200, estándar) apenas se alcanza. Se adopta F = 20, que maximiza el IoU global, por compromiso y sin afinar más (evitar sobreajuste). El visor ofrece mostrar/ocultar el lóbulo (casilla «lóbulo distal de la 77»), colorearlo aparte y superponer el contorno de la unidad 77; la variante sin lóbulo se reproduce con `distal=False` en `stages_1730` (resultados idénticos a la versión anterior).
 
 ### 3.2 1824 (mismos parámetros del modelo)
 IoU 0.41, precisión 0.60, exhaustividad 0.57, AUC 0.97; área simulada 2.3 km² frente a 2.4 km² (IGME).
@@ -90,30 +126,30 @@ Se calcula, por simulación, la fecha mediana de las celdas del disco de incerti
 | Núcleo | Radio (m) | P(≥50 % del disco cubierto) | Fecha simulada P10 · P50 · P90 | Fecha documentada |
 |---|---|---|---|---|
 | Tingafa (Tíngafa) ⚑ | 700 | 100 % | 1730-10-18 · 1730-10-19 · 1730-10-20 | 1731-03-07 (R24 (von Buch 1825)) |
-| Chimanfaya ⚑ | 2000 | 100 % | 1730-11-03 · 1730-11-15 · 1730-12-09 | 1730-09 (R16/R19/R22: «primera aldea») |
-| Santa Catalina (aldea y ermita) ⚑ | 2000 | 100 % | 1730-10-19 · 1730-10-19 · 1730-10-21 | 1730-09-07 (R21 (divulgación, sin contrastar)) |
-| Testeina | 1500 | 100 % | 1736-04-05 · 1736-04-08 · 1736-04-09 | — |
-| Peña Palomas | 1500 | 100 % | 1730-09-16 · 1730-10-03 · 1730-11-26 | — |
+| Chimanfaya ⚑ | 2000 | 100 % | 1730-10-29 · 1730-11-10 · 1730-11-24 | 1730-09 (R16/R19/R22: «primera aldea») |
+| Santa Catalina (aldea y ermita) ⚑ | 2000 | 100 % | 1730-10-18 · 1730-10-20 · 1730-10-21 | 1730-09-07 (R21 (divulgación, sin contrastar)) |
+| Testeina | 1500 | 100 % | 1736-04-06 · 1736-04-08 · 1736-04-10 | — |
+| Peña Palomas | 1500 | 95 % | 1730-09-14 · 1730-09-17 · 1730-10-18 | — |
 | El Chupadero (Chupaderos) | 1500 | 0 % | — | — |
-| Los Rodeos (Rodeo) | 1500 | 100 % | 1730-11-28 · 1730-12-09 · 1730-12-27 | — |
-| Mazo (Maso) | 2000 | 100 % | 1730-11-13 · 1730-11-21 · 1730-11-26 | — |
-| Mancha Blanca (emplazamiento antiguo) | 2500 | 100 % | 1736-03-30 · 1736-04-02 · 1736-04-05 | — |
+| Los Rodeos (Rodeo) | 1500 | 100 % | 1730-11-30 · 1730-12-09 · 1730-12-21 | — |
+| Mazo (Maso) | 2000 | 100 % | 1730-11-17 · 1730-11-21 · 1730-11-25 | — |
+| Mancha Blanca (emplazamiento antiguo) | 2500 | 12 % | 1736-03-22 · 1736-03-25 · 1736-03-28 | — |
 
 ⚑ El punto del núcleo coincide con un cono/centro eruptivo (anclaje toponímico): la cobertura no es una prueba independiente. **Desajustes**: Tingafa simulada en octubre de 1730 (por lava de Pico Partido) frente al 7-mar-1731 documentado (R24); Santa Catalina ≈6 semanas después de la fecha de R21; Chimanfaya ≈2 meses después de septiembre de 1730 (R16). Con incertidumbres de ubicación de 0,7–2,5 km y cronología imprecisa, **las fechas simuladas de núcleos no son fiables a escala de días ni de meses**.
 
 ### 3.4 Recorte a la línea de costa real (IGN) y tratamiento del mar
-**Qué pasaba.** La versión anterior pintaba y validaba también las celdas sobre el mar. Causa (reproducida y medida en `build/sim/analysis_mar.py`): el MDT (AWS Terrarium) no tiene batimetría en torno a Lanzarote, así que el mar es una superficie **plana a 0 m** (43 % de las celdas de la rejilla valen exactamente 0 m). El modelo solo trata como sumidero lo que queda por debajo de -10 m; la superficie de 0 m no lo cumple y la lava se desplaza sobre ella como sobre un llano. En el escenario base eso son 13.4 km² con P ≥ 0.5 (8.5 % de la huella) y 4.9 % del volumen depositado, en un único foco al oeste (≈29.000° N, -13.833° E) que llega a 2.1 km de la costa actual.
+**Qué pasaba.** La versión anterior pintaba y validaba también las celdas sobre el mar. Causa (reproducida y medida en `build/sim/analysis_mar.py`): el MDT (AWS Terrarium) no tiene batimetría en torno a Lanzarote, así que el mar es una superficie **plana a 0 m** (43 % de las celdas de la rejilla valen exactamente 0 m). El modelo solo trata como sumidero lo que queda por debajo de -10 m; la superficie de 0 m no lo cumple y la lava se desplaza sobre ella como sobre un llano. En el escenario base eso son 13.4 km² con P ≥ 0.5 (8.1 % de la huella) y 4.9 % del volumen depositado, en un único foco al oeste (≈29.000° N, -13.833° E) que llega a 2.1 km de la costa actual.
 
 **Qué se hace.** La línea de costa es la unión de los límites de los municipios de Lanzarote del IGN (INSPIRE *Unidades administrativas*, WFS `ign.es/wfs-inspire/unidades-administrativas`, CC BY 4.0 © IGN), simplificada a ≈4 m (`data/costa_lanzarote.geojson`). Coincide con el MDT en el 99.8 % de las celdas (tierra = cota > 0,5 m). (1) El modelo **no se recalcula** (misma semilla, mismos parámetros: sin recorte se reproducen exactamente las cifras anteriores). (2) La validación se calcula **solo en celdas de tierra**. (3) El visor muestra la huella recortada a la costa real con un recorte vectorial.
 
 | Escenario | IoU sin recorte | IoU con recorte (tierra) | km² simulados sin recorte | km² simulados en tierra | km² sobre el mar (P ≥ umbral) | % del volumen depositado en el mar |
 |---|---|---|---|---|---|---|
-| S1 | 0.59 | 0.62 | 131 | 123 | 8.0 | 4.1 % |
-| S2 (base) | 0.65 | 0.70 | 157 | 143 | 13.4 | 4.9 % |
-| S3 | 0.65 | 0.72 | 176 | 156 | 19.9 | 6.0 % |
-| S4 | 0.64 | 0.72 | 187 | 163 | 23.7 | 6.4 % |
+| S1 | 0.60 | 0.62 | 139 | 131 | 8.0 | 4.1 % |
+| S2 (base) | 0.66 | 0.71 | 164 | 151 | 13.4 | 4.9 % |
+| S3 | 0.67 | 0.75 | 183 | 164 | 19.9 | 6.0 % |
+| S4 | 0.67 | 0.75 | 194 | 171 | 23.7 | 6.4 % |
 
-**Qué es real y qué es artefacto.** Los polígonos IGME de 1730–36 solo salen de la costa actual en 0.05 km² de 146 km² (1824: 0.00 km²). Las coladas de 1730–36 sí ganaron terreno al mar (R13 y R16 describen lava alcanzando la costa oeste), pero esas plataformas ya forman parte de la costa actual y están dentro de la huella válida; lo que queda mar adentro de la costa actual es, en este modelo, un artefacto del MDT plano a 0 m: no hay evidencia cartográfica (IGME) de lava más allá de la costa actual, y los deltas sumergidos o erosionados que pudieran existir no pueden evaluarse con estos datos. Con el recorte la coincidencia sube (IoU 0.70 frente a 0.65 en el escenario base) únicamente porque se elimina el área simulada sobre el mar; no refleja una mejora del modelo. Con el recorte, S3 y S4 puntúan algo más que S2 (IoU 0.72 y 0.72 frente a 0.70); se mantiene S2 como escenario base (elegido antes del recorte; ver §6).
+**Qué es real y qué es artefacto.** Los polígonos IGME de 1730–36 solo salen de la costa actual en 0.05 km² de 146 km² (1824: 0.00 km²). Las coladas de 1730–36 sí ganaron terreno al mar (R13 y R16 describen lava alcanzando la costa oeste), pero esas plataformas ya forman parte de la costa actual y están dentro de la huella válida; lo que queda mar adentro de la costa actual es, en este modelo, un artefacto del MDT plano a 0 m: no hay evidencia cartográfica (IGME) de lava más allá de la costa actual, y los deltas sumergidos o erosionados que pudieran existir no pueden evaluarse con estos datos. Con el recorte la coincidencia sube (IoU 0.71 frente a 0.66 en el escenario base) únicamente porque se elimina el área simulada sobre el mar; no refleja una mejora del modelo. Con el recorte, S3 y S4 puntúan algo más que S2 (IoU 0.75 y 0.75 frente a 0.71); se mantiene S2 como escenario base (elegido antes del recorte; ver §6).
 
 **Visualización en 3D.** Con terreno activo, MapLibre dibuja una fuente de imagen/canvas como una única tesela web (la de zoom entero cuyo centro contiene el centro de la imagen); lo que sobresale de esa tesela se recorta, y la simulación aparecía cortada en vertical sobre el relieve. El visor reparte ahora cada capa en teselas de la malla web z = 11 (un canvas por tesela, 500 × 498 px; no pueden ser cuadrados ni potencia de 2 en la versión vendorizada de MapLibre 4.7.1, donde se verían negros), remuestrea el ráster UTM en cada una y aplica el recorte a la costa con una máscara vectorial. Se comprueba con `build/shot3d.py` y `build/shot_costa.py`.
 
@@ -164,7 +200,8 @@ Ver la ficha «Limitaciones del modelo de simulación» del visor. Resumen:
 - Cronología posterior a 1731 mal documentada (R13): inicio de Nueces en febrero de 1733 o marzo–abril de 1736 (el visor simula la versión clásica de 1736; la alternativa de 1733 solo cambiaría fechas, no el apilamiento), posible fin en 1735, actividad de Fuego discontinua.
 - Los volúmenes de R13 excluyen lava perdida en el mar y tefras; el escenario no los corrige.
 - Calibración y validación sobre el mismo mapa: validación cruzada espacial solo parcial; 1824 no es totalmente independiente.
-- Fallos: flujos largos (Nueces), longitudes de Tao/Tinguatón, fechas de núcleos. **Mar**: el MDT no tiene batimetría (mar plano a 0 m) y el modelo extendía la lava sobre él (≈8.5 % de la huella, ≈13 km²); se recorta a la costa actual del IGN y no se simulan deltas ni lava sumergida.
+- Fallos: flujos largos (Nueces) —sin el lóbulo distal supuesto, la unidad 77 solo se cubre en un 67 %; con él, un 82 %, pero esa mejora es circular (§3.1b)—, longitudes de Tao/Tinguatón, fechas de núcleos. **Mar**: el MDT no tiene batimetría (mar plano a 0 m) y el modelo extendía la lava sobre él (≈8.1 % de la huella, ≈13 km²); se recorta a la costa actual del IGN y no se simulan deltas ni lava sumergida.
+- El lóbulo distal de la 77 es un **supuesto derivado del mapa IGME de validación** (geometría, volumen y F calibrados sobre él): sus métricas son circulares; da siempre «con y sin».
 - Calibración (barridos de §7) hecha **antes** del recorte a la costa y sin máscara de tierra; los parámetros no se han vuelto a calibrar.
 
 ## 7. Reproducir

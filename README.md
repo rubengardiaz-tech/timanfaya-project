@@ -42,7 +42,13 @@ El botón **Simulación** del visor muestra una **simulación hipotética** de l
 
 ### Simulación en 3D y línea de costa (actualización)
 - **3D**: con relieve activo, MapLibre dibuja una imagen/canvas como una sola tesela y recorta lo que sobresale (la simulación aparecía cortada en vertical). Ahora `app/sim.js` reparte cada capa en teselas web z = 11 (un canvas de 500 × 498 px por tesela; los canvas cuadrados o potencia de 2 se ven negros en el MapLibre 4.7.1 vendorizado) y remuestrea el ráster UTM en cada una.
-- **Mar**: el MDT Terrarium no tiene batimetría (mar plano a 0 m) y la lava simulada se extendía sobre él (≈8,5 % de la huella del escenario base). La huella se recorta a la línea de costa actual del IGN (`data/costa_lanzarote.geojson`, fuente R57) y la validación se calcula solo en tierra. Detalle y métricas: `docs/SIMULACION_COLADAS.md` §3.4.
+- **Mar**: el MDT Terrarium no tiene batimetría (mar plano a 0 m) y la lava simulada se extendía sobre él (≈8,1 % de la huella del escenario base). La huella se recorta a la línea de costa actual del IGN (`data/costa_lanzarote.geojson`, fuente R57) y la validación se calcula solo en tierra. Detalle y métricas: `docs/SIMULACION_COLADAS.md` §3.4.
+
+### Lóbulo distal de la unidad 77 (supuesto circular)
+- **Por qué faltaban las coladas del 3.er episodio (IGME unidad 77)**: (1) un desfase de una unidad en la paleta del modo «Color por fase» (corregido); (2) ≈7 km² de la unidad 77, un lóbulo estrecho hacia el este, que el modelo no alcanzaba (exhaustividad ≈1 %).
+- **Corrección aplicada a petición del usuario**: ese lóbulo se emite como una fuente aparte (`lobulo_distal_77` en `build/sim/params.json`; ≈21 % del volumen de la 77, restado a Colorada; boca = extremo aguas arriba de su polígono; F = 20 cadenas). Está marcado en el visor como **«supuesto, derivado de IGME»** (casilla para ocultarlo, color propio).
+- **Es circular**: su geometría procede del mismo mapa con el que se valida. El panel «Validación» da las métricas **con y sin** el lóbulo (escenario base: IoU 0,698 → 0,712; exhaustividad de la 77: 67 % → 82 %), y el IoU excluyendo su polígono (0,727 → 0,709). Detalle y sensibilidad a F: `docs/SIMULACION_COLADAS.md` §3.1b.
+- Nuevos modos del visor: «Color por episodio IGME» y casilla «contorno de la unidad 77».
 
 ## Licencias y atribuciones
 - **Código, diseño de la interfaz y contenidos originales del proyecto: Creative Commons Attribution 4.0 International (CC BY 4.0)** — ver `LICENSE` y https://creativecommons.org/licenses/by/4.0/. Atribución: «Proyecto Timanfaya — Rubén Díaz García». Copyright (c) 2026 Rubén Díaz García. Contacto: rubendiazgar@outlook.es.
