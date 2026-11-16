@@ -30,6 +30,7 @@ El **código**, el **diseño de la interfaz** y los **contenidos originales elab
 |---|---|
 | Mapa Geológico Continuo GEODE 1:25.000 (polígonos de coladas y conos) | IGME; consulte sus condiciones de uso en la fuente |
 | NGBE (topónimos) y PNOA (ortofoto) | IGN, CC BY 4.0 |
+| Línea de costa actual (unión de los límites municipales de Lanzarote, WFS INSPIRE «Unidades administrativas»; recorte de la simulación) | IGN, CC BY 4.0 (según la política de datos del IGN); simplificada, con cambios |
 | Ortofotos históricas 1977 y 1990 y espacios naturales (WMS) | GRAFCAN / IDECanarias; según sus condiciones de uso |
 | InSAR de Purcell et al. (2022), Zenodo 6620524 | CC BY 4.0 (el PNG y los contornos mostrados son un recorte y un derivado de ese dataset, con cambios) |
 | Gómez-Ortiz et al. (2019), *Remote Sensing* 11(6):675, copia en DIGITAL.CSIC | CC BY-NC-SA 4.0 (la traza y el círculo de TA1 del Islote de Hilario se han **digitalizado de su Fig. 6**; esa geometría conserva las condiciones de la obra original y **no** se ofrece bajo CC BY) |

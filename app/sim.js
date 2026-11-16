@@ -12,11 +12,64 @@ const st={on:false,show1730:true,show1824:true,mode:'prob',pmin:.5,unc:true,fill
 const sims={}; let map,api,ready=false,anim=null;
 
 function loadPx(uri){return new Promise(res=>{const im=new Image();im.onerror=()=>res(null);im.onload=()=>{const c=document.createElement('canvas');c.width=im.width;c.height=im.height;const x=c.getContext('2d',{willReadFrequently:true});x.drawImage(im,0,0);res(x.getImageData(0,0,im.width,im.height));};im.src=uri;});}
+
+/* ---------- Teselado para el terreno 3D ----------
+   MapLibre dibuja una fuente de imagen/canvas con terreno como UNA sola tesela: la más pequeña (zoom entero) cuyo centro contiene el centro de
+   la imagen. Lo que sobresale de esa tesela queda recortado en 3D (bloque cortado en vertical). Solución: repartir la capa en celdas de la
+   malla web z=11 (cada canvas cubre exactamente una tesela, ligeramente reducida para que su zoom sea 11) y remuestrear el ráster (rejilla UTM 28N) en cada una. */
+const TZ=11, TW=500, TH=498, TEPS=1e-4;   // los canvas NO deben ser cuadrados: en MapLibre 4.7.1 (vendor) un canvas cuadrado se muestra negro (comprobado con Playwright); 500×498 evita el problema (distorsión 0,4 %)
+function utmFwd(lon,lat){   // WGS84 → UTM 28N (series de Krüger, error < 1 mm)
+  const a=6378137,f=1/298.257223563,n=f/(2-f),A=a/(1+n)*(1+n*n/4+n**4/64),k0=0.9996,l0=-15*Math.PI/180;
+  const al=[n/2-2*n*n/3+5*n**3/16,13*n*n/48-3*n**3/5,61*n**3/240];
+  const p=lat*Math.PI/180,l=lon*Math.PI/180-l0,q=2*Math.sqrt(n)/(1+n);
+  const t=Math.sinh(Math.atanh(Math.sin(p))-q*Math.atanh(q*Math.sin(p)));
+  const xi0=Math.atan2(t,Math.cos(l)),eta0=Math.atanh(Math.sin(l)/Math.sqrt(1+t*t));
+  let xi=xi0,eta=eta0;for(let j=1;j<=3;j++){xi+=al[j-1]*Math.sin(2*j*xi0)*Math.cosh(2*j*eta0);eta+=al[j-1]*Math.cos(2*j*xi0)*Math.sinh(2*j*eta0);}
+  return [500000+k0*A*eta,k0*A*xi];
+}
+const tile2ll=(tx,ty,u,v)=>{const n=2**TZ,fx=(tx+u)/n,fy=(ty+v)/n;return [fx*360-180,Math.atan(Math.sinh(Math.PI*(1-2*fy)))*180/Math.PI];};
+const ll2tilepx=(tx,ty,lon,lat)=>{const n=2**TZ,fx=(lon+180)/360*n,fy=(1-Math.asinh(Math.tan(lat*Math.PI/180))/Math.PI)/2*n;return [(fx-tx)*TW,(fy-ty)*TH];};
+function makeTiles(o){
+  const c=o.corners,NW=utmFwd(c[0][0],c[0][1]),NE=utmFwd(c[1][0],c[1][1]),SW=utmFwd(c[3][0],c[3][1]);
+  const dx=(NE[0]-NW[0])/o.w, dy=(NW[1]-SW[1])/o.h;                     // tamaño de celda (≈ 50 m); la rejilla es UTM (ejes alineados)
+  const tl=lon=>Math.floor((lon+180)/360*2**TZ), tt=lat=>Math.floor((1-Math.asinh(Math.tan(lat*Math.PI/180))/Math.PI)/2*2**TZ);
+  const lons=c.map(p=>p[0]),lats=c.map(p=>p[1]);
+  const x0=tl(Math.min(...lons)),x1=tl(Math.max(...lons)),y0=tt(Math.max(...lats)),y1=tt(Math.min(...lats));
+  const out=[];
+  for(let ty=y0;ty<=y1;ty++)for(let tx=x0;tx<=x1;tx++){
+    const idx=new Int32Array(TW*TH).fill(-1);let any=false;
+    for(let v=0;v<TH;v++)for(let u=0;u<TW;u++){
+      const ll=tile2ll(tx,ty,(u+.5)/TW,(v+.5)/TH),en=utmFwd(ll[0],ll[1]);
+      const col=Math.floor((en[0]-NW[0])/dx),row=Math.floor((NW[1]-en[1])/dy);
+      if(col>=0&&col<o.w&&row>=0&&row<o.h){const j=row*o.w+col;if(o.P[j]>0||o.V[4*j+3]>0)any=true;idx[v*TW+u]=j;}
+    }
+    if(!any)continue;
+    const cv=document.createElement('canvas');cv.width=TW;cv.height=TH;
+    const mk=document.createElement('canvas');mk.width=TW;mk.height=TH;const m=mk.getContext('2d');   // máscara de tierra (línea de costa IGN) en píxeles de la tesela
+    m.fillStyle='#000';m.beginPath();
+    (J.costa||[]).forEach(poly=>poly.forEach(ring=>{ring.forEach((p,i)=>{const q=ll2tilepx(tx,ty,p[0],p[1]);i?m.lineTo(q[0],q[1]):m.moveTo(q[0],q[1]);});m.closePath();}));
+    m.fill('evenodd');
+    const e=TEPS,id=`${o.key}-${tx}-${ty}`;
+    out.push({id,tx,ty,idx,cv,ctx:cv.getContext('2d'),mask:mk,img:new ImageData(TW,TH),
+      coords:[tile2ll(tx,ty,e,e),tile2ll(tx,ty,1-e,e),tile2ll(tx,ty,1-e,1-e),tile2ll(tx,ty,e,1-e)]});
+  }
+  return out;
+}
+function paintTiles(o){
+  const D=o.img.data;
+  o.tiles.forEach(t=>{
+    const T=t.img.data,idx=t.idx;
+    for(let i=0;i<idx.length;i++){const j=idx[i],k=4*i;if(j<0){T[k+3]=0;continue;}const s=4*j;T[k]=D[s];T[k+1]=D[s+1];T[k+2]=D[s+2];T[k+3]=D[s+3];}
+    t.ctx.putImageData(t.img,0,0);
+    t.ctx.globalCompositeOperation='destination-in';t.ctx.drawImage(t.mask,0,0);t.ctx.globalCompositeOperation='source-over';   // recorte a la costa real
+    const src=map.getSource('sim-'+t.id); if(src&&src.play){src.play();map.once('render',()=>{try{src.pause();}catch(e){}});}
+  });
+}
 async function mk(key,corners){
   const [T,U,V]=await Promise.all(['t','u','v'].map(k=>loadPx(S.img[`s${key}_${k}`])));
   const n=T.width*T.height, o={key,w:T.width,h:T.height,corners,t50:new Uint16Array(n),P:new Uint8Array(n),d10:new Uint8Array(n),d90:new Uint8Array(n),ph:new Uint8Array(n),V:V.data};
   for(let i=0;i<n;i++){o.t50[i]=T.data[4*i]*256+T.data[4*i+1];o.P[i]=T.data[4*i+2];o.d10[i]=U.data[4*i];o.d90[i]=U.data[4*i+1];o.ph[i]=U.data[4*i+2];}
-  const cv=document.createElement('canvas');cv.width=o.w;cv.height=o.h;o.cv=cv;o.ctx=cv.getContext('2d');o.img=o.ctx.createImageData(o.w,o.h);
+  o.img=new ImageData(o.w,o.h); o.tiles=makeTiles(o); return o;
   return o;
 }
 function draw(o){
@@ -30,16 +83,15 @@ function draw(o){
     let c; if(cls===1)c=[255,214,64]; else if(mode==='fase')c=hex(PAL[o.ph[i]]||PAL[0]); else if(o.key==='1824')c=cls===3?[110,40,160]:[160,90,205]; else c=cls===3?[196,40,24]:[232,104,40];
     D[j]=c[0];D[j+1]=c[1];D[j+2]=c[2];D[j+3]=cls===3?(110+120*pp):cls===2?(80+110*pp):(60+80*pp);
   }
-  o.ctx.putImageData(o.img,0,0);
-  const s=map.getSource('sim-'+o.key); if(s&&s.play){s.play();map.once('render',()=>{try{s.pause();}catch(e){}});}
+  paintTiles(o);
   map.triggerRepaint();
 }
 function drawAll(){ if(!ready)return; Object.values(sims).forEach(draw); updateVillages(); updateReadout(); }
 function updateReadout(){const el=$('#sim-date'); if(el)el.textContent=st.cutDay===Infinity?'sin filtro de fecha (resultado final de la simulación)':'simulado hasta '+iso(st.cutDay);}
 function applyVis(){
   if(!ready)return; const v=st.on?'visible':'none';
-  [['1730',st.show1730],['1824',st.show1824]].forEach(([k,s])=>{if(map.getLayer('sim-'+k+'-r'))map.setLayoutProperty('sim-'+k+'-r','visibility',st.on&&s?'visible':'none');});
-  ['sim-nuc-c','sim-nuc-l','sim-vent-c'].forEach(l=>{if(map.getLayer(l))map.setLayoutProperty(l,'visibility',v);});
+  [['1730',st.show1730],['1824',st.show1824]].forEach(([k,s])=>{(sims[k]?sims[k].tiles:[]).forEach(t=>{const l='sim-'+t.id+'-r';if(map.getLayer(l))map.setLayoutProperty(l,'visibility',st.on&&s?'visible':'none');});});
+  ['sim-nuc-c','sim-nuc-l','sim-vent-c','sim-costa-l'].forEach(l=>{if(map.getLayer(l))map.setLayoutProperty(l,'visibility',v);});
   const f=st.on&&!st.fill?0:null;
   [['col1730-f',.62],['col1824-f',.7]].forEach(([l,o])=>{if(map.getLayer(l))map.setPaintProperty(l,'fill-opacity',f===0?0.04:o);});
   const w=$('#simwarn'); if(w)w.hidden=!st.on; $('#btnSim').classList.toggle('on',st.on); $('#simpanel').hidden=!st.on;
@@ -97,6 +149,7 @@ function openValid(){
   modal(`<h2>Validación frente a los polígonos IGME</h2><div class="simwarn2">SIMULACIÓN HIPOTÉTICA. Coincidencia con las coladas IGME (unidades 73, 75, 77) en celdas de ${J.dx_m} m, con la huella «P ≥ ${J.umbral}» sobre ${J.n_simulaciones} simulaciones. Parte del ajuste es <b>calibración sobre el mismo mapa</b> (ver tipo «calibrado» en los parámetros); no es validación independiente.</div>
   <h3>1730–1736 por escenario de volumen</h3><table class="refs simp"><thead><tr><th>Esc.</th><th>Espesor (m)</th><th>V (km³)</th><th>IoU</th><th>Precisión</th><th>Exhaustividad</th><th>F1</th><th>AUC (P)</th><th>km² simulados</th><th>km² sobrestimados</th><th>km² infravalorados</th></tr></thead><tbody>${rows}</tbody></table>
   <p class="mini">Área IGME observada: ${f1(E[J.escenario_base].km2_obs,1)} km². IoU = intersección/unión; precisión = fracción simulada que es lava IGME; exhaustividad = fracción de lava IGME cubierta; AUC = capacidad de la probabilidad para separar celdas con/sin lava IGME. Validación cruzada espacial (calibrar en fases 1–3 y evaluar en 4–5): IoU ${f1(J.cv.A_en_B.IoU_B)} (óptimo posible ${f1(J.cv.A_en_B.IoU_B_mejor_posible)}); a la inversa (calibrar en 4–5, evaluar en 1–3): IoU ${f1(J.cv.B_en_A.IoU_A)} (${f1(J.cv.B_en_A.IoU_A_mejor_posible)}).</p>
+  <h3>Recorte a la línea de costa real</h3><p class="mini">Estas métricas se calculan <b>solo sobre tierra</b> (línea de costa actual del IGN). Sin recorte, el escenario base daba IoU ${f1(E[J.escenario_base].sin_recorte.IoU)} (${f1(E[J.escenario_base].sin_recorte.km2_pred,0)} km² simulados). La diferencia es el área que la simulación coloca <b>sobre el mar</b>: ${f1(J.mar.km2_mar_P_ge_umbral,1)} km² con P ≥ ${J.umbral} (${f1(J.mar.pct_huella_en_mar,1)} % de la huella) y ${f1(J.mar.fraccion_volumen_depositado_en_mar_pct,1)} % del volumen depositado, hasta ${f1(J.mar.distancia_costa_m_max/1000,1)} km mar adentro. Es un <b>artefacto del modelo</b>: el MDT (Terrarium) representa el mar como una superficie plana a 0 m y la lava solo se pierde por debajo de ${J.mar.limite_mar_modelo_m} m, de modo que se extiende sobre ese «llano». Los polígonos IGME apenas salen de la costa actual (${f1(J.mar.km2_igme_1730_fuera_costa_actual,2)} km²): las plataformas de lava que ganaron terreno al mar en 1730–36 ya forman parte de la costa actual y están dentro de la huella válida. Lo que no queda cartografiado (deltas sumergidos o erosionados) no puede evaluarse con estos datos.</p>
   <h3>1824 (mismos parámetros del modelo)</h3><p>IoU ${f1(m24.IoU)} · precisión ${f1(m24.precision)} · exhaustividad ${f1(m24.recall)} · AUC ${f1(m24.AUC)} · área simulada ${f1(m24.km2_pred,1)} km² frente a ${f1(m24.km2_obs,1)} km² (IGME). <b>Atención:</b> un parámetro estructural (longitud mínima de cadena) se eligió viendo la longitud de la colada de Nuevo del Fuego, por lo que 1824 no es una prueba totalmente independiente.</p>
   <table class="refs simp"><thead><tr><th>Centro 1824</th><th>V (Mm³)</th><th>Longitud R13 (km)</th><th>Longitud simulada, mediana (P10–P90)</th><th>Fecha en que alcanza el 90 % de su longitud (P10…P90)</th></tr></thead><tbody>${rc}</tbody></table>
   <p class="mini">R13 indica que la colada de Nuevo del Fuego alcanzó la costa el 3-oct-1824.</p>
@@ -113,9 +166,11 @@ function villExtra(id){
 }
 function build(){
   const first=map.getLayer('col1730-l')?'col1730-l':undefined;
-  [['1730',J.corners_1730],['1824',J.corners_1824]].forEach(([k,c])=>{const o=sims[k];
-    map.addSource('sim-'+k,{type:'canvas',canvas:o.cv,coordinates:c,animate:false});
-    map.addLayer({id:'sim-'+k+'-r',type:'raster',source:'sim-'+k,paint:{'raster-opacity':.82,'raster-resampling':'nearest','raster-fade-duration':0},layout:{visibility:'none'}},first);});
+  ['1730','1824'].forEach(k=>{sims[k].tiles.forEach(t=>{
+    map.addSource('sim-'+t.id,{type:'canvas',canvas:t.cv,coordinates:t.coords,animate:false});
+    map.addLayer({id:'sim-'+t.id+'-r',type:'raster',source:'sim-'+t.id,paint:{'raster-opacity':.82,'raster-resampling':'nearest','raster-fade-duration':0},layout:{visibility:'none'}},first);});});
+  map.addSource('sim-costa',{type:'geojson',data:{type:'Feature',properties:{},geometry:{type:'MultiPolygon',coordinates:J.costa||[]}}});
+  map.addLayer({id:'sim-costa-l',type:'line',source:'sim-costa',paint:{'line-color':'#0d47a1','line-width':1.1,'line-opacity':.9},layout:{visibility:'none'}});
   map.addSource('sim-nuc',{type:'geojson',data:{type:'FeatureCollection',features:[]}});
   map.addLayer({id:'sim-nuc-c',type:'circle',source:'sim-nuc',paint:{'circle-radius':8,'circle-color':['match',['get','s'],0,VCOL[0],1,VCOL[1],2,VCOL[2],VCOL[3]],'circle-stroke-color':['case',['==',['get','s'],3],'#c62828','#1b1b1b'],'circle-stroke-width':2},layout:{visibility:'none'}});
   map.addSource('sim-vent',{type:'geojson',data:{type:'FeatureCollection',features:J.fases_1730.concat(J.fases_1824).map(f=>({type:'Feature',properties:{nombre:f.nombre},geometry:{type:'Point',coordinates:[f.lon,f.lat]}}))}});

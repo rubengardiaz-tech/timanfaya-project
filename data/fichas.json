@@ -2618,7 +2618,8 @@
     "R55",
     "R56",
     "R32",
-    "R41"
+    "R41",
+    "R57"
    ],
    "enlaces": [
     {
@@ -2638,7 +2639,7 @@
    "capa": "simulacion",
    "categoria": "Simulación hipotética",
    "confianza": "bajo",
-   "resumen": "Con el escenario base (S2, 20 m de espesor medio) y la huella P ≥ 0,5, la coincidencia con las coladas IGME de 1730–36 es IoU = 0,65 (precisión 0,76, exhaustividad 0,82, AUC 0,93). Parte de este ajuste es calibración sobre el mismo mapa.",
+   "resumen": "Con el escenario base (S2, 20 m de espesor medio) y la huella P ≥ 0,5, la coincidencia con las coladas IGME de 1730–36 es IoU = 0,70 (precisión 0,83, exhaustividad 0,82, AUC 0,92). Parte de este ajuste es calibración sobre el mismo mapa.",
    "detalle": [
     {
      "k": "ADVERTENCIA",
@@ -2646,11 +2647,11 @@
     },
     {
      "k": "1730–36, escenario base",
-     "v": "157 km² simulados frente a 146 km² IGME; sobrestimados 38 km², infravalorados 27 km². IoU medio de una simulación individual 0,63."
+     "v": "143 km² simulados frente a 146 km² IGME; sobrestimados 25 km², infravalorados 27 km². IoU medio de una simulación individual 0,68."
     },
     {
      "k": "Sensibilidad al volumen",
-     "v": "S1 (15 m, 2,2 km³): IoU 0,59, sobre 28 km², infra 43 km²; S2 (20 m, 2,9 km³): IoU 0,65, sobre 38 km², infra 27 km²; S3 (25 m, 3,6 km³): IoU 0,65, sobre 50 km², infra 19 km²; S4 (28.9 m, 4,2 km³): IoU 0,64, sobre 57 km², infra 16 km²"
+     "v": "S1 (15 m, 2,2 km³): IoU 0,62, sobre 20 km², infra 43 km²; S2 (20 m, 2,9 km³): IoU 0,70, sobre 25 km², infra 27 km²; S3 (25 m, 3,6 km³): IoU 0,72, sobre 30 km², infra 19 km²; S4 (28.9 m, 4,2 km³): IoU 0,72, sobre 34 km², infra 16 km²"
     },
     {
      "k": "Validación cruzada espacial",
@@ -2680,7 +2681,8 @@
     "R55",
     "R56",
     "R32",
-    "R41"
+    "R41",
+    "R57"
    ],
    "enlaces": [],
    "variantes": [],
@@ -2726,8 +2728,12 @@
      "v": "Los parámetros del modelo se ajustaron al mismo mapa IGME con el que se valida; sólo la validación cruzada espacial aporta una prueba parcial. Un parámetro estructural (longitud mínima de cadena) se escogió viendo la longitud de la colada de 1824."
     },
     {
+     "k": "Mar y línea de costa",
+     "v": "El MDT Terrarium no incluye batimetría alrededor de Lanzarote: el mar es una superficie plana a 0 m. El modelo solo pierde lava por debajo de -10 m, de modo que la lava se extendía sobre ese llano (13,4 km² con P ≥ 0,5, el 8,5 % de la huella y el 4,9 % del volumen, hasta 2,1 km mar adentro). Es un artefacto del MDT, no una predicción de lava en el mar: la huella se recorta a la línea de costa ACTUAL (IGN, CC BY 4.0) y la validación se calcula solo en tierra (IoU 0,70 frente a 0,65 sin recorte; la mejora procede de eliminar ese área, no de un mejor modelo). Los polígonos IGME salen de la costa actual en solo 0,05 km²: las plataformas de lava que ganaron terreno al mar ya forman parte de la costa. No se simulan deltas sumergidos ni lava bajo el mar, y la costa de 1730 pudo ser distinta."
+    },
+    {
      "k": "Fallos conocidos",
-     "v": "Flujos largos y finos (Nueces → Arrecife; 21,7 km) infravalorados; longitudes de Tao y Tinguatón sobrestimadas; deltas costeros dependientes de la batimetría actual; fechas de cobertura de núcleos con desajustes de semanas a meses; las posiciones de los núcleos son aproximadas (incertidumbre 0,7–2,5 km)."
+     "v": "Flujos largos y finos (Nueces → Arrecife; 21,7 km) infravalorados; longitudes de Tao y Tinguatón sobrestimadas; sin batimetría en el MDT (el mar es un llano a 0 m: la lava simulada se extendía sobre el mar y ahora se recorta a la línea de costa actual del IGN; no se simulan deltas ni lava sumergida); fechas de cobertura de núcleos con desajustes de semanas a meses; las posiciones de los núcleos son aproximadas (incertidumbre 0,7–2,5 km)."
     },
     {
      "k": "Identificaciones 1824",
@@ -2745,7 +2751,8 @@
     "R55",
     "R56",
     "R32",
-    "R41"
+    "R41",
+    "R57"
    ],
    "enlaces": [],
    "variantes": [],

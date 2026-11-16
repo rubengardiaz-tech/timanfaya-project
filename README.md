@@ -7,9 +7,9 @@ Visor web estático (sin servidor ni compilación) que reúne información públ
 index.html      redirección a app/ (necesaria para GitHub Pages desde la raíz del repositorio)
 .nojekyll       indica a GitHub Pages que sirva los archivos tal cual (sin Jekyll)
 app/            aplicación (index.html, app.js, sim.js, style.css, vendor/maplibre-gl 4.7.1, data/bundle.js, dem_bundle.js y sim_bundle.js)
-data/           capas GeoJSON, fichas.json, referencias.json, timeline.json, sim/ (ráster y JSON de la simulación hipotética)
+data/           capas GeoJSON (incl. costa_lanzarote.geojson: línea de costa IGN), fichas.json, referencias.json, timeline.json, sim/ (ráster y JSON de la simulación hipotética)
 docs/           FUENTES_Y_METODOLOGIA.md, RESUMEN_EJECUTIVO.md, ACERCA_DE_AVISO_LEGAL.md, SIMULACION_COLADAS.md (+ LICENSE en la raíz)
-build/          scripts de generación y pruebas (Python; test_velocidades.py prueba el selector de velocidad), build/sim/ (código y parámetros de la simulación) y teselas de terreno de origen
+build/          scripts de generación y pruebas (Python; test_velocidades.py prueba el selector de velocidad; shot3d.py, shot_costa.py y test_costa.py comprueban el 3D y el recorte a la costa), build/sim/ (código y parámetros de la simulación) y teselas de terreno de origen
 (Las capturas screenshot*.png NO forman parte del despliegue: se entregan aparte en timanfaya_capturas.zip.)
 ```
 
@@ -38,7 +38,11 @@ Véase `docs/FUENTES_Y_METODOLOGIA.md`, apartado 5 (`build/final.py` y `build/bu
 Cada `Feature` GeoJSON incluye: `id`, `ficha_id`, `nombre`, `confianza` (alto/medio/bajo), `ubicacion_aproximada`, `incertidumbre_m` (si aplica), `metodo` y `source_ids` (identificadores de `referencias.json`). `fichas.json` contiene resumen, detalle, método de localización, limitaciones y fuentes; `timeline.json`, los eventos con fecha aproximada marcada.
 
 ## Simulación hipotética de coladas
-El botón **Simulación** del visor muestra una **simulación hipotética** de la propagación de las coladas de 1730–1736 y 1824 (modelo estocástico de lóbulos sobre un MDT previo estimado, ejecutado por fases y repetido 40 veces), con probabilidad de cobertura, fecha estimada de llegada con incertidumbre, validación frente a los polígonos IGME y núcleos sepultados coloreados según el momento en que la simulación los cubre. **No es una reconstrucción histórica**: sus parámetros son de fuente, derivados, supuestos o calibrados (tabla «Parámetros y trazabilidad»). Método, validación y limitaciones: `docs/SIMULACION_COLADAS.md`; código y parámetros reproducibles: `build/sim/` (requiere numpy, scipy, shapely, pyproj, rasterio, numba).
+El botón **Simulación** del visor muestra una **simulación hipotética** de la propagación de las coladas de 1730–1736 y 1824 (modelo estocástico de lóbulos sobre un MDT previo estimado, ejecutado por fases y repetido 40 veces), con probabilidad de cobertura, fecha estimada de llegada con incertidumbre, validación frente a los polígonos IGME y núcleos sepultados coloreados según el momento en que la simulación los cubre. **No es una reconstrucción histórica**: sus parámetros son de fuente, derivados, supuestos o calibrados (tabla «Parámetros y trazabilidad»). Método, validación y limitaciones: `docs/SIMULACION_COLADAS.md`; código y parámetros reproducibles: `build/sim/` (requiere numpy, scipy, shapely, pyproj, rasterio, numba; orden: `prepare_dem.py` → `run_all.py` → `analysis_mar.py` → `export_web.py` → `make_doc.py`, luego `build/final.py` y `build/bundle.py`).
+
+### Simulación en 3D y línea de costa (actualización)
+- **3D**: con relieve activo, MapLibre dibuja una imagen/canvas como una sola tesela y recorta lo que sobresale (la simulación aparecía cortada en vertical). Ahora `app/sim.js` reparte cada capa en teselas web z = 11 (un canvas de 500 × 498 px por tesela; los canvas cuadrados o potencia de 2 se ven negros en el MapLibre 4.7.1 vendorizado) y remuestrea el ráster UTM en cada una.
+- **Mar**: el MDT Terrarium no tiene batimetría (mar plano a 0 m) y la lava simulada se extendía sobre él (≈8,5 % de la huella del escenario base). La huella se recorta a la línea de costa actual del IGN (`data/costa_lanzarote.geojson`, fuente R57) y la validación se calcula solo en tierra. Detalle y métricas: `docs/SIMULACION_COLADAS.md` §3.4.
 
 ## Licencias y atribuciones
 - **Código, diseño de la interfaz y contenidos originales del proyecto: Creative Commons Attribution 4.0 International (CC BY 4.0)** — ver `LICENSE` y https://creativecommons.org/licenses/by/4.0/. Atribución: «Proyecto Timanfaya — Rubén Díaz García». Copyright (c) 2026 Rubén Díaz García. Contacto: rubendiazgar@outlook.es.

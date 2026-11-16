@@ -839,6 +839,21 @@
    "acceso": "abierto",
    "notas": "",
    "fecha_consulta": "2026-11-11"
+  },
+  {
+   "id": "R57",
+   "tipo": "servicio web (WFS)",
+   "titulo": "IGN — Unidades administrativas (INSPIRE), capa au:AdministrativeUnit, nivel Municipio (Arrecife, Haría, San Bartolomé, Teguise, Tías, Tinajo, Yaiza)",
+   "autores": "Instituto Geográfico Nacional (España)",
+   "anio": null,
+   "doi": null,
+   "url": "https://www.ign.es/wfs-inspire/unidades-administrativas",
+   "tipo_dato": "Línea de costa actual para recortar la simulación y validar solo en tierra",
+   "aporta": "Unión de los polígonos municipales de Lanzarote como máscara de tierra (límite costero actual), simplificada a ≈4 m (data/costa_lanzarote.geojson). Es la costa actual, no la de 1730.",
+   "verificacion": "GetCapabilities y GetFeature (GeoJSON) ejecutados el 16-nov-2026 (Atlantic/Canary, UTC+0); coincide con el MDT en el 99,8 % de las celdas. Licencia CC BY 4.0 © IGN según la política de datos del IGN (no re-verificada en esta sesión).",
+   "acceso": "abierto",
+   "notas": "",
+   "fecha_consulta": "2026-11-11"
   }
  ],
  "nota": "Estado de verificación indica qué se abrió/leyó realmente el 2026-11-11 (Atlantic/Canary, UTC+0)."

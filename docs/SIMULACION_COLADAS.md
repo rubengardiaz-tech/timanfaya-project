@@ -47,30 +47,30 @@ Inspirado en MrLavaLoba (R54) y en la familia de autómatas de pendiente tipo DO
 
 - Cada centro emite F cadenas de lóbulos intercaladas. Un lóbulo deposita `dz` metros en una celda de 50 m.
 - El lóbulo padre es el último de la cadena (exponente de lóbulo e = 0). El hijo se coloca en uno de los 8 vecinos con probabilidad ∝ (pendiente descendente)^γ + peso mínimo, sobre la superficie topográfica + depósitos; si no hay descenso, ∝ exp(−(h − h_min)/escala), lo que rellena depresiones.
-- Las celdas por debajo de −10 m actúan como sumidero (lava perdida en el mar; entre −10 y 0 m puede formarse delta).
+- Las celdas por debajo de −10 m actúan como sumidero (lava perdida en el mar; entre −10 y 0 m puede formarse delta). **Pero el MDT Terrarium usado no incluye batimetría en este tramo: el mar es una superficie plana a 0 m** (98 % de las celdas de mar valen exactamente 0 m), de modo que casi nada actúa como sumidero y la lava se extiende por ese «llano» (artefacto). Por eso la huella se **recorta a la línea de costa real del IGN** antes de validar y de mostrar (§3.4).
 - Nº de lóbulos = V/(dz·Δ²). Nº efectivo de cadenas F_ef = min(F, N/L_min).
 - Tiempo: fracción del volumen emitido por el centro en que una celda recibe su primer lóbulo × duración de su ventana. Las probabilidades son la fracción de simulaciones que cubren la celda; los percentiles de fecha, condicionados a cobertura.
 - Parámetros finales: dz = 2.0 m, F = 200, e = 0.0, γ = 1.0, peso mínimo = 0.05, L_min = 300.
 
 ### 2.4 Calibración (no es validación independiente)
 - Barrido grueso (`sweep.py`, 90 combinaciones × 6 simulaciones; e, F, wmin, dz) y fino (`sweep2.py`, 72 comb.): e = 0 fue siempre lo mejor y IoU ≈ 0,60–0,61 en un amplio plateau de F, wmin, dz. Ambos barridos usaron la primera asignación de volúmenes (vecino más próximo en todo el campo).
-- Cambio estructural posterior: volumen por episodio IGME + Nueces fijo (R13) → IoU 0,61 → 0,65.
+- Cambio estructural posterior: volumen por episodio IGME + Nueces fijo (R13) → IoU 0,61 → 0,65 (valores sin recorte a la costa).
 - Barrido 3 (`sweep3.py`, 108 comb.): nivel del mar (−20…0 m), longitud mínima de cadena (sin límite/150/300), F, wmin con la asignación final. Se eligió L_min = 300 por su mejor compromiso entre IoU de 1730 y la longitud de la colada de Nuevo del Fuego (R13), de modo que **1824 no es ya una prueba totalmente independiente**.
 - Validación cruzada espacial (`sweep_cv.py`): calibrar con las fases 1–3 y evaluar en las 4–5 da IoU 0.66 (óptimo posible 0.66); a la inversa, 0.61 (0.63). El modelo tiene pocos parámetros efectivos y se transfiere bien, pero esto no valida el mecanismo físico.
 
 ## 3. Validación
 
-### 3.1 1730–1736 frente a IGME (unidades 73, 75, 77; 145.6 km²; huella P ≥ 0.5; 40 simulaciones)
+### 3.1 1730–1736 frente a IGME (unidades 73, 75, 77; 145.5 km²; huella P ≥ 0.5; 40 simulaciones)
 | Escenario | Espesor (m) | V (km³) | IoU | Precisión | Exhaustividad | F1 | AUC | km² simulados | km² sobrestimados | km² infravalorados | Lava perdida en el mar |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| S1 | 15 | 2.18 | 0.59 | 0.78 | 0.70 | 0.74 | 0.90 | 131 | 28 | 43 | 0.0 % |
-| S2 (base) | 20 | 2.91 | 0.65 | 0.76 | 0.82 | 0.79 | 0.93 | 157 | 38 | 27 | 0.1 % |
-| S3 | 25 | 3.64 | 0.65 | 0.72 | 0.87 | 0.79 | 0.94 | 176 | 50 | 19 | 1.0 % |
-| S4 | 28.9 | 4.21 | 0.64 | 0.69 | 0.89 | 0.78 | 0.94 | 187 | 57 | 16 | 2.5 % |
+| S1 | 15 | 2.18 | 0.62 | 0.83 | 0.70 | 0.76 | 0.89 | 123 | 20 | 43 | 0.0 % |
+| S2 (base) | 20 | 2.91 | 0.70 | 0.83 | 0.82 | 0.82 | 0.92 | 143 | 25 | 27 | 0.1 % |
+| S3 | 25 | 3.64 | 0.72 | 0.81 | 0.87 | 0.84 | 0.94 | 156 | 30 | 19 | 1.0 % |
+| S4 | 28.9 | 4.21 | 0.72 | 0.79 | 0.89 | 0.84 | 0.93 | 163 | 34 | 16 | 2.5 % |
 
-- Escenario base S2: IoU medio de una simulación individual 0.63; área media por simulación 156.6 ± 0.9 km². IoU según el umbral de probabilidad: P≥0.1: 0.62 · P≥0.2: 0.63 · P≥0.3: 0.64 · P≥0.4: 0.64 · P≥0.5: 0.65 · P≥0.6: 0.65 · P≥0.7: 0.64 · P≥0.8: 0.64 · P≥0.9: 0.62.
+- Escenario base S2: IoU medio de una simulación individual 0.68; área media por simulación 156.6 ± 0.9 km². IoU según el umbral de probabilidad: P≥0.1: 0.69 · P≥0.2: 0.70 · P≥0.3: 0.70 · P≥0.4: 0.70 · P≥0.5: 0.70 · P≥0.6: 0.69 · P≥0.7: 0.69 · P≥0.8: 0.67 · P≥0.9: 0.65.
 - La coincidencia es poco sensible al volumen (S2–S4), pero el área sobrestimada crece con él y la infravalorada decrece.
-- **Mapa de zonas sobrestimadas e infravaloradas**: modo «Validación frente a IGME» del visor (verde = coincide, rojo = sobrestimado, azul = infravalorado). Sobrestimación principal: la plataforma costera del oeste (lava que construye un delta sobre la batimetría actual) y bordes del campo; infravaloración principal: flujos largos y estrechos hacia el este/noreste (colada de las Nueces) y el norte.
+- **Mapa de zonas sobrestimadas e infravaloradas**: modo «Validación frente a IGME» del visor (verde = coincide, rojo = sobrestimado, azul = infravalorado). Sobrestimación principal (tras recortar a la costa): bordes del campo; antes del recorte, además, una mancha sobre el mar al oeste (artefacto del MDT plano, §3.4); infravaloración principal: flujos largos y estrechos hacia el este/noreste (colada de las Nueces) y el norte.
 - Nueces: el modelo da una colada de ≈4.0 km frente a 21,7 km (R13): **fallo conocido**.
 
 ### 3.2 1824 (mismos parámetros del modelo)
@@ -101,6 +101,22 @@ Se calcula, por simulación, la fecha mediana de las celdas del disco de incerti
 
 ⚑ El punto del núcleo coincide con un cono/centro eruptivo (anclaje toponímico): la cobertura no es una prueba independiente. **Desajustes**: Tingafa simulada en octubre de 1730 (por lava de Pico Partido) frente al 7-mar-1731 documentado (R24); Santa Catalina ≈6 semanas después de la fecha de R21; Chimanfaya ≈2 meses después de septiembre de 1730 (R16). Con incertidumbres de ubicación de 0,7–2,5 km y cronología imprecisa, **las fechas simuladas de núcleos no son fiables a escala de días ni de meses**.
 
+### 3.4 Recorte a la línea de costa real (IGN) y tratamiento del mar
+**Qué pasaba.** La versión anterior pintaba y validaba también las celdas sobre el mar. Causa (reproducida y medida en `build/sim/analysis_mar.py`): el MDT (AWS Terrarium) no tiene batimetría en torno a Lanzarote, así que el mar es una superficie **plana a 0 m** (43 % de las celdas de la rejilla valen exactamente 0 m). El modelo solo trata como sumidero lo que queda por debajo de -10 m; la superficie de 0 m no lo cumple y la lava se desplaza sobre ella como sobre un llano. En el escenario base eso son 13.4 km² con P ≥ 0.5 (8.5 % de la huella) y 4.9 % del volumen depositado, en un único foco al oeste (≈29.000° N, -13.833° E) que llega a 2.1 km de la costa actual.
+
+**Qué se hace.** La línea de costa es la unión de los límites de los municipios de Lanzarote del IGN (INSPIRE *Unidades administrativas*, WFS `ign.es/wfs-inspire/unidades-administrativas`, CC BY 4.0 © IGN), simplificada a ≈4 m (`data/costa_lanzarote.geojson`). Coincide con el MDT en el 99.8 % de las celdas (tierra = cota > 0,5 m). (1) El modelo **no se recalcula** (misma semilla, mismos parámetros: sin recorte se reproducen exactamente las cifras anteriores). (2) La validación se calcula **solo en celdas de tierra**. (3) El visor muestra la huella recortada a la costa real con un recorte vectorial.
+
+| Escenario | IoU sin recorte | IoU con recorte (tierra) | km² simulados sin recorte | km² simulados en tierra | km² sobre el mar (P ≥ umbral) | % del volumen depositado en el mar |
+|---|---|---|---|---|---|---|
+| S1 | 0.59 | 0.62 | 131 | 123 | 8.0 | 4.1 % |
+| S2 (base) | 0.65 | 0.70 | 157 | 143 | 13.4 | 4.9 % |
+| S3 | 0.65 | 0.72 | 176 | 156 | 19.9 | 6.0 % |
+| S4 | 0.64 | 0.72 | 187 | 163 | 23.7 | 6.4 % |
+
+**Qué es real y qué es artefacto.** Los polígonos IGME de 1730–36 solo salen de la costa actual en 0.05 km² de 146 km² (1824: 0.00 km²). Las coladas de 1730–36 sí ganaron terreno al mar (R13 y R16 describen lava alcanzando la costa oeste), pero esas plataformas ya forman parte de la costa actual y están dentro de la huella válida; lo que queda mar adentro de la costa actual es, en este modelo, un artefacto del MDT plano a 0 m: no hay evidencia cartográfica (IGME) de lava más allá de la costa actual, y los deltas sumergidos o erosionados que pudieran existir no pueden evaluarse con estos datos. Con el recorte la coincidencia sube (IoU 0.70 frente a 0.65 en el escenario base) únicamente porque se elimina el área simulada sobre el mar; no refleja una mejora del modelo. Con el recorte, S3 y S4 puntúan algo más que S2 (IoU 0.72 y 0.72 frente a 0.70); se mantiene S2 como escenario base (elegido antes del recorte; ver §6).
+
+**Visualización en 3D.** Con terreno activo, MapLibre dibuja una fuente de imagen/canvas como una única tesela web (la de zoom entero cuyo centro contiene el centro de la imagen); lo que sobresale de esa tesela se recorta, y la simulación aparecía cortada en vertical sobre el relieve. El visor reparte ahora cada capa en teselas de la malla web z = 11 (un canvas por tesela, 500 × 498 px; no pueden ser cuadrados ni potencia de 2 en la versión vendorizada de MapLibre 4.7.1, donde se verían negros), remuestrea el ráster UTM en cada una y aplica el recorte a la costa con una máscara vectorial. Se comprueba con `build/shot3d.py` y `build/shot_costa.py`.
+
 ## 4. Trazabilidad de parámetros
 Tipos: **fuente** = valor de una referencia; **derivado** = cálculo propio a partir de fuentes; **supuesto** = sin respaldo en fuente; **calibrado** = ajustado comparando con IGME.
 
@@ -129,7 +145,7 @@ Tipos: **fuente** = valor de una referencia; **derivado** = cálculo propio a pa
 | exponente_pendiente | 1.0 | supuesto | Peso de cada vecino ∝ (pendiente descendente)^γ. |
 | peso_minimo_vecino | 0.05 | calibrado | Peso residual para permitir la dispersión lateral. |
 | escala_relleno_depresion_m | 1.0 | supuesto | Si no hay vecino más bajo, peso ∝ exp(−(h−h_min)/escala). |
-| limite_mar_m | -10 | supuesto | Las celdas con superficie por debajo de este nivel actúan como sumidero (lava perdida en el mar); entre −10 y 0 m la lava puede formar delta. |
+| limite_mar_m | -10 | supuesto | Las celdas con superficie por debajo de este nivel actúan como sumidero (lava perdida en el mar); entre −10 y 0 m la lava puede formar delta. LIMITACIÓN: el MDT Terrarium no tiene batimetría aquí (mar plano a 0 m), por lo que casi ninguna celda cumple el criterio y la lava se extiende sobre el «llano»; la huella se recorta después a la costa real del IGN (docs/SIMULACION_COLADAS.md §3.4). |
 | longitud_min_cadena | 300 | calibrado | Valor elegido en sweep3.py (150/300/sin límite) por el mejor compromiso entre IoU 1730 y la longitud de la colada de Nuevo del Fuego (R13: 6,34 km) → ya no es una validación independiente para 1824. Modificación estructural introducida tras comprobar que con F fijo las coladas pequeñas de 1824 (pocos lóbulos) no pueden alcanzar su longitud observada: nº efectivo de cadenas F_ef = min(F, N_lóbulos / longitud_min_cadena). Ver docs/SIMULACION_COLADAS.md (§ Validación 1824). |
 | volumen_nueces_Mm3 | 140 (rango [110, 170]) | fuente | R13 (§4.4: 140 ± 30 ×10^6 m³ para la colada de las Nueces, a partir de R01 y R41). Volumen fijado para la fase Nueces; el resto del volumen del 3.er episodio IGME se asigna a Colorada. |
 | n_simulaciones | 40 | supuesto | Nº de ejecuciones estocásticas por escenario para estimar probabilidades. |
@@ -148,16 +164,18 @@ Ver la ficha «Limitaciones del modelo de simulación» del visor. Resumen:
 - Cronología posterior a 1731 mal documentada (R13): inicio de Nueces en febrero de 1733 o marzo–abril de 1736 (el visor simula la versión clásica de 1736; la alternativa de 1733 solo cambiaría fechas, no el apilamiento), posible fin en 1735, actividad de Fuego discontinua.
 - Los volúmenes de R13 excluyen lava perdida en el mar y tefras; el escenario no los corrige.
 - Calibración y validación sobre el mismo mapa: validación cruzada espacial solo parcial; 1824 no es totalmente independiente.
-- Fallos: flujos largos (Nueces), longitudes de Tao/Tinguatón, delta costero del oeste, fechas de núcleos.
+- Fallos: flujos largos (Nueces), longitudes de Tao/Tinguatón, fechas de núcleos. **Mar**: el MDT no tiene batimetría (mar plano a 0 m) y el modelo extendía la lava sobre él (≈8.5 % de la huella, ≈13 km²); se recorta a la costa actual del IGN y no se simulan deltas ni lava sumergida.
+- Calibración (barridos de §7) hecha **antes** del recorte a la costa y sin máscara de tierra; los parámetros no se han vuelto a calibrar.
 
 ## 7. Reproducir
 ```
 pip install numpy scipy shapely pyproj rasterio pillow numba      # + playwright para test_sim.py
 cd build/sim
-python prepare_dem.py        # rejilla, MDT actual y previos  -> out/dem.npz   (necesita /workspace/raw/dem13.npy y data/*.geojson)
+python prepare_dem.py        # rejilla, MDT actual, previos y máscara de tierra (costa IGN) -> out/dem.npz   (necesita /workspace/raw/dem13.npy y data/*.geojson, incl. costa_lanzarote.geojson)
 python sweep.py; python sweep2.py; python sweep3.py; python sweep_cv.py   # calibración (opcional)
 python run_all.py            # simulaciones y métricas        -> out/resultados.json, out/*.npz
-python export_web.py         # PNG + data/sim/simulacion.json
+python analysis_mar.py       # diagnóstico del mar y de la costa -> out/mar.json
+python export_web.py         # PNG (recortados a la costa) + data/sim/simulacion.json
 python make_doc.py           # regenera este documento
 cd .. && python final.py && python bundle.py   # fichas, fuentes y app/data/sim_bundle.js
 python test_sim.py           # prueba Playwright + capturas (desde la raíz del proyecto)
